@@ -2,320 +2,471 @@
 <html lang="ar" dir="rtl" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>كتاب الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك | تأليف: جنكيز</title>
   
   <meta name="description" content="كتاب عربي متكامل في الوعي الرقمي، البرمجة، الأمن السيبراني الدفاعي، الذكاء الاصطناعي، وتكنولوجيا خدمة المجتمع. تأليف: جنكيز.">
   <meta name="author" content="جنكيز">
   <meta name="keywords" content="الوعي الرقمي, جنكيز, الأمن السيبراني, البرمجة, بايثون, الذكاء الاصطناعي, حماية الخصوصية, كتب تقنية عربية">
-  
+  <meta name="theme-color" content="#080d1a">
+
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="book">
   <meta property="og:title" content="كتاب الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك">
-  <meta property="og:description" content="«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين» — تأليف: جنكيز. اقرأ الكتاب كاملاً أونلاين.">
+  <meta property="og:description" content="«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين» — تأليف: جنكيز. اقرأ الكتاب كاملاً أونلاين مجاناً.">
   <meta property="og:image" content="https://hex-jankiz.github.io/digital-awareness-book/front_cover.jpg">
   <meta property="og:url" content="https://hex-jankiz.github.io/digital-awareness-book/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="كتاب الوعي الرقمي | تأليف جنكيز">
+  <meta name="twitter:title" content="كتاب الوعي الرقمي | تأليف: جنكيز">
   <meta name="twitter:description" content="دليل تطبيقي شامل في البرمجة والأمن السيبراني والذكاء الاصطناعي وحماية الأسرة.">
   <meta name="twitter:image" content="https://hex-jankiz.github.io/digital-awareness-book/front_cover.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="front_cover.jpg">
 
-  <!-- Fonts: Cairo & Amiri & JetBrains Mono -->
+  <!-- Optimized Google Fonts: Tajawal (Body) & Cairo (Headings) & JetBrains Mono (Code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX for crisp mathematical formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
 
   <style>
+    /* =============================================================
+       1. DESIGN TOKENS & FLUID RESPONSIVE TYPOGRAPHY
+       ============================================================= */
     :root {
-      --font-heading: 'Cairo', system-ui, -apple-system, sans-serif;
-      --font-body: 'Amiri', serif;
-      --font-code: 'JetBrains Mono', monospace;
+      /* Modern, Clean Sans-Serif Arabic Fonts - No Calligraphic/Traditional fonts */
+      --font-body: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+      --font-heading: 'Cairo', 'Tajawal', system-ui, sans-serif;
+      --font-code: 'JetBrains Mono', 'SF Mono', Consolas, Monaco, monospace;
+
+      /* Fluid Typography using clamp() - 100% Responsive on all viewports */
+      /* Base Text: 16.4px on 360px mobile -> scales smoothly to 19.5px on desktop */
+      --text-base: clamp(16px, 0.32vw + 15.3px, 19.5px);
+      --text-sm: clamp(13px, 0.2vw + 12.3px, 15px);
+      --text-xs: clamp(11.5px, 0.15vw + 11px, 13px);
+      --text-lg: clamp(18px, 0.4vw + 16.8px, 21.5px);
       
-      --base-font-size: 19px;
-      --line-height: 1.85;
+      /* Main Headings (H1): 24px on mobile -> 34px on desktop */
+      --h1-size: clamp(23.5px, 1.1vw + 20px, 34px);
+      /* Section Headings (H2): 20px on mobile -> 27px on desktop */
+      --h2-size: clamp(20px, 0.75vw + 17.5px, 27px);
+      /* Subheadings (H3): 17.5px on mobile -> 22px on desktop */
+      --h3-size: clamp(17.5px, 0.5vw + 15.5px, 22px);
+
+      --line-height-body: 1.84;
+      --line-height-heading: 1.38;
+      
       --sidebar-width: 320px;
-      --header-height: 64px;
+      --header-height: 60px;
+      
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
-      --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      --radius-pill: 9999px;
+
+      --transition-fast: 0.18s ease;
+      --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* THEME: Cyber Dark (Default) */
+    /* THEME: Cyber Dark (Default - High Contrast, Eye-Care) */
     [data-theme="dark"] {
-      --bg-canvas: #070b14;
+      --bg-app: #080d1a;
       --bg-surface: #0f172a;
+      --bg-card: #131d33;
       --bg-surface-elevated: #1e293b;
-      --border-color: rgba(56, 189, 248, 0.18);
-      --text-primary: #f1f5f9;
-      --text-secondary: #94a3b8;
-      --text-muted: #64748b;
-      --accent: #0ea5e9;
-      --accent-glow: rgba(14, 165, 233, 0.28);
-      --accent-hover: #38bdf8;
-      --code-bg: #030712;
-      --code-border: #1f2937;
-      --blockquote-bg: rgba(14, 165, 233, 0.07);
-      --blockquote-border: #0ea5e9;
-      --header-bg: rgba(7, 11, 20, 0.88);
-      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-    }
-
-    /* THEME: Warm Sepia */
-    [data-theme="sepia"] {
-      --bg-canvas: #fbf0d9;
-      --bg-surface: #f4e4c1;
-      --bg-surface-elevated: #ecd6ab;
-      --border-color: #d6be96;
-      --text-primary: #2d241e;
-      --text-secondary: #5e4f43;
-      --text-muted: #8c7b6d;
-      --accent: #b45309;
-      --accent-glow: rgba(180, 83, 9, 0.2);
-      --accent-hover: #92400e;
-      --code-bg: #ecd6ab;
-      --code-border: #d6be96;
-      --blockquote-bg: rgba(180, 83, 9, 0.08);
-      --blockquote-border: #b45309;
-      --header-bg: rgba(251, 240, 217, 0.92);
-      --card-shadow: 0 8px 24px -8px rgba(90, 60, 30, 0.15);
-    }
-
-    /* THEME: Clean Light */
-    [data-theme="light"] {
-      --bg-canvas: #f8fafc;
-      --bg-surface: #ffffff;
-      --bg-surface-elevated: #f1f5f9;
-      --border-color: #e2e8f0;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
+      --bg-hover: #1e2942;
+      --border-subtle: rgba(56, 189, 248, 0.14);
+      --border-strong: rgba(56, 189, 248, 0.28);
+      
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
-      --accent: #0284c7;
-      --accent-glow: rgba(2, 132, 199, 0.2);
-      --accent-hover: #0369a1;
-      --code-bg: #f1f5f9;
-      --code-border: #cbd5e1;
-      --blockquote-bg: #f0f9ff;
-      --blockquote-border: #0284c7;
-      --header-bg: rgba(255, 255, 255, 0.92);
-      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      
+      --accent: #38bdf8;
+      --accent-deep: #0284c7;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-glow: rgba(56, 189, 248, 0.25);
+      
+      --code-bg: #040814;
+      --code-border: #1e293b;
+      --code-text: #7dd3fc;
+      
+      --quote-bg: rgba(56, 189, 248, 0.06);
+      --quote-border: #38bdf8;
+      
+      --special-box-bg: rgba(14, 165, 233, 0.08);
+      --special-box-border: #0ea5e9;
+      
+      --header-bg: rgba(8, 13, 26, 0.94);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 8px 24px -6px rgba(0, 0, 0, 0.55);
+      --shadow-lg: 0 16px 36px -10px rgba(0, 0, 0, 0.75);
     }
 
-    /* Reset & Base Styles */
+    /* THEME: Warm Sepia (Paper Warmth, Long Reading Comfort) */
+    [data-theme="sepia"] {
+      --bg-app: #fbf0d9;
+      --bg-surface: #f4e5c3;
+      --bg-card: #f0deba;
+      --bg-surface-elevated: #e6ce9e;
+      --bg-hover: #e3c994;
+      --border-subtle: #d8be8f;
+      --border-strong: #c8aa74;
+      
+      --text-primary: #2d241d;
+      --text-secondary: #4a3b2f;
+      --text-muted: #786452;
+      
+      --accent: #b45309;
+      --accent-deep: #92400e;
+      --accent-soft: rgba(180, 83, 9, 0.12);
+      --accent-glow: rgba(180, 83, 9, 0.2);
+      
+      --code-bg: #e6ce9e;
+      --code-border: #d8be8f;
+      --code-text: #78350f;
+      
+      --quote-bg: rgba(180, 83, 9, 0.07);
+      --quote-border: #b45309;
+      
+      --special-box-bg: rgba(180, 83, 9, 0.08);
+      --special-box-border: #b45309;
+      
+      --header-bg: rgba(251, 240, 217, 0.95);
+      --shadow-sm: 0 2px 6px rgba(90, 60, 30, 0.08);
+      --shadow-md: 0 6px 18px -4px rgba(90, 60, 30, 0.12);
+      --shadow-lg: 0 14px 28px -8px rgba(90, 60, 30, 0.18);
+    }
+
+    /* THEME: Clean Light (Clean Crisp Daylight) */
+    [data-theme="light"] {
+      --bg-app: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-hover: #e2e8f0;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      
+      --accent: #0284c7;
+      --accent-deep: #0369a1;
+      --accent-soft: rgba(2, 132, 199, 0.1);
+      --accent-glow: rgba(2, 132, 199, 0.2);
+      
+      --code-bg: #f1f5f9;
+      --code-border: #e2e8f0;
+      --code-text: #0369a1;
+      
+      --quote-bg: #f0f9ff;
+      --quote-border: #0284c7;
+      
+      --special-box-bg: #f0f9ff;
+      --special-box-border: #0284c7;
+      
+      --header-bg: rgba(255, 255, 255, 0.95);
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 6px 18px -4px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 14px 28px -8px rgba(0, 0, 0, 0.12);
+    }
+
+    /* =============================================================
+       2. GLOBAL RESETS & FOUNDATION
+       ============================================================= */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
 
     html {
       scroll-behavior: smooth;
-      font-size: var(--base-font-size);
+      direction: rtl;
+      font-size: 16px;
+      overflow-x: hidden;
     }
 
     body {
-      background-color: var(--bg-canvas);
+      background-color: var(--bg-app);
       color: var(--text-primary);
       font-family: var(--font-body);
-      line-height: var(--line-height);
+      font-size: var(--text-base);
+      line-height: var(--line-height-body);
+      font-weight: 400;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
-    /* Top Reading Progress Bar */
-    #progress-container {
+    /* Images & Media Responsiveness */
+    img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Reading Progress Top Bar */
+    #progress-tracker {
       position: fixed;
       top: 0;
       right: 0;
       left: 0;
-      height: 4px;
+      height: 3.5px;
       background: transparent;
-      z-index: 1000;
+      z-index: 1600;
     }
     #progress-bar {
       height: 100%;
       width: 0%;
-      background: linear-gradient(90deg, var(--accent), #38bdf8);
-      box-shadow: 0 0 12px var(--accent);
-      transition: width 0.1s ease-out;
+      background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+      box-shadow: 0 0 10px var(--accent-glow);
+      transition: width 0.08s linear;
     }
 
-    /* Top Sticky Header */
-    header.top-header {
+    /* =============================================================
+       3. STICKY APP HEADER
+       ============================================================= */
+    header.app-header {
       position: sticky;
       top: 0;
       height: var(--header-height);
       background-color: var(--header-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
-      z-index: 900;
+      padding: 0 clamp(10px, 2.5vw, 28px);
+      z-index: 1000;
+      transition: var(--transition-fast);
     }
 
-    .header-brand {
+    .header-right {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-family: var(--font-heading);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      text-decoration: none;
+      gap: 10px;
     }
-    .header-brand .author-tag {
-      font-size: 0.8rem;
-      font-weight: 600;
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    }
+    .brand-badge {
       background: var(--accent);
       color: #ffffff;
-      padding: 2px 10px;
-      border-radius: 999px;
-      margin-right: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
-    .icon-btn {
+    /* Action Buttons (Strict Minimum Touch Targets) */
+    .btn-action {
+      min-width: 38px;
+      height: 38px;
+      padding: 0 9px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
       background: var(--bg-surface-elevated);
       color: var(--text-primary);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-sm);
-      padding: 7px 12px;
       font-family: var(--font-heading);
-      font-size: 0.85rem;
-      cursor: pointer;
+      font-size: var(--text-sm);
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
-      transition: var(--transition-smooth);
+      cursor: pointer;
+      user-select: none;
+      transition: var(--transition-fast);
     }
-    .icon-btn:hover {
-      background: var(--accent);
-      color: #ffffff;
+    .btn-action:hover {
+      background: var(--bg-hover);
       border-color: var(--accent);
+      color: var(--accent);
       transform: translateY(-1px);
     }
-
-    .menu-toggle {
-      display: none;
+    .btn-action:active {
+      transform: translateY(1px);
     }
 
-    /* Layout Wrapper */
-    .app-layout {
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff !important;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background: var(--accent-deep);
+      border-color: var(--accent-deep);
+      color: #ffffff !important;
+    }
+
+    /* =============================================================
+       4. LAYOUT STRUCTURE (SIDEBAR & MAIN READING STAGE)
+       ============================================================= */
+    .book-shell {
       display: flex;
-      max-width: 1440px;
+      max-width: 1360px;
       margin: 0 auto;
       min-height: calc(100vh - var(--header-height));
+      position: relative;
     }
 
-    /* Sidebar Navigation */
-    aside.book-sidebar {
+    /* Sidebar Drawer */
+    aside.book-drawer {
       width: var(--sidebar-width);
       flex-shrink: 0;
       position: sticky;
       top: var(--header-height);
       height: calc(100vh - var(--header-height));
       overflow-y: auto;
-      padding: 24px 16px;
-      border-left: 1px solid var(--border-color);
-      background-color: var(--bg-surface);
+      padding: 20px 14px;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-subtle);
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
+      z-index: 950;
+      transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .sidebar-cover-card {
-      text-align: center;
-      padding: 14px;
-      background: var(--bg-surface-elevated);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
+    .drawer-top-bar {
+      display: none; /* Shown only on mobile drawer */
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
     }
-    .sidebar-cover-card img {
-      width: 130px;
-      height: auto;
-      border-radius: var(--radius-sm);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
-      margin-bottom: 10px;
-      transition: transform 0.3s ease;
-    }
-    .sidebar-cover-card img:hover {
-      transform: scale(1.04);
-    }
-    .sidebar-book-title {
+    .drawer-top-title {
       font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .drawer-close-btn {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .drawer-header-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .drawer-cover-thumb {
+      width: 95px;
+      height: auto;
+      margin: 0 auto 10px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-md);
+    }
+    .drawer-book-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
       font-weight: 800;
       color: var(--accent);
       margin-bottom: 2px;
     }
-    .sidebar-book-author {
-      font-family: var(--font-heading);
-      font-size: 0.85rem;
-      color: var(--text-secondary);
+    .drawer-book-meta {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
     }
 
-    .toc-search-wrap input {
+    .drawer-search-box input {
       width: 100%;
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-color);
+      height: 38px;
+      padding: 0 12px;
+      background: var(--bg-app);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-sm);
-      padding: 8px 12px;
       color: var(--text-primary);
-      font-family: var(--font-heading);
-      font-size: 0.85rem;
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
       outline: none;
-      transition: var(--transition-smooth);
+      transition: var(--transition-fast);
     }
-    .toc-search-wrap input:focus {
+    .drawer-search-box input:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-glow);
+      box-shadow: 0 0 0 3px var(--accent-soft);
     }
 
-    nav.toc-nav {
+    nav.drawer-toc-nav {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
       overflow-y: auto;
+      padding-bottom: 24px;
     }
     .toc-link {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 12px;
+      padding: 9px 12px;
       border-radius: var(--radius-sm);
       color: var(--text-secondary);
       text-decoration: none;
       font-family: var(--font-heading);
-      font-size: 0.88rem;
-      line-height: 1.4;
-      transition: var(--transition-smooth);
+      font-size: 0.86rem;
+      font-weight: 600;
+      line-height: 1.45;
+      transition: var(--transition-fast);
+      border-right: 3px solid transparent;
     }
     .toc-link:hover {
       background: var(--bg-surface-elevated);
       color: var(--text-primary);
-      transform: translateX(-4px);
+      transform: translateX(-3px);
     }
     .toc-link.active {
-      background: var(--accent-glow);
+      background: var(--accent-soft);
       color: var(--accent);
+      border-right-color: var(--accent);
       font-weight: 700;
-      border-right: 3px solid var(--accent);
     }
     .toc-badge {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
+      font-weight: 700;
       padding: 2px 6px;
       border-radius: 4px;
       background: var(--bg-surface-elevated);
@@ -327,572 +478,955 @@
       color: #ffffff;
     }
 
-    /* Main Book Content Stage */
-    main.book-content {
+    /* Backdrop for Mobile Drawer */
+    #drawer-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 1400;
+    }
+
+    /* Main Reading Stage */
+    main.reading-stage {
       flex: 1;
       min-width: 0;
-      padding: 40px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(16px, 3.5vw, 40px) clamp(14px, 3.5vw, 44px);
     }
 
-    /* Hero Book Card */
-    .book-hero {
-      display: flex;
-      gap: 36px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-color);
+    /* =============================================================
+       5. BOOK HERO PRESENTATION
+       ============================================================= */
+    .hero-presentation-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 36px;
-      margin-bottom: 56px;
-      box-shadow: var(--card-shadow);
+      padding: clamp(20px, 4vw, 36px);
+      margin-bottom: clamp(30px, 5vw, 50px);
+      box-shadow: var(--shadow-md);
+      display: flex;
       align-items: center;
+      gap: clamp(20px, 4vw, 36px);
     }
-    .hero-cover-col img {
-      width: 240px;
+    .hero-cover-wrap {
+      flex-shrink: 0;
+    }
+    .hero-cover-wrap img {
+      width: clamp(160px, 24vw, 240px);
       height: auto;
       border-radius: var(--radius-md);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      box-shadow: var(--shadow-lg);
     }
-    .hero-info-col {
+    .hero-details-wrap {
       flex: 1;
     }
-    .hero-title {
+    .hero-book-title {
       font-family: var(--font-heading);
-      font-size: 2.6rem;
+      font-size: var(--h1-size);
       font-weight: 900;
-      line-height: 1.2;
       color: var(--accent);
+      line-height: 1.25;
       margin-bottom: 8px;
     }
-    .hero-subtitle {
+    .hero-book-subtitle {
       font-family: var(--font-heading);
-      font-size: 1.3rem;
+      font-size: var(--h3-size);
       font-weight: 600;
       color: var(--text-secondary);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
-    .hero-quote {
-      background: var(--blockquote-bg);
-      border-right: 4px solid var(--accent);
-      padding: 14px 20px;
+    .hero-official-quote {
+      background: var(--quote-bg);
+      border-right: 4px solid var(--quote-border);
+      padding: 12px 18px;
       border-radius: var(--radius-sm);
-      font-style: italic;
-      font-size: 1.15rem;
+      font-size: var(--text-base);
       color: var(--text-primary);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      line-height: 1.7;
     }
-    .hero-meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 12px;
-      margin-bottom: 24px;
+    .hero-specs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
     }
-    .hero-meta-item {
+    .hero-spec-pill {
       background: var(--bg-surface-elevated);
-      padding: 10px 14px;
-      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      font-size: var(--text-xs);
       font-family: var(--font-heading);
-      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 600;
     }
-    .hero-meta-item span {
-      display: block;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-    }
-    .hero-meta-item strong {
-      color: var(--text-primary);
-      font-size: 1rem;
+    .hero-spec-pill strong {
+      color: var(--accent);
     }
 
-    /* Chapter Cards */
+    /* =============================================================
+       6. CHAPTER ARTICLES & MODERN ARABIC TYPOGRAPHY
+       ============================================================= */
     .book-chapter-section {
-      margin-bottom: 64px;
-      scroll-margin-top: calc(var(--header-height) + 20px);
+      margin-bottom: clamp(36px, 6vw, 60px);
+      scroll-margin-top: calc(var(--header-height) + 16px);
     }
+
     .chapter-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      padding: 44px 50px;
-      box-shadow: var(--card-shadow);
+      padding: clamp(18px, 4.5vw, 44px);
+      box-shadow: var(--shadow-md);
       position: relative;
+      overflow: hidden;
     }
-    .chapter-badge-wrap {
-      margin-bottom: 18px;
+
+    .chapter-header-badge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
     }
     .chapter-pill-badge {
       background: var(--accent);
       color: #ffffff;
       font-family: var(--font-heading);
-      font-size: 0.85rem;
+      font-size: var(--text-xs);
       font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 999px;
-      display: inline-block;
+      padding: 3px 12px;
+      border-radius: var(--radius-pill);
+    }
+    .chapter-progress-label {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-family: var(--font-heading);
     }
 
-    /* Typography inside content */
-    .chapter-inner-content h1 {
+    /* Body Typography: Clean, Modern Tajawal, Regular Weight (400), RTL Right Aligned */
+    .chapter-body-typography {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: var(--line-height-body);
+      color: var(--text-primary);
+      text-align: right;
+      direction: rtl;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .chapter-body-typography h1 {
       font-family: var(--font-heading);
-      font-size: 2.2rem;
+      font-size: var(--h1-size);
       font-weight: 900;
       color: var(--accent);
-      margin-bottom: 24px;
-      line-height: 1.3;
-      border-bottom: 2px solid var(--border-color);
+      line-height: var(--line-height-heading);
+      margin: 16px 0 24px;
       padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-subtle);
     }
-    .chapter-inner-content h2 {
+
+    .chapter-body-typography h2 {
       font-family: var(--font-heading);
-      font-size: 1.6rem;
+      font-size: var(--h2-size);
       font-weight: 800;
       color: var(--text-primary);
-      margin-top: 36px;
-      margin-bottom: 16px;
-      line-height: 1.4;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      line-height: var(--line-height-heading);
+      margin: 32px 0 14px;
+      padding-top: 10px;
     }
-    .chapter-inner-content h3 {
+
+    .chapter-body-typography h3 {
       font-family: var(--font-heading);
-      font-size: 1.3rem;
+      font-size: var(--h3-size);
       font-weight: 700;
       color: var(--accent);
-      margin-top: 24px;
-      margin-bottom: 12px;
+      line-height: var(--line-height-heading);
+      margin: 24px 0 10px;
     }
-    .chapter-inner-content p {
-      margin-bottom: 18px;
-      text-align: justify;
+
+    .chapter-body-typography h4, 
+    .chapter-body-typography h5 {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      margin: 20px 0 8px;
+    }
+
+    .chapter-body-typography p {
+      margin-bottom: 1.25rem;
+      text-align: right;
       color: var(--text-primary);
-      font-size: 1.05rem;
     }
-    .chapter-inner-content ul, 
-    .chapter-inner-content ol {
-      margin: 16px 28px 24px;
-      padding-right: 12px;
+
+    .chapter-body-typography ul, 
+    .chapter-body-typography ol {
+      margin: 14px 24px 22px 0;
+      padding-right: 14px;
     }
-    .chapter-inner-content li {
-      margin-bottom: 10px;
-      line-height: 1.8;
+    .chapter-body-typography li {
+      margin-bottom: 8px;
+      line-height: 1.78;
+      color: var(--text-primary);
     }
-    .chapter-inner-content blockquote {
-      background: var(--blockquote-bg);
-      border-right: 4px solid var(--blockquote-border);
-      padding: 16px 24px;
+
+    .chapter-body-typography blockquote {
+      background: var(--quote-bg);
+      border-right: 4px solid var(--quote-border);
+      padding: 14px 20px;
       border-radius: var(--radius-sm);
-      margin: 24px 0;
-      font-style: italic;
+      margin: 22px 0;
       color: var(--text-primary);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.76;
     }
-    .chapter-inner-content hr {
+
+    .chapter-body-typography hr {
       border: 0;
       height: 1px;
-      background: var(--border-color);
-      margin: 32px 0;
+      background: var(--border-subtle);
+      margin: 28px 0;
     }
 
-    /* Specialized Box */
-    .chapter-inner-content div[style*="border-right: 4px solid"] {
-      background: var(--blockquote-bg) !important;
-      border: 1px solid var(--border-color) !important;
-      border-right: 5px solid var(--accent) !important;
+    .chapter-body-typography strong {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Specialized Box (للقارئ المتخصص) */
+    .chapter-body-typography div[style*="border-right: 4px solid"],
+    .chapter-body-typography div[style*="border-right:4px solid"] {
+      background: var(--special-box-bg) !important;
+      border: 1px solid var(--border-strong) !important;
+      border-right: 5px solid var(--special-box-border) !important;
       border-radius: var(--radius-md) !important;
-      padding: 24px !important;
-      margin: 32px 0 !important;
-      box-shadow: 0 4px 18px var(--accent-glow);
+      padding: clamp(16px, 3vw, 24px) !important;
+      margin: 28px 0 !important;
+      box-shadow: 0 4px 16px var(--accent-soft) !important;
     }
 
-    /* Tables */
-    .chapter-inner-content table {
+    /* 100% RESPONSIVE TABLES */
+    .table-responsive {
       width: 100%;
-      border-collapse: collapse;
-      margin: 24px 0;
-      font-family: var(--font-heading);
-      font-size: 0.92rem;
+      margin: 22px 0;
       overflow-x: auto;
-      display: block;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
     }
-    .chapter-inner-content th, 
-    .chapter-inner-content td {
-      padding: 12px 16px;
-      border: 1px solid var(--border-color);
+    .table-responsive table {
+      width: 100%;
+      min-width: 480px;
+      border-collapse: collapse;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+    }
+    .table-responsive th, 
+    .table-responsive td {
+      padding: 10px 14px;
+      border: 1px solid var(--border-subtle);
       text-align: right;
     }
-    .chapter-inner-content th {
+    .table-responsive th {
       background: var(--bg-surface-elevated);
       color: var(--accent);
       font-weight: 700;
+      white-space: nowrap;
     }
-    .chapter-inner-content tr:nth-child(even) {
+    .table-responsive tr:nth-child(even) {
       background: rgba(255, 255, 255, 0.02);
     }
 
-    /* Code Blocks */
-    .chapter-inner-content pre {
-      background: var(--code-bg);
-      border: 1px solid var(--code-border);
+    /* 100% RESPONSIVE CODE BLOCKS & SYNTAX */
+    .code-wrapper {
+      position: relative;
+      margin: 20px 0;
       border-radius: var(--radius-sm);
-      padding: 18px;
+      border: 1px solid var(--code-border);
+      background: var(--code-bg);
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .copy-code-btn {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 0.74rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 10;
+      transition: var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .copy-code-btn:hover {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+    .code-wrapper pre {
+      margin: 0;
+      padding: 16px;
       overflow-x: auto;
-      font-family: var(--font-code);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin: 24px 0;
       direction: ltr;
       text-align: left;
+      font-family: var(--font-code);
+      font-size: 0.86rem;
+      line-height: 1.62;
+      color: var(--code-text);
+      -webkit-overflow-scrolling: touch;
+      white-space: pre;
     }
-    .chapter-inner-content code {
+    .chapter-body-typography code {
       font-family: var(--font-code);
       background: var(--code-bg);
+      color: var(--code-text);
       padding: 2px 6px;
       border-radius: 4px;
-      font-size: 0.88em;
-      border: 1px solid var(--border-color);
+      font-size: 0.86em;
+      border: 1px solid var(--border-subtle);
+      direction: ltr;
+      display: inline-block;
+      unicode-bidi: embed;
     }
-    .chapter-inner-content pre code {
+    .code-wrapper pre code {
       background: transparent;
       padding: 0;
       border: 0;
+      color: inherit;
+      display: block;
     }
 
-    /* Checklists */
-    input[type="checkbox"] {
-      margin-left: 8px;
+    /* Interactive Checklists (Personal Security Checklist) */
+    .chapter-body-typography ul.checklist-parent,
+    .chapter-body-typography ul:has(.checklist-item),
+    ul:has(.checklist-item) {
+      list-style: none !important;
+      list-style-type: none !important;
+      padding-right: 0 !important;
+      margin-right: 0 !important;
+    }
+    .checklist-item {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin-bottom: 8px !important;
+    }
+    .checklist-row {
+      margin: 10px 0;
+    }
+    .checklist-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      padding: 9px 13px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      transition: var(--transition-fast);
+      user-select: none;
+    }
+    .checklist-label:hover {
+      background: var(--bg-surface-elevated);
+      border-color: var(--accent);
+    }
+    .checklist-label input[type="checkbox"] {
+      margin-top: 5px;
       accent-color: var(--accent);
-      width: 17px;
-      height: 17px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
       cursor: pointer;
     }
+    .checklist-text {
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--text-primary);
+    }
+    .checklist-label input[type="checkbox"]:checked ~ .checklist-text {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
 
-    /* Floating Quick Actions */
-    .floating-actions {
-      position: fixed;
-      bottom: 24px;
-      left: 24px;
+    /* Chapter Bottom Navigation (Next / Previous Buttons) */
+    .chapter-bottom-nav {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .chapter-nav-btn {
+      flex: 1;
+      max-width: 48%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      text-decoration: none;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition-fast);
+      min-height: 52px;
+    }
+    .chapter-nav-btn:hover {
+      background: var(--bg-hover);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .chapter-nav-btn.next-btn {
+      justify-content: flex-end;
+      text-align: left;
+    }
+    .chapter-nav-btn.prev-btn {
+      justify-content: flex-start;
+      text-align: right;
+    }
+    .nav-arrow {
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .nav-btn-text {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      z-index: 800;
     }
-    .floating-btn {
+    .nav-direction {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--font-heading);
+    }
+    .nav-title {
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 220px;
+    }
+    .chapter-nav-placeholder {
+      flex: 1;
+      max-width: 48%;
+    }
+
+    /* Floating Quick Scroll to Top */
+    #back-to-top {
+      position: fixed;
+      bottom: 22px;
+      left: 22px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
       background: var(--accent);
       color: #ffffff;
       border: none;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 14px var(--accent-glow);
-      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-fast);
+      z-index: 800;
     }
-    .floating-btn:hover {
-      transform: scale(1.1) translateY(-3px);
-      box-shadow: 0 8px 22px var(--accent-glow);
+    #back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    #back-to-top:hover {
+      transform: scale(1.08) translateY(-3px);
+      background: var(--accent-deep);
     }
 
-    /* Share Modal Popup */
-    #share-modal {
+    /* Toast Notification for Resuming Reading */
+    #resume-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1300;
+      transform: translateY(120px);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    #resume-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .toast-text {
+      font-size: var(--text-sm);
+      font-family: var(--font-heading);
+      color: var(--text-primary);
+    }
+    .toast-btn {
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 5px 12px;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .toast-close {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    /* Share Modal */
+    .modal-overlay {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0, 0, 0, 0.72);
       backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       z-index: 2000;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 16px;
     }
     .modal-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
       border-radius: var(--radius-lg);
-      padding: 28px;
-      max-width: 460px;
+      padding: clamp(20px, 4vw, 32px);
+      max-width: 440px;
       width: 100%;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      box-shadow: var(--shadow-lg);
       text-align: center;
     }
-    .share-links-grid {
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .modal-desc {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .share-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin: 20px 0;
+      gap: 10px;
+      margin-bottom: 18px;
     }
-    .share-channel-btn {
-      padding: 12px;
+    .share-btn {
+      padding: 11px;
       border-radius: var(--radius-sm);
       color: #ffffff;
       text-decoration: none;
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: opacity 0.2s;
+      gap: 6px;
+      min-height: 44px;
     }
-    .share-channel-btn:hover { opacity: 0.9; }
-    .btn-wa { background: #25D366; }
-    .btn-tg { background: #0088cc; }
-    .btn-x { background: #000000; border: 1px solid #333; }
-    .btn-fb { background: #1877F2; }
-    .btn-copy { background: var(--bg-surface-elevated); color: var(--text-primary); border: 1px solid var(--border-color); grid-column: span 2; }
+    .btn-whatsapp { background: #25D366; }
+    .btn-telegram { background: #0088cc; }
+    .btn-twitter { background: #000000; border: 1px solid #333; }
+    .btn-facebook { background: #1877F2; }
+    .btn-copy-url {
+      grid-column: span 2;
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+    }
 
-    /* Print Styles */
+    /* =============================================================
+       7. PRINT & PDF EXPORT
+       ============================================================= */
     @media print {
-      #progress-container,
-      header.top-header,
-      aside.book-sidebar,
-      .floating-actions,
-      #share-modal {
+      #progress-tracker,
+      header.app-header,
+      aside.book-drawer,
+      #drawer-backdrop,
+      #back-to-top,
+      #resume-toast,
+      .chapter-bottom-nav,
+      .copy-code-btn,
+      .modal-overlay {
         display: none !important;
       }
       body {
         background: #ffffff !important;
         color: #000000 !important;
         font-size: 11pt !important;
+        line-height: 1.6 !important;
       }
-      .app-layout {
+      .book-shell {
         display: block !important;
+      }
+      main.reading-stage {
+        padding: 0 !important;
         max-width: 100% !important;
       }
-      main.book-content {
-        padding: 0 !important;
-      }
       .chapter-card {
-        border: 0 !important;
+        border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
+        margin-bottom: 40pt !important;
+        page-break-after: always;
+      }
+      .hero-presentation-card {
+        border: none !important;
+        box-shadow: none !important;
         page-break-after: always;
       }
     }
 
-    /* Responsive Queries */
+    /* =============================================================
+       8. RESPONSIVE BREAKPOINTS (Tablet, Mobile, Ultra-Narrow)
+       ============================================================= */
     @media (max-width: 1024px) {
-      aside.book-sidebar {
+      aside.book-drawer {
         position: fixed;
-        right: -340px;
+        right: -360px;
         top: 0;
         bottom: 0;
+        width: min(320px, 86vw);
         height: 100vh;
-        z-index: 1500;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100dvh;
+        box-shadow: -8px 0 28px rgba(0, 0, 0, 0.55);
+        transition: right 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2000;
       }
-      aside.book-sidebar.open {
-        right: 0;
+      aside.book-drawer.open {
+        right: 0 !important;
       }
-      .menu-toggle {
-        display: inline-flex;
+      .drawer-top-bar {
+        display: flex;
       }
-      main.book-content {
-        padding: 24px 20px;
+      #drawer-backdrop {
+        z-index: 1900;
       }
-      .book-hero {
+      #drawer-backdrop.open {
+        display: block !important;
+      }
+      .nav-title {
+        max-width: 140px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --header-height: 54px;
+      }
+      .hero-presentation-card {
         flex-direction: column;
         text-align: center;
-        padding: 24px;
+        padding: 22px 16px;
+      }
+      .hero-cover-wrap img {
+        margin: 0 auto;
+        width: 175px;
+      }
+      .hero-official-quote {
+        border-right: none;
+        border-top: 3px solid var(--quote-border);
+      }
+      .chapter-bottom-nav {
+        flex-direction: column;
+      }
+      .chapter-nav-btn {
+        max-width: 100%;
+      }
+      .chapter-nav-placeholder {
+        display: none;
+      }
+      .btn-text-hide-sm {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header.app-header {
+        padding: 0 10px;
+      }
+      .brand-link {
+        font-size: 0.95rem;
+        gap: 6px;
+      }
+      .brand-badge {
+        font-size: 0.68rem;
+        padding: 2px 6px;
+      }
+      .header-actions {
+        gap: 4px;
+      }
+      .btn-action {
+        min-width: 36px;
+        height: 36px;
+        padding: 0 7px;
+        font-size: 0.8rem;
+      }
+      main.reading-stage {
+        padding: 12px 10px;
       }
       .chapter-card {
-        padding: 24px 18px;
+        padding: 18px 12px;
+        border-radius: var(--radius-md);
       }
-      .hero-cover-col img {
-        width: 180px;
+      .chapter-body-typography ul, 
+      .chapter-body-typography ol {
+        margin-right: 14px;
+        padding-right: 8px;
+      }
+      .nav-title {
+        max-width: 200px;
+      }
+      #resume-toast {
+        left: 12px;
+        right: 12px;
+        bottom: 16px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .brand-link span:not(.brand-badge) {
+        display: none;
+      }
+      .btn-action {
+        min-width: 32px;
+        height: 32px;
+        padding: 0 5px;
+        font-size: 0.74rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Reading Progress Bar -->
-  <div id="progress-container">
+  <!-- Top Reading Progress Indicator -->
+  <div id="progress-tracker">
     <div id="progress-bar"></div>
   </div>
 
   <!-- Header -->
-  <header class="top-header">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <button id="menu-btn" class="icon-btn menu-toggle" aria-label="فتح الفهرس">
-        <span>☰</span>
-        <span>الفهرس</span>
+  <header class="app-header">
+    <div class="header-right">
+      <button id="menu-btn" class="btn-action" aria-label="فتح الفهرس" title="فهرس الفصول">
+        <span style="font-size: 1.15rem;">☰</span>
+        <span class="btn-text-hide-sm">الفهرس</span>
       </button>
-      <a href="#hero" class="header-brand">
-        <span class="author-tag">جنكيز</span>
+
+      <a href="#hero" class="brand-link">
+        <span class="brand-badge">جنكيز</span>
         <span>الوعي الرقمي</span>
       </a>
     </div>
 
     <div class="header-actions">
       <!-- Theme Switcher -->
-      <button id="theme-btn" class="icon-btn" title="تغيير مظهر القراءة">
+      <button id="theme-btn" class="btn-action" title="تغيير نمط القراءة (ليلي / ورقي / نهاري)" aria-label="مظهر القراءة">
         <span id="theme-icon">🌙</span>
-        <span id="theme-label" style="display:none;">الوضع</span>
+        <span id="theme-label" class="btn-text-hide-sm">ليلي</span>
       </button>
 
-      <!-- Font Resizing -->
-      <button id="font-decrease" class="icon-btn" title="تصغير الخط">A-</button>
-      <button id="font-increase" class="icon-btn" title="تكبير الخط">A+</button>
+      <!-- Font Resizing Controls -->
+      <button id="font-decrease" class="btn-action" title="تصغير حجم الخط" aria-label="تصغير الخط">A-</button>
+      <button id="font-increase" class="btn-action" title="تكبير حجم الخط" aria-label="تكبير الخط">A+</button>
 
-      <!-- Print Button -->
-      <button onclick="window.print()" class="icon-btn" title="طباعة أو تصدير PDF">
+      <!-- Print / PDF Button -->
+      <button onclick="window.print()" class="btn-action btn-text-hide-sm" title="طباعة أو تصدير بصيغة PDF">
         <span>🖨️</span>
-        <span class="btn-text-resp">PDF</span>
+        <span>PDF</span>
       </button>
 
       <!-- Share Button -->
-      <button id="share-btn" class="icon-btn" style="background: var(--accent); color: #fff;" title="مشاركة الكتاب">
+      <button id="share-btn" class="btn-action btn-primary" title="مشاركة الكتاب">
         <span>🔗</span>
         <span>مشاركة</span>
       </button>
     </div>
   </header>
 
-  <!-- App Layout -->
-  <div class="app-layout">
+  <!-- Mobile Drawer Backdrop -->
+  <div id="drawer-backdrop" aria-hidden="true"></div>
+
+  <!-- Book Shell -->
+  <div class="book-shell">
     
-    <!-- Sidebar -->
-    <aside class="book-sidebar" id="sidebar">
-      <div class="sidebar-cover-card">
-        <img src="front_cover.jpg" alt="غلاف كتاب الوعي الرقمي">
-        <div class="sidebar-book-title">الوعي الرقمي</div>
-        <div class="sidebar-book-author">تأليف: جنكيز</div>
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="book-drawer" id="book-drawer" aria-label="فهرس فصول الكتاب">
+      <div class="drawer-top-bar">
+        <span class="drawer-top-title">📖 فهرس الكتاب</span>
+        <button id="drawer-close-btn" class="drawer-close-btn" aria-label="إغلاق الفهرس">✕</button>
       </div>
 
-      <div class="toc-search-wrap">
-        <input type="text" id="toc-search" placeholder="🔍 ابحث في عناوين الفصول...">
+      <div class="drawer-header-card">
+        <img src="front_cover.jpg" alt="غلاف كتاب الوعي الرقمي" class="drawer-cover-thumb">
+        <h2 class="drawer-book-title">الوعي الرقمي</h2>
+        <div class="drawer-book-meta">المعرفة التي تحميك وتصنع مستقبلك</div>
+        <div style="font-size: 0.78rem; color: var(--accent); font-weight: 700; margin-top: 4px;">تأليف: جنكيز</div>
       </div>
 
-      <nav class="toc-nav" id="toc-nav">
+      <div class="drawer-search-box">
+        <input type="text" id="toc-search" placeholder="🔍 ابحث في الفصول والموضوعات..." aria-label="البحث في الفهرس">
+      </div>
+
+      <nav class="drawer-toc-nav" id="drawer-toc-nav">
         
-    <a href="#front-matter" class="toc-link" data-target="front-matter">
+    <a href="#front-matter" class="toc-link" data-target="front-matter" id="toc-link-front-matter">
       <span class="toc-badge">تمهيد</span>
-      <span class="toc-text">الصفحات التمهيدية</span>
+      <span class="toc-text">الصفحات التمهيدية والبيانات الرسمية</span>
     </a>
     
 
-    <a href="#ch1" class="toc-link" data-target="ch1">
+    <a href="#ch1" class="toc-link" data-target="ch1" id="toc-link-ch1">
       <span class="toc-badge">فصل 1</span>
       <span class="toc-text">الفصل الأول: الإنسان في العصر الرقمي</span>
     </a>
     
 
-    <a href="#ch2" class="toc-link" data-target="ch2">
+    <a href="#ch2" class="toc-link" data-target="ch2" id="toc-link-ch2">
       <span class="toc-badge">فصل 2</span>
       <span class="toc-text">الفصل الثاني: كيف تعمل البرامج والتطبيقات؟</span>
     </a>
     
 
-    <a href="#ch3" class="toc-link" data-target="ch3">
+    <a href="#ch3" class="toc-link" data-target="ch3" id="toc-link-ch3">
       <span class="toc-badge">فصل 3</span>
       <span class="toc-text">الفصل الثالث: البرمجة وفن التفكير المنطقي</span>
     </a>
     
 
-    <a href="#ch4" class="toc-link" data-target="ch4">
+    <a href="#ch4" class="toc-link" data-target="ch4" id="toc-link-ch4">
       <span class="toc-badge">فصل 4</span>
       <span class="toc-text">الفصل الرابع: الأمن السيبراني وفهم المخاطر</span>
     </a>
     
 
-    <a href="#ch5" class="toc-link" data-target="ch5">
+    <a href="#ch5" class="toc-link" data-target="ch5" id="toc-link-ch5">
       <span class="toc-badge">فصل 5</span>
       <span class="toc-text">الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟</span>
     </a>
     
 
-    <a href="#ch6" class="toc-link" data-target="ch6">
+    <a href="#ch6" class="toc-link" data-target="ch6" id="toc-link-ch6">
       <span class="toc-badge">فصل 6</span>
       <span class="toc-text">الفصل السادس: بناء البرمجيات والأنظمة الآمنة</span>
     </a>
     
 
-    <a href="#ch7" class="toc-link" data-target="ch7">
+    <a href="#ch7" class="toc-link" data-target="ch7" id="toc-link-ch7">
       <span class="toc-badge">فصل 7</span>
       <span class="toc-text">الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان</span>
     </a>
     
 
-    <a href="#ch8" class="toc-link" data-target="ch8">
+    <a href="#ch8" class="toc-link" data-target="ch8" id="toc-link-ch8">
       <span class="toc-badge">فصل 8</span>
       <span class="toc-text">الفصل الثامن: أخطاء رقمية قد تغير حياتك</span>
     </a>
     
 
-    <a href="#ch9" class="toc-link" data-target="ch9">
+    <a href="#ch9" class="toc-link" data-target="ch9" id="toc-link-ch9">
       <span class="toc-badge">فصل 9</span>
       <span class="toc-text">الفصل التاسع: التكنولوجيا في خدمة المجتمع</span>
     </a>
     
 
-    <a href="#ch10" class="toc-link" data-target="ch10">
+    <a href="#ch10" class="toc-link" data-target="ch10" id="toc-link-ch10">
       <span class="toc-badge">فصل 10</span>
-      <span class="toc-text">الفصل العاشر: من المعرفة إلى التأثير (الخطة)</span>
+      <span class="toc-text">الفصل العاشر: من المعرفة إلى التأثير (الخطة التطبيقية)</span>
     </a>
     
 
-    <a href="#back-matter" class="toc-link" data-target="back-matter">
-      <span class="toc-badge">المراجع والختام</span>
+    <a href="#back-matter" class="toc-link" data-target="back-matter" id="toc-link-back-matter">
+      <span class="toc-badge">الختام والمراجع</span>
       <span class="toc-text">الخاتمة ومعجم المصطلحات والمراجع</span>
     </a>
     
       </nav>
     </aside>
 
-    <!-- Main Content -->
-    <main class="book-content">
+    <!-- Reading Stage -->
+    <main class="reading-stage" id="reading-stage">
       
-      <!-- Book Hero Section -->
-      <section id="hero" class="book-hero">
-        <div class="hero-cover-col">
-          <img src="front_cover.jpg" alt="غلاف كتاب الوعي الرقمي الكامل">
+      <!-- Hero Presentation -->
+      <section id="hero" class="hero-presentation-card">
+        <div class="hero-cover-wrap">
+          <img src="front_cover.jpg" alt="غلاف كتاب الوعي الرقمي - جنكيز">
         </div>
-        <div class="hero-info-col">
-          <h1 class="hero-title">الوعي الرقمي</h1>
-          <div class="hero-subtitle">المعرفة التي تحميك وتصنع مستقبلك</div>
+        <div class="hero-details-wrap">
+          <h1 class="hero-book-title">الوعي الرقمي</h1>
+          <div class="hero-book-subtitle">المعرفة التي تحميك وتصنع مستقبلك</div>
           
-          <div class="hero-quote">
+          <div class="hero-official-quote">
             «المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».
           </div>
 
-          <div class="hero-meta-grid">
-            <div class="hero-meta-item">
-              <span>المؤلف</span>
-              <strong>جنكيز</strong>
-            </div>
-            <div class="hero-meta-item">
-              <span>عدد الفصول</span>
-              <strong>10 فصول كاملة</strong>
-            </div>
-            <div class="hero-meta-item">
-              <span>الصفحات التقديرية</span>
-              <strong>140 صفحة</strong>
-            </div>
-            <div class="hero-meta-item">
-              <span>اللغة والنوع</span>
-              <strong>عربية فصحى / تقني دفاعي</strong>
-            </div>
+          <div class="hero-specs-row">
+            <span class="hero-spec-pill">المؤلف: <strong>جنكيز</strong></span>
+            <span class="hero-spec-pill">المحتوى: <strong>10 فصول كاملة</strong></span>
+            <span class="hero-spec-pill">الحجم: <strong>140 صفحة مقدرة</strong></span>
+            <span class="hero-spec-pill">اللغة: <strong>عربية فصحى حديثة</strong></span>
+            <span class="hero-spec-pill">النوع: <strong>تقني دفاعي وتعليمي</strong></span>
           </div>
 
-          <a href="#front-matter" class="icon-btn" style="background: var(--accent); color:#fff; font-size: 1.05rem; padding: 10px 24px; border-radius: 999px;">
+          <a href="#front-matter" class="btn-action btn-primary" style="padding: 10px 24px; font-size: 1rem; border-radius: var(--radius-pill); text-decoration: none;">
             <span>📖 ابدأ القراءة الآن</span>
           </a>
         </div>
       </section>
 
-      <!-- Chapters Sections -->
+      <!-- Complete Book Chapters Sections -->
       
-    <section id="front-matter" class="book-chapter-section" data-title="الصفحات التمهيدية">
+    <article id="front-matter" class="book-chapter-section" data-title="الصفحات التمهيدية والبيانات الرسمية" data-index="0">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">تمهيد</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 1 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الوعي الرقمي</h1>
 <h2>المعرفة التي تحميك وتصنع مستقبلك</h2>
 <hr />
@@ -901,8 +1435,6 @@
 <p>«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».</p>
 </blockquote>
 <hr />
-<div style="page-break-after: always;"></div>
-
 <h2>صفحة حقوق النشر والبيانات الببليوغرافية</h2>
 <p><strong>عنوان الكتاب:</strong> الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك<br />
 <strong>المؤلف:</strong> جنكيز<br />
@@ -924,8 +1456,6 @@
 <p>المعلومات والنماذج والأكواد البرمجية الواردة في هذا الكتاب مُعدة حصرياً لأغراض تعليمية، وتوعوية، وتثقيفية، ودفاعية لتعزيز الأمن الرقمي الشخصي والمؤسسي، وحماية الأنظمة والبيانات، ونشر الفكر البرمجي الإيجابي.</p>
 <p>المؤلف والناشر يُخليان مسؤوليتهما القانونية والأخلاقية الكاملة عن أي استخدام غير مشروع، أو غير مصرح به، أو أي محاولة لإساءة توظيف المفاهيم التقنية الواردة هنا لاختراق الأنظمة، أو التعدي على خصوصية الأفراد، أو انتهاك القوانين واللوائح التنظيمية المحلية والدولية لمكافحة الجرائم المعلوماتية. إن تطبيق أي تقييم أمني عملي يجب أن يتم حصرياً داخل بيئات افتراضية معزولة، أو على أنظمة يمتلك المستخدم إذناً خطياً ورسمياً مسبقاً باختبارها.</p>
 <hr />
-<div style="page-break-after: always;"></div>
-
 <h2>الإهداء</h2>
 <div align="center">
 
@@ -946,8 +1476,6 @@
 </div>
 
 <hr />
-<div style="page-break-after: always;"></div>
-
 <h2>كلمة المؤلف: جنكيز</h2>
 <p><em>(المسودة المقترحة المعروضة على المؤلف للاعتماد قبل الطباعة)</em></p>
 <p>بسم الله الرحمن الرحيم،</p>
@@ -959,8 +1487,6 @@
 <p>أضع هذا الكتاب بين يديك راجياً أن يكون لك مصباحاً ينير دروب هذا الفضاء الفسيح، ولبنة تسهم في بناء مجتمع عربي واعٍ رقمياً، وقادرٍ على حماية حاضره وصناعة مستقبله.</p>
 <p><strong>جنكيز</strong></p>
 <hr />
-<div style="page-break-after: always;"></div>
-
 <h2>المقدمة: لماذا نحتاج إلى الوعي الرقمي؟</h2>
 <p>لم يشهد التاريخ البشري تحولاً في أنماط العيش والتواصل والعمل بالسرعة والعمق اللذين أحدثتهما الثورة الرقمية خلال العقود القليلة الماضية. فقبل ثلاثين عاماً فقط، كان الاتصال الفوري عبر القارات حلماً نادراً، وكانت قواعد البيانات والمعالجات الإلكترونية حكراً على المؤسسات العسكرية والجامعات البحثية الكبرى. أما اليوم، فإن كل واحد منا يحمل في جيبه حاسوباً يفوق في قدرته الحسابية الحواسيب التي أدارت أولى رحلات الإنسان إلى الفضاء، متصلاً بشبكة تضم مليارات البشر، وتتحرك عبرها تريليونات الدولارات وتدفقات لا نهائية من البيانات والمعلومات في كل لحظة.</p>
 <p>غير أن هذا التطور المذهل حمل معه مفارقة لافتة: <strong>كلما ازدادت التكنولوجيا ذكاءً وسهولة في الاستخدام، قلّت بالضرورة حاجة المستخدم العادي للتفكير في كيفية عملها</strong>. لقد صُممت واجهات التطبيقات الحديثة لتكون فائقة السلاسة والإغراء، بحيث يستطيع طفل صغير أو شيخ مسن أن يتفاعل معها بلمسة إصبع. ولكن، خلف هذه الواجهات المصقولة اللامعة، تكمن منظومة برمجية وشبكية وأمنية شديدة التعقيد، تدار فيها معارك حقيقية حول البيانات والخصوصية والسيطرة.</p>
@@ -989,16 +1515,31 @@
 <p>لقد صِيغت كل صفحة من صفحات هذا الكتاب لتخاطب عقلك بلغة راقية وأمثلة حية من واقعك اليومي، مع تخصيص مربعات <strong>«للقارئ المتخصص»</strong> لكل من يريد الغوص في أسرار الهندسة العميقة والبروتوكولات الدولية.</p>
 <p>أهلاً بك في هذه الرحلة المعرفية الشيقة، متمنياً لك قراءة ممتعة تُحدث في حياتك الرقمية فرقاً حقيقياً ومستداماً.</p>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          <div class="chapter-nav-placeholder"></div>
+          
+        <a href="#ch1" class="chapter-nav-btn next-btn" data-target="ch1">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل الأول: الإنسان في العصر الرقمي</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch1" class="book-chapter-section" data-title="الفصل الأول: الإنسان في العصر الرقمي">
+    <article id="ch1" class="book-chapter-section" data-title="الفصل الأول: الإنسان في العصر الرقمي" data-index="1">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 1</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 2 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل الأول: الإنسان في العصر الرقمي</h1>
 <hr />
 <blockquote>
@@ -1191,16 +1732,39 @@
 <li><strong>Submarine Cable Map (<code>submarinecablemap.com</code>):</strong> خريطة تفاعلية عالمية موثوقة تستعرض مسارات الكابلات البحرية الممتدة في قيعان المحيطات.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#front-matter" class="chapter-nav-btn prev-btn" data-target="front-matter">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الصفحات التمهيدية والبيانات الرسمية</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch2" class="chapter-nav-btn next-btn" data-target="ch2">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل الثاني: كيف تعمل البرامج والتطبيقات؟</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch2" class="book-chapter-section" data-title="الفصل الثاني: كيف تعمل البرامج والتطبيقات؟">
+    <article id="ch2" class="book-chapter-section" data-title="الفصل الثاني: كيف تعمل البرامج والتطبيقات؟" data-index="2">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 2</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 3 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل الثاني: كيف تعمل البرامج والتطبيقات؟</h1>
 <hr />
 <blockquote>
@@ -1278,7 +1842,7 @@
 <h2>7. الخوادم السحابية ونماذج الحوسبة (IaaS, PaaS, SaaS)</h2>
 <p>في السابق، كانت أي شركة تريد إطلاق تطبيق تضطر لشراء حواسيب ضخمة ووضعها في غرفة مبردة واستئجار خطوط إنترنت باهظة وفريق صيانة. أما اليوم، فالحوسبة السحابية (Cloud Computing) أتاحت استئجار هذه الموارد بضغطة زر.</p>
 <p>تنقسم الخدمات السحابية عالمياً إلى ثلاثة نماذج مشهورة:</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th style="text-align: left;">النموذج</th>
@@ -1307,7 +1871,7 @@
 <td style="text-align: left;">Gmail, Google Drive, Office 365</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <h2>8. واجهات برمجة التطبيقات (APIs): جسور التفاهم الرقمي</h2>
 <p>إذا أردت أن تفهم سحر العالم الرقمي الحديث، فعليك أن تفهم ما هو <strong>الـ API (Application Programming Interface)</strong>.</p>
@@ -1326,14 +1890,14 @@
 <hr />
 <h2>9. تفكيك رحلة واقعية: ماذا يحدث عند تسجيل الدخول في تطبيق؟</h2>
 <p>لندمج ما تعلمناه في سيناريو واحد دقيق: أنت تفتح تطبيقك البنكي، وتكتب اسم المستخدم وكلمة المرور، ثم تضغط "تسجيل الدخول". ماذا يجري خلف الكواليس؟</p>
-<pre><code>[هاتفك الذكي] ---&gt; (طلب مشفر بـ HTTPS) ---&gt; [بوابة الـ API]
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code>[هاتفك الذكي] ---&gt; (طلب مشفر بـ HTTPS) ---&gt; [بوابة الـ API]
                                                    |
                                                    v
                                           [خادم التوثيق]
                                                    |
                                                    v
                                           [قاعدة البيانات المشفرة]
-</code></pre>
+</code></pre></div>
 <ol>
 <li><strong>التحقق المحلي (Client-side Validation):</strong> يتأكد التطبيق في هاتفك من أنك لم تترك الحقول فارغة وأن صيغة البريد صحيحة.</li>
 <li><strong>التشفير عبر النقل (TLS/HTTPS):</strong> تُشفر كلمة المرور في حزمة بيانات آمنة قبل خروجها من هاتفك حتى لا يقرأها أي شخص يتنصت على شبكة الواي فاي.</li>
@@ -1411,16 +1975,39 @@
 <li><strong>Postman API Architecture Guide:</strong> مقالات تعليمية موثوقة حول تصميم وتكامل واجهات برمجة التطبيقات واختبارها.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch1" class="chapter-nav-btn prev-btn" data-target="ch1">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل الأول: الإنسان في العصر الرقمي</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch3" class="chapter-nav-btn next-btn" data-target="ch3">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل الثالث: البرمجة وفن التفكير المنطقي</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch3" class="book-chapter-section" data-title="الفصل الثالث: البرمجة وفن التفكير المنطقي">
+    <article id="ch3" class="book-chapter-section" data-title="الفصل الثالث: البرمجة وفن التفكير المنطقي" data-index="3">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 3</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 4 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل الثالث: البرمجة وفن التفكير المنطقي</h1>
 <hr />
 <blockquote>
@@ -1452,61 +2039,61 @@
 <hr />
 <h2>3. لغة بايثون (Python): لماذا هي بوابتنا المثالية؟</h2>
 <p>تتميز لغة بايثون بأنها صُممت من الأساس لتكون <strong>مقروءة، وبسيطة، وأنيقة</strong>. فبينما تتطلب بعض اللغات كتابة 10 أسطر معقدة لطباعة جملة، تفعلها بايثون في سطر واحد بديهي:</p>
-<pre><code class="language-python">print(&quot;مرحباً بك في عالم الوعي الرقمي!&quot;)
-</code></pre>
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python">print(&quot;مرحباً بك في عالم الوعي الرقمي!&quot;)
+</code></pre></div>
 <p>تُستخدم بايثون اليوم في كبرى الشركات العالمية والجامعات: في تطوير مواقع الويب، في تحليل البيانات، في تطبيقات الأمن السيبراني الدفاعي، وفي أبحاث الذكاء الاصطناعي الأكثر تطوراً.</p>
 <hr />
 <h2>4. اللبنات التأسيسية للبرمجة (The Core Building Blocks)</h2>
 <p>مهما بلغت درجة تعقيد أي برنامج في العالم—من لعبة ثلاثية الأبعاد إلى نظام توجيه الصواريخ—فإنه مبني في جوهره من أربعة عناصر رئيسية:</p>
 <h3>أ) المتغيرات وأنواع البيانات (Variables &amp; Data Types)</h3>
 <p><strong>المتغير</strong> هو بمثابة "صندوق تخزين يحمل اسماً" داخل ذاكرة الحاسوب المؤقتة (RAM)، تضع فيه قيمة لاستخدامها لاحقاً:</p>
-<pre><code class="language-python"># أمثلة على المتغيرات في بايثون
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python"># أمثلة على المتغيرات في بايثون
 user_name = &quot;جنكيز&quot;           # نص (String / str)
 user_age = 25                 # عدد صحيح (Integer / int)
 account_balance = 1500.75     # عدد عشري (Float / float)
 is_authenticated = True       # قيمة منطقية (Boolean: True أو False)
-</code></pre>
+</code></pre></div>
 <h3>ب) الشروط واتخاذ القرار (Conditionals: if / else)</h3>
 <p>البرنامج الذكي هو الذي يعرف كيف يتخذ قرارات وفق المعطيات:</p>
-<pre><code class="language-python">password_attempts = 3
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python">password_attempts = 3
 
 if password_attempts &gt;= 3:
     print(&quot;تم قفل الحساب مؤقتاً لحمايتك!&quot;)
 else:
     print(&quot;يمكنك محاولة كتابة كلمة المرور مجدداً.&quot;)
-</code></pre>
+</code></pre></div>
 <h3>ج) التكرار الذكي والحلقات (Loops: for / while)</h3>
 <p>إذا طلبت من إنسان كتابة جملة 1000 مرة، فسيشعر بالملل والإرهاق بعد المرة العاشرة. أما الحاسوب، فيكرر المهمة ملايين المرات في ثانية واحدة دون أدنى تذمر:</p>
-<pre><code class="language-python"># فحص قائمة الرسائل الواردة لكشف الروابط المشبوهة
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python"># فحص قائمة الرسائل الواردة لكشف الروابط المشبوهة
 messages = [&quot;أهلاً بك&quot;, &quot;مبروك ربحت مليون دولار! انقر هنا&quot;, &quot;اجتماع العمل غداً&quot;]
 
 for msg in messages:
     if &quot;مبروك ربحت&quot; in msg:
         print(f&quot;تحذير: رسالة احتيال محتملة -&gt; {msg}&quot;)
-</code></pre>
+</code></pre></div>
 <h3>د) الدوال وإعادة الاستخدام (Functions &amp; Modularity)</h3>
 <p>بدلاً من إعادة كتابة نفس الكود 50 مرة في أماكن مختلفة، نجمع الخطوات داخل <strong>«دالة» (Function)</strong> ونناديها باسمها كلما احتجنا إليها:</p>
-<pre><code class="language-python">def calculate_tax(amount):
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python">def calculate_tax(amount):
     &quot;&quot;&quot;دالة تحسب الضريبة بنسبة 15%&quot;&quot;&quot;
     return amount * 0.15
 
 # استدعاء الدالة بسهولة
 final_tax = calculate_tax(200)
 print(f&quot;قيمة الضريبة هي: {final_tax} ريال&quot;)
-</code></pre>
+</code></pre></div>
 <hr />
 <h2>5. معالجة الأخطاء والتعامل مع الاستثناءات (Error Handling)</h2>
 <p>المبرمج المبتدئ يفترض دائماً أن المستخدم سيكتب مدخلات مثالية ولن تقع أية مشكلة في الشبكة. أما المبرمج المحترف، فيتوقع الخطأ قبل وقوعه ويحصن برنامجه ضده!</p>
 <p>ماذا يحدث لو طلب برنامجك من المستخدم إدخال عمره، فكتب كلمة "خمسة وعشرون" بالحروف بدلاً من الأرقام؟<br />
 بدون حماية، سينهار البرنامج ويتوقف فوراً (Crashes).</p>
 <p>لحماية البرنامج، نستخدم ما يُسمى <strong>كتلة الحماية (try / except)</strong>:</p>
-<pre><code class="language-python">try:
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python">try:
     age_input = input(&quot;من فضلك اكتب عمرك بالأرقام: &quot;)
     age = int(age_input) # محاولة تحويل النص إلى رقم
     print(f&quot;عمرك المسجل هو: {age} عاماً&quot;)
 except ValueError:
     print(&quot;تنبيه لطيف: يرجى إدخال أرقام صحيحة فقط (مثال: 25) وليس كلمات.&quot;)
-</code></pre>
+</code></pre></div>
 <p>بهذه الطريقة البسيطة، يظل البرنامج ثابتاً ورصيناً ويرشد المستخدم باحترام دون أن ينهار.</p>
 <hr />
 <h2>6. قواعد الكود النظيف (Clean Code)</h2>
@@ -1520,7 +2107,7 @@ except ValueError:
 <h2>7. مشروع الفصل التطبيقي: برنامج إدارة الميزانية والتبرع المجتمعي</h2>
 <p>تطبيقاً عملياً لرسالة هذا الكتاب في ربط البرمجة بخدمة المجتمع، سنقوم الآن بكتابة وتشغيل برنامج متكامل بلغة بايثون لإدارة المصروفات الشهرية وحساب نسبة مخصصة للتبرع ودعم المحتاجين.</p>
 <p>هذا البرنامج آمن تماماً، ويعمل محلياً، ويجمع بين: المتغيرات، الدوال، الحلقات، الشروط، ومعالجة الأخطاء.</p>
-<pre><code class="language-python"># ==============================================================
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python"># ==============================================================
 # مشروع الفصل الثالث: مدير الميزانية والمساهمة المجتمعية
 # تأليف وفكرة: كتاب الوعي الرقمي - جنكيز
 # ==============================================================
@@ -1577,7 +2164,7 @@ if __name__ == &quot;__main__&quot;:
 
     report = calculate_budget(monthly_income, monthly_expenses)
     display_report(report)
-</code></pre>
+</code></pre></div>
 <h3>تفكيك الكود البرمجي:</h3>
 <ul>
 <li><strong><code>def calculate_budget(...)</code></strong>: تعريف دالة مرنة تقبل الدخل وقائمة المصروفات وتحسب العمليات بدقة متناهية.</li>
@@ -1635,16 +2222,39 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin):</strong> المرجع العالمي الأهم في كتابة الشيفرات البرمجية النظيفة والمستدامة.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch2" class="chapter-nav-btn prev-btn" data-target="ch2">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل الثاني: كيف تعمل البرامج والتطبيقات؟</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch4" class="chapter-nav-btn next-btn" data-target="ch4">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل الرابع: الأمن السيبراني وفهم المخاطر</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch4" class="book-chapter-section" data-title="الفصل الرابع: الأمن السيبراني وفهم المخاطر">
+    <article id="ch4" class="book-chapter-section" data-title="الفصل الرابع: الأمن السيبراني وفهم المخاطر" data-index="4">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 4</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 5 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل الرابع: الأمن السيبراني وفهم المخاطر الرقمية</h1>
 <hr />
 <blockquote>
@@ -1690,13 +2300,13 @@ if __name__ == &quot;__main__&quot;:
 <hr />
 <h2>4. ثالوث الأمان المعلوماتي الكلاسيكي (CIA Triad)</h2>
 <p>على مدار أكثر من أربعة عقود، اعتمد مهندسو الأمن العالميون نموذجاً قياسياً يمثل الأضلاع الثلاثة الأساسية لحماية أي معلومة أو نظام، يُعرف عالمياً بـ <strong>ثالوث CIA</strong>:</p>
-<pre><code>                  [السرية - Confidentiality]
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code>                  [السرية - Confidentiality]
                            /\
                           /  \
                          /    \
                         /      \
   [السلامة - Integrity] -------- [التوافر - Availability]
-</code></pre>
+</code></pre></div>
 <h3>أ) السرية (Confidentiality): "لا يقرأها إلا من يحق له"</h3>
 <p>ضمان أن البيانات لا يطلع عليها إلا الأشخاص أو الأنظمة المصرح لهم فقط.<br />
 <em>أدوات تحقيقها:</em> التشفير، كلمات المرور القوية، الصلاحيات المحدودة.</p>
@@ -1823,16 +2433,39 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>MITRE ATT&amp;CK Framework (<code>attack.mitre.org</code>):</strong> الموسوعة المفتوحة الأكبر في العالم لتحليل سلوكيات المهاجمين والتكتيكات الدفاعية.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch3" class="chapter-nav-btn prev-btn" data-target="ch3">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل الثالث: البرمجة وفن التفكير المنطقي</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch5" class="chapter-nav-btn next-btn" data-target="ch5">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch5" class="book-chapter-section" data-title="الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟">
+    <article id="ch5" class="book-chapter-section" data-title="الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟" data-index="5">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 5</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 6 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟ (الدليل العملي)</h1>
 <hr />
 <blockquote>
@@ -1945,11 +2578,11 @@ if __name__ == &quot;__main__&quot;:
 <h2>9. قاعدة النسخ الاحتياطي الذهبية (3-2-1)</h2>
 <p>تخيل أن هاتفك سقط في البحر الآن، أو أن حاسوبك أصابته برمجية فدية شفرت كل ذكريات طفولة أبنائك ومستندات عملك الهامة. ماذا تفعل؟</p>
 <p>إذا كنت تطبق <strong>قاعدة 3-2-1 للنسخ الاحتياطي المعتمدة عالمياً</strong>، فستبتسم وتشتري جهازاً جديداً وتستعيد كل شيء في نصف ساعة!</p>
-<pre><code>القاعدة الذهبية (3-2-1):
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code>القاعدة الذهبية (3-2-1):
 [ 3 ] احتفظ بثلاث نسخ من بياناتك المهمة (النسخة الأصلية + نسختان احتياطيتان).
 [ 2 ] خزن النسخ على نوعين مختلفين من وسائط التخزين (قرص صلب خارجي + خدمة سحابية).
 [ 1 ] احتفظ بنسخة واحدة على الأقل في موقع جغرافي بعيد خارج منزلك (نسخة سحابية مشفرة).
-</code></pre>
+</code></pre></div>
 <hr />
 <h2>10. خطط الطوارئ الفورية (Emergency Response Playbooks)</h2>
 <h3>السيناريو أ: ماذا تفعل فوراً إذا فُقد أو سُرق هاتفك؟</h3>
@@ -1968,27 +2601,27 @@ if __name__ == &quot;__main__&quot;:
 <hr />
 <h2>11. قائمة الفحص الذاتي للأمن الرقمي (Personal Security Checklist)</h2>
 <p>ضع علامة (✔) أمام كل معيار تطبقه حالياً لتقيس مستوى درعك الرقمي:</p>
-<ul>
-<li>[ ] 1. أستخدم عبارات مرور طويلة ومختلفة لكل حساب من حساباتي ولا أكرر كلمة مرور أبداً.</li>
-<li>[ ] 2. أستخدم مدير كلمات مرور موثوق يحفظ بياناتي في خزينة مشفرة.</li>
-<li>[ ] 3. فعلت المصادقة الثنائية (MFA) عبر تطبيق توثيق لبريدي وحساباتي البنكية والاجتماعية.</li>
-<li>[ ] 4. لا أشارك رموز التحقق (OTP) مع أي كائن كان، حتى لو ادعى أنه موظف البنك.</li>
-<li>[ ] 5. شاشة هاتفي مقفلة برمز مرور معقد لا يقل عن 6 أرقام مع القياسات البيومترية.</li>
-<li>[ ] 6. أحدث نظام تشغيل هاتفي وحاسوبي وتطبيقاتي بانتظام دون تأجيل.</li>
-<li>[ ] 7. أغلقت إمكانية تثبيت التطبيقات من مصادر مجهولة على جهازي.</li>
-<li>[ ] 8. راجعت صلاحيات التطبيقات وأغلقت وصول الكاميرا والميكروفون عن البرامج التي لا تحتاجهما.</li>
-<li>[ ] 9. أمتلك نسختين احتياطيتين من ملفاتي وصوري الهامة وفق قاعدة (3-2-1).</li>
-<li>[ ] 10. لا أنقر على روابط الشحنات أو تحديث البيانات في الرسائل النصية القصيرة (SMS).</li>
-<li>[ ] 11. أتأكد من شريط عنوان المتصفح بدقة قبل كتابة بيانات دخولي في أي موقع.</li>
-<li>[ ] 12. لدي بريد إلكتروني خاص ومحمي للمعاملات الرسمية منفصل عن بريد الترفيه والتسوق.</li>
-<li>[ ] 13. راجعت إعدادات الخصوصية في منصات التواصل وجعلت منشوراتي العائلية مقتصرة على الأصدقاء فقط.</li>
-<li>[ ] 14. لا أتصل بشبكات الواي فاي العامة في المقاهي لإجراء معاملات مالية أو فتح بريد العمل إلا عبر شبكة افتراضية خاصة (VPN) موثوقة.</li>
-<li>[ ] 15. علمت أطفالي مبدأ المصارحة التامة في حال تعرضهم لأي موقف مريب على الإنترنت.</li>
-<li>[ ] 16. مفعل ميزة العثور على جهازي عن بُعد وقادر على مسحه في حال السرقة.</li>
-<li>[ ] 17. قمت بتشفير القرص الصلب لحاسوبي الشخصي (عبر BitLocker في ويندوز أو FileVault في ماك).</li>
-<li>[ ] 18. أتحقق دورياً من قائمة الجلسات والأجهزة المتصلة بحساباتي وأطرد الأجهزة القديمة.</li>
-<li>[ ] 19. قمت بتغطية كاميرا الحاسوب بغطاء فيزيائي عند عدم الاستخدام.</li>
-<li>[ ] 20. أنقل هذه المعرفة لأهلي وأصدقائي تذكيراً بشعار: «المعرفة قوة، وقيمتها فيما نقدمه بها للآخرين».</li>
+<ul class="checklist-parent">
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">1. أستخدم عبارات مرور طويلة ومختلفة لكل حساب من حساباتي ولا أكرر كلمة مرور أبداً.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">2. أستخدم مدير كلمات مرور موثوق يحفظ بياناتي في خزينة مشفرة.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">3. فعلت المصادقة الثنائية (MFA) عبر تطبيق توثيق لبريدي وحساباتي البنكية والاجتماعية.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">4. لا أشارك رموز التحقق (OTP) مع أي كائن كان، حتى لو ادعى أنه موظف البنك.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">5. شاشة هاتفي مقفلة برمز مرور معقد لا يقل عن 6 أرقام مع القياسات البيومترية.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">6. أحدث نظام تشغيل هاتفي وحاسوبي وتطبيقاتي بانتظام دون تأجيل.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">7. أغلقت إمكانية تثبيت التطبيقات من مصادر مجهولة على جهازي.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">8. راجعت صلاحيات التطبيقات وأغلقت وصول الكاميرا والميكروفون عن البرامج التي لا تحتاجهما.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">9. أمتلك نسختين احتياطيتين من ملفاتي وصوري الهامة وفق قاعدة (3-2-1).</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">10. لا أنقر على روابط الشحنات أو تحديث البيانات في الرسائل النصية القصيرة (SMS).</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">11. أتأكد من شريط عنوان المتصفح بدقة قبل كتابة بيانات دخولي في أي موقع.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">12. لدي بريد إلكتروني خاص ومحمي للمعاملات الرسمية منفصل عن بريد الترفيه والتسوق.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">13. راجعت إعدادات الخصوصية في منصات التواصل وجعلت منشوراتي العائلية مقتصرة على الأصدقاء فقط.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">14. لا أتصل بشبكات الواي فاي العامة في المقاهي لإجراء معاملات مالية أو فتح بريد العمل إلا عبر شبكة افتراضية خاصة (VPN) موثوقة.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">15. علمت أطفالي مبدأ المصارحة التامة في حال تعرضهم لأي موقف مريب على الإنترنت.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">16. مفعل ميزة العثور على جهازي عن بُعد وقادر على مسحه في حال السرقة.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">17. قمت بتشفير القرص الصلب لحاسوبي الشخصي (عبر BitLocker في ويندوز أو FileVault في ماك).</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">18. أتحقق دورياً من قائمة الجلسات والأجهزة المتصلة بحساباتي وأطرد الأجهزة القديمة.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">19. قمت بتغطية كاميرا الحاسوب بغطاء فيزيائي عند عدم الاستخدام.</span></label></li>
+<li class="checklist-item"><label class="checklist-label"><input type="checkbox" class="task-checkbox" ><span class="checklist-text">20. أنقل هذه المعرفة لأهلي وأصدقائي تذكيراً بشعار: «المعرفة قوة، وقيمتها فيما نقدمه بها للآخرين».</span></label></li>
 </ul>
 <p><em>(إذا حققت أكثر من 16 علامة: فأنت تتمتع بحصانة رقمية ممتازة تحمي بها نفسك ومجتمعك!)</em></p>
 <hr />
@@ -2041,16 +2674,39 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>Electronic Frontier Foundation (EFF) - Surveillance Self-Defense:</strong> دليل مؤسسة الجبهة الإلكترونية العالمي لحماية الخصوصية الرقمية والأمان الشخصي عبر <code>ssd.eff.org</code>.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch4" class="chapter-nav-btn prev-btn" data-target="ch4">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل الرابع: الأمن السيبراني وفهم المخاطر</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch6" class="chapter-nav-btn next-btn" data-target="ch6">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل السادس: بناء البرمجيات والأنظمة الآمنة</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch6" class="book-chapter-section" data-title="الفصل السادس: بناء البرمجيات والأنظمة الآمنة">
+    <article id="ch6" class="book-chapter-section" data-title="الفصل السادس: بناء البرمجيات والأنظمة الآمنة" data-index="6">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 6</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 7 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل السادس: بناء البرمجيات والأنظمة الآمنة</h1>
 <hr />
 <blockquote>
@@ -2092,7 +2748,7 @@ if __name__ == &quot;__main__&quot;:
 <hr />
 <h2>4. الفرق الحاسم بين المصادقة والتفويض</h2>
 <p>في كل نظام برمجي يتعامل مع مستخدمين، هناك حارسان يقفان عند الباب، ويخلط الكثيرون بين وظيفتيهما:</p>
-<table>
+<div class="table-responsive"><table>
 <thead>
 <tr>
 <th style="text-align: left;">المفهوم</th>
@@ -2115,7 +2771,7 @@ if __name__ == &quot;__main__&quot;:
 <td style="text-align: left;">بعد إثبات هويتك، هل يحق لك دخول قمرة القيادة في الطائرة؟ أم مقعدك في الدرجة السياحية فقط؟</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>الخطأ البرمجي الشائع:</h3>
 <p>قد ينجح المبرمج في التحقق من أن المستخدم مسجل بالفعل (نجاح المصادقة)، لكنه ينسى فحص صلاحياته (فشل التفويض)!<br />
 فمثلاً: يقوم المستخدم العادي بتغيير الرقم في رابط المتصفح من:<br />
@@ -2145,7 +2801,7 @@ if __name__ == &quot;__main__&quot;:
 <hr />
 <h2>6. تطبيق عملي بـ Python: مقارنة برمجية بين التجزئة الخاطئة والآمنة</h2>
 <p>دعنا نرى كيف يُترجم هذا المفهوم في كود بايثون احترافي:</p>
-<pre><code class="language-python"># ==============================================================
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code class="language-python"># ==============================================================
 # مقارنة هندسية بين التخزين الخاطئ والآمن لكلمات المرور
 # كتاب الوعي الرقمي - تأليف: جنكيز
 # ==============================================================
@@ -2212,7 +2868,7 @@ if __name__ == &quot;__main__&quot;:
 
     print(f&quot;\nنتيجة محاولة الكلمة الصحيحة: {'✔ نجح الدخول' if is_correct else '❌ فشل'}&quot;)
     print(f&quot;نتيجة محاولة الكلمة الخاطئة : {'✔ نجح الدخول' if is_wrong else '❌ تم الصد بنجاح'}&quot;)
-</code></pre>
+</code></pre></div>
 <p>لاحظ استخدام الدالة <code>hmac.compare_digest</code>؛ فالمبرمج المتقدم يدرك أن مقارنة النصوص العادية عبر <code>==</code> تستهلك زمناً يختلف بحسب عدد الأحرف المتطابقة، مما قد يسمح للمهاجم بقياس فروق الزمن بالميكروثانية لمعرفة الحروف الصحيحة (هجمات التوقيت Timing Attacks)!</p>
 <hr />
 <h2>7. أمان قنوات الاتصال: بروتوكول TLS 1.3 وتثبيت الشهادات</h2>
@@ -2294,16 +2950,39 @@ if __name__ == &quot;__main__&quot;:
 <li><strong>CISA Secure by Design Whitepaper:</strong> الرؤية العالمية المعتمدة لهندسة البرمجيات الآمنة منذ التأسيس عبر <code>cisa.gov/securebydesign</code>.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch5" class="chapter-nav-btn prev-btn" data-target="ch5">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch7" class="chapter-nav-btn next-btn" data-target="ch7">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch7" class="book-chapter-section" data-title="الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان">
+    <article id="ch7" class="book-chapter-section" data-title="الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان" data-index="7">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 7</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 8 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان</h1>
 <hr />
 <blockquote>
@@ -2318,7 +2997,7 @@ if __name__ == &quot;__main__&quot;:
 <hr />
 <h2>2. ما هو الذكاء الاصطناعي؟ رحلة المفاهيم الثلاثة</h2>
 <p>لكي نفهم الشجرة المعرفية للذكاء الاصطناعي، يجب أن نميز بين ثلاثة مستويات متداخلة تشبه الدمى الروسية (الماتريوشكا):</p>
-<pre><code>+-------------------------------------------------------+
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code>+-------------------------------------------------------+
 |  الذكاء الاصطناعي (Artificial Intelligence - AI)      |
 |  +-------------------------------------------------+  |
 |  |  تعلم الآلة (Machine Learning - ML)             |  |
@@ -2328,7 +3007,7 @@ if __name__ == &quot;__main__&quot;:
 |  |  +-------------------------------------------+  |  |
 |  +-------------------------------------------------+  |
 +-------------------------------------------------------+
-</code></pre>
+</code></pre></div>
 <ol>
 <li>
 <p><strong>الذكاء الاصطناعي (AI) - المظلة الأكبر:</strong><br />
@@ -2456,16 +3135,39 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 <li><strong>DeepLearning.AI Courses (Andrew Ng):</strong> المناهج التعليمية المعتمدة عالمياً لأسس الذكاء الاصطناعي والتعلم العميق.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch6" class="chapter-nav-btn prev-btn" data-target="ch6">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل السادس: بناء البرمجيات والأنظمة الآمنة</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch8" class="chapter-nav-btn next-btn" data-target="ch8">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل الثامن: أخطاء رقمية قد تغير حياتك</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch8" class="book-chapter-section" data-title="الفصل الثامن: أخطاء رقمية قد تغير حياتك">
+    <article id="ch8" class="book-chapter-section" data-title="الفصل الثامن: أخطاء رقمية قد تغير حياتك" data-index="8">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 8</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 9 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل الثامن: أخطاء رقمية قد تغير حياتك (دراسات حالة واقعية)</h1>
 <hr />
 <blockquote>
@@ -2634,7 +3336,7 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 <hr />
 <h2>10. النموذج القياسي للتعافي الفوري عند الوقوع في أي فخ رقمي</h2>
 <p>إذا شككت في أي لحظة أنك ارتكبت خطأً رقمياً أو تعرضت لاختراق، فاتبع قاعدة <strong>«الدقائق الذهبية الخمس» (The 5-Golden Minutes Protocol)</strong>:</p>
-<pre><code>[ الخطوة 1: العزل ] ---&gt; افصل الجهاز فوراً عن الواي فاي وشبكة الهاتف الخلوي
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code>[ الخطوة 1: العزل ] ---&gt; افصل الجهاز فوراً عن الواي فاي وشبكة الهاتف الخلوي
           |
 [ الخطوة 2: التغيير ] ---&gt; من جهاز آخر نظيف: غير كلمة مرور الحساب الأساسي فوراً
           |
@@ -2643,7 +3345,7 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 [ الخطوة 4: الطرد ] ---&gt; ادخل على الحساب واضغط &quot;تسجيل الخروج من كافة الأجهزة الأخرى&quot;
           |
 [ الخطوة 5: البلاغ ] ---&gt; لا تخف ولا تتردد: ارفع بلاغاً للجهات الأمنية المختصة لملاحقة الفاعل
-</code></pre>
+</code></pre></div>
 <hr />
 <h2>11. ملخص الفصل الثامن</h2>
 <ul>
@@ -2671,16 +3373,39 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 <li><strong>CISA Social Engineering &amp; Phishing Guidance:</strong> الإرشادات الرسمية للتعرف على أساليب الخداع النفسي والتصيد الإلكتروني عبر <code>cisa.gov</code>.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch7" class="chapter-nav-btn prev-btn" data-target="ch7">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch9" class="chapter-nav-btn next-btn" data-target="ch9">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل التاسع: التكنولوجيا في خدمة المجتمع</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch9" class="book-chapter-section" data-title="الفصل التاسع: التكنولوجيا في خدمة المجتمع">
+    <article id="ch9" class="book-chapter-section" data-title="الفصل التاسع: التكنولوجيا في خدمة المجتمع" data-index="9">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 9</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 10 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل التاسع: التكنولوجيا في خدمة المجتمع</h1>
 <hr />
 <blockquote>
@@ -2804,16 +3529,39 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 * **Open Source Initiative (OSI):** المنظمة العالمية المعنية بتراخيص ومبادئ البرمجيات مفتوحة المصدر عبر `opensource.org`.
 * **UN Sustainable Development Goals (SDGs) & ICT:** تقارير الأمم المتحدة حول دور تكنولوجيا المعلومات في تحقيق أهداف التنمية المستدامة والعدالة الاجتماعية.
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch8" class="chapter-nav-btn prev-btn" data-target="ch8">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل الثامن: أخطاء رقمية قد تغير حياتك</span>
+          </div>
+        </a>
+        
+          
+        <a href="#ch10" class="chapter-nav-btn next-btn" data-target="ch10">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الفصل العاشر: من المعرفة إلى التأثير (الخطة التطبيقية)</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="ch10" class="book-chapter-section" data-title="الفصل العاشر: من المعرفة إلى التأثير (الخطة)">
+    <article id="ch10" class="book-chapter-section" data-title="الفصل العاشر: من المعرفة إلى التأثير (الخطة التطبيقية)" data-index="10">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
+        <header class="chapter-header-badge">
           <span class="chapter-pill-badge">فصل 10</span>
-        </div>
-        <div class="chapter-inner-content">
+          <span class="chapter-progress-label">القسم 11 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الفصل العاشر: من المعرفة إلى التأثير (خطة الـ 30 يوماً لمستقبلك)</h1>
 <hr />
 <blockquote>
@@ -2845,13 +3593,13 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 <hr />
 <h2>3. كيف تختار تخصصك ومسارك التقني القادم؟</h2>
 <p>إذا كنت ترغب في تحويل اهتمامك بالتقنية إلى مسار مهني ودراسي، فالعالم الرقمي يفتح لك أربعة أبواب رئيسية واعدة:</p>
-<pre><code>                          [ العالم الرقمي ]
+<div class="code-wrapper"><button class="copy-code-btn" type="button" aria-label="نسخ الكود"><span>📋 نسخ</span></button><pre><code>                          [ العالم الرقمي ]
                                  |
      +---------------+-----------+-----------+---------------+
      |               |                       |               |
 [ تطوير الويب ]  [ الأمن السيبراني ]    [ الذكاء الاصطناعي ]  [ الحوسبة السحابية ]
    (Web Dev)      (Cyber Defense)       (AI &amp; Data)       (Cloud &amp; DevOps)
-</code></pre>
+</code></pre></div>
 <ol>
 <li><strong>تطوير تطبيقات الويب والهواتف (Software Development):</strong><br />
    مناسب للشخص الذي يحب البناء، والإبداع، وتصميم الحلول التي يلمسها الناس مباشرة في حياتهم. (تعلم: HTML, CSS, JavaScript, Python, Dart/Flutter, قواعد البيانات).</li>
@@ -2923,16 +3671,39 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 <li>خطة الـ 30 يوماً توفر دليلاً تطبيقياً متدرجاً يبدأ بضبط كلمات المرور وينتهي بنقل المعرفة ونشر الوعي في المحيط الأسري والاجتماعي.</li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch9" class="chapter-nav-btn prev-btn" data-target="ch9">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل التاسع: التكنولوجيا في خدمة المجتمع</span>
+          </div>
+        </a>
+        
+          
+        <a href="#back-matter" class="chapter-nav-btn next-btn" data-target="back-matter">
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل التالي</span>
+            <span class="nav-title">الخاتمة ومعجم المصطلحات والمراجع</span>
+          </div>
+          <span class="nav-arrow">←</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
-    <section id="back-matter" class="book-chapter-section" data-title="الخاتمة ومعجم المصطلحات والمراجع">
+    <article id="back-matter" class="book-chapter-section" data-title="الخاتمة ومعجم المصطلحات والمراجع" data-index="11">
       <div class="chapter-card">
-        <div class="chapter-badge-wrap">
-          <span class="chapter-pill-badge">المراجع والختام</span>
-        </div>
-        <div class="chapter-inner-content">
+        <header class="chapter-header-badge">
+          <span class="chapter-pill-badge">الختام والمراجع</span>
+          <span class="chapter-progress-label">القسم 12 من 12</span>
+        </header>
+        
+        <div class="chapter-body-typography">
           <h1>الخاتمة، معجم المصطلحات، وقائمة المراجع الرسمية</h1>
 <hr />
 <h2>أولاً: خاتمة الكتاب — التكنولوجيا في خدمة الإنسان</h2>
@@ -2949,8 +3720,6 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
 <p>أسأل الله العلي القدير أن يجعل هذا العمل خالصاً لوجهه الكريم، نافعاً لكل من قرأه، ولبنة تسهم في رفعة الوعي التقني في مجتمعاتنا العربية العزيزة.</p>
 <p><strong>المؤلف: جنكيز</strong></p>
 <hr />
-<div style="page-break-after: always;"></div>
-
 <h2>ثانياً: معجم المصطلحات التقنية الموحد (Technical Glossary)</h2>
 <p>دليل مرجعي مرتب هجائياً لأهم المفاهيم والمصطلحات التقنية الواردة في الكتاب باللغة العربية مع مقابلها باللغة الإنجليزية:</p>
 <h3>أ</h3>
@@ -3040,8 +3809,6 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
   مجموعة من البروتوكولات والتعريفات القياسية التي تسمح للبرامج والتطبيقات المختلفة بالتواصل وتبادل البيانات بأمان وسلاسة.</li>
 </ul>
 <hr />
-<div style="page-break-after: always;"></div>
-
 <h2>ثالثاً: قائمة المصادر والمراجع الرسمية المعتمدة (Official References)</h2>
 <p>تم توثيق كافة المفاهيم والمعايير الهندسية والأمنية الواردة في هذا الكتاب استناداً إلى الوثائق الرسمية والمواصفات القياسية الصادرة عن كبرى الهيئات الدولية والمنظمات المعيارية:</p>
 <h3>1. معايير المعهد الوطني للمعايير والتقنية (NIST Standards)</h3>
@@ -3105,143 +3872,245 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
   الرابط الرسمي: <code>https://www.rfc-editor.org/info/rfc8446</code></li>
 </ul>
         </div>
+
+        <nav class="chapter-bottom-nav" aria-label="التنقل بين الفصول">
+          
+        <a href="#ch10" class="chapter-nav-btn prev-btn" data-target="ch10">
+          <span class="nav-arrow">→</span>
+          <div class="nav-btn-text">
+            <span class="nav-direction">الفصل السابق</span>
+            <span class="nav-title">الفصل العاشر: من المعرفة إلى التأثير (الخطة التطبيقية)</span>
+          </div>
+        </a>
+        
+          
+        <a href="#hero" class="chapter-nav-btn next-btn" data-target="hero">
+          <div class="nav-btn-text">
+            <span class="nav-direction">نهاية الكتاب</span>
+            <span class="nav-title">العودة للغلاف الرئيسي</span>
+          </div>
+          <span class="nav-arrow">↑</span>
+        </a>
+        
+        </nav>
       </div>
-    </section>
+    </article>
     
 
     </main>
   </div>
 
-  <!-- Floating Quick Actions -->
-  <div class="floating-actions">
-    <button id="scroll-top-btn" class="floating-btn" title="العودة للأعلى" style="display: none;">↑</button>
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="العودة لأعلى الصفحة" aria-label="أعلى الصفحة">↑</button>
+
+  <!-- Resume Reading Toast -->
+  <div id="resume-toast">
+    <span class="toast-text">مرحباً بعودتك! هل تريد المتابعة من حيث توقفت؟</span>
+    <button id="resume-btn" class="toast-btn">متابعة</button>
+    <button id="toast-close-btn" class="toast-close">✕</button>
   </div>
 
   <!-- Share Modal -->
-  <div id="share-modal">
+  <div class="modal-overlay" id="share-modal">
     <div class="modal-card">
-      <h3 style="font-family: var(--font-heading); margin-bottom: 8px; color: var(--accent);">مشاركة كتاب الوعي الرقمي</h3>
-      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px;">شارك هذا الرابط مع عائلتك وأصدقائك لنشر الوعي والأمان الرقمي:</p>
+      <h3 class="modal-title">مشاركة كتاب الوعي الرقمي</h3>
+      <p class="modal-desc">«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين» — شارك هذا الرابط مع من تحب:</p>
       
-      <div class="share-links-grid">
-        <a id="share-wa" href="#" target="_blank" class="share-channel-btn btn-wa">واتساب</a>
-        <a id="share-tg" href="#" target="_blank" class="share-channel-btn btn-tg">تيليجرام</a>
-        <a id="share-x" href="#" target="_blank" class="share-channel-btn btn-x">منصة X</a>
-        <a id="share-fb" href="#" target="_blank" class="share-channel-btn btn-fb">فيسبوك</a>
-        <button id="copy-link-btn" class="share-channel-btn btn-copy">📋 نسخ الرابط المباشر</button>
+      <div class="share-grid">
+        <a id="share-wa" href="#" target="_blank" class="share-btn btn-whatsapp">واتساب</a>
+        <a id="share-tg" href="#" target="_blank" class="share-btn btn-telegram">تيليجرام</a>
+        <a id="share-x" href="#" target="_blank" class="share-btn btn-twitter">منصة X</a>
+        <a id="share-fb" href="#" target="_blank" class="share-btn btn-facebook">فيسبوك</a>
+        <button id="copy-url-btn" class="share-btn btn-copy-url">📋 نسخ رابط القراءة</button>
       </div>
 
-      <button id="close-modal-btn" class="icon-btn" style="margin-top: 12px; width: 100%; justify-content: center;">إغلاق</button>
+      <button id="close-modal-btn" class="btn-action" style="width: 100%;">إغلاق</button>
     </div>
   </div>
 
   <script>
-    // Theme Management
+    // =============================================================
+    // 1. THEME MANAGEMENT (Cyber Dark, Warm Sepia, Clean Light)
+    // =============================================================
     const themeBtn = document.getElementById('theme-btn');
     const themeIcon = document.getElementById('theme-icon');
+    const themeLabel = document.getElementById('theme-label');
     const themes = ['dark', 'sepia', 'light'];
-    const themeIcons = { 'dark': '🌙', 'sepia': '📜', 'light': '☀️' };
-    
-    let currentThemeIndex = 0;
-    const savedTheme = localStorage.getItem('digital_book_theme') || 'dark';
-    currentThemeIndex = themes.indexOf(savedTheme);
-    applyTheme(savedTheme);
+    const themeData = {
+      'dark': { icon: '🌙', label: 'ليلي', color: '#080d1a' },
+      'sepia': { icon: '📜', label: 'ورقي', color: '#fbf0d9' },
+      'light': { icon: '☀️', label: 'نهاري', color: '#f8fafc' }
+    };
+
+    let currentTheme = localStorage.getItem('jankiz_book_theme') || 'dark';
+    applyTheme(currentTheme);
 
     themeBtn.addEventListener('click', () => {
-      currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-      const newTheme = themes[currentThemeIndex];
-      applyTheme(newTheme);
+      const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+      currentTheme = themes[nextIndex];
+      applyTheme(currentTheme);
     });
 
     function applyTheme(theme) {
       document.documentElement.setAttribute('data-theme', theme);
-      themeIcon.textContent = themeIcons[theme];
-      localStorage.setItem('digital_book_theme', theme);
+      themeIcon.textContent = themeData[theme].icon;
+      if (themeLabel) themeLabel.textContent = themeData[theme].label;
+      
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      if (metaTheme) metaTheme.setAttribute('content', themeData[theme].color);
+      
+      localStorage.setItem('jankiz_book_theme', theme);
     }
 
-    // Reading Progress & Scroll
-    const progressBar = document.getElementById('progress-bar');
-    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    // =============================================================
+    // 2. FONT SCALING (Fluid & Safe for all screens)
+    // =============================================================
+    const fontIncreaseBtn = document.getElementById('font-increase');
+    const fontDecreaseBtn = document.getElementById('font-decrease');
     
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      progressBar.style.width = scrolled + '%';
+    let fontOffset = parseFloat(localStorage.getItem('jankiz_font_offset')) || 0;
+    applyFontOffset(fontOffset);
 
-      if (winScroll > 400) {
-        scrollTopBtn.style.display = 'flex';
-      } else {
-        scrollTopBtn.style.display = 'none';
+    fontIncreaseBtn.addEventListener('click', () => {
+      if (fontOffset < 4) {
+        fontOffset += 1;
+        applyFontOffset(fontOffset);
       }
     });
 
-    scrollTopBtn.addEventListener('click', () => {
+    fontDecreaseBtn.addEventListener('click', () => {
+      if (fontOffset > -2) {
+        fontOffset -= 1;
+        applyFontOffset(fontOffset);
+      }
+    });
+
+    function applyFontOffset(offset) {
+      document.body.style.fontSize = `calc(var(--text-base) + ${offset}px)`;
+      localStorage.setItem('jankiz_font_offset', offset);
+    }
+
+    // =============================================================
+    // 3. READING PROGRESS BAR & SCROLL MONITOR
+    // =============================================================
+    const progressBar = document.getElementById('progress-bar');
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progressPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      
+      progressBar.style.width = Math.min(progressPercent, 100) + '%';
+
+      if (scrollTop > 380) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+
+      // Save scroll position
+      localStorage.setItem('jankiz_last_scroll', scrollTop);
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Font Sizing
-    let currentFontSize = parseInt(localStorage.getItem('digital_book_font_size')) || 19;
-    document.documentElement.style.fontSize = currentFontSize + 'px';
+    // Resume reading toast
+    window.addEventListener('DOMContentLoaded', () => {
+      const lastScroll = parseInt(localStorage.getItem('jankiz_last_scroll') || '0', 10);
+      const resumeToast = document.getElementById('resume-toast');
+      const resumeBtn = document.getElementById('resume-btn');
+      const toastCloseBtn = document.getElementById('toast-close-btn');
 
-    document.getElementById('font-increase').addEventListener('click', () => {
-      if (currentFontSize < 28) {
-        currentFontSize += 1;
-        document.documentElement.style.fontSize = currentFontSize + 'px';
-        localStorage.setItem('digital_book_font_size', currentFontSize);
+      if (lastScroll > 500 && !window.location.hash) {
+        setTimeout(() => {
+          resumeToast.classList.add('show');
+        }, 1200);
+
+        resumeBtn.addEventListener('click', () => {
+          window.scrollTo({ top: lastScroll, behavior: 'smooth' });
+          resumeToast.classList.remove('show');
+        });
+
+        toastCloseBtn.addEventListener('click', () => {
+          resumeToast.classList.remove('show');
+        });
+
+        setTimeout(() => {
+          resumeToast.classList.remove('show');
+        }, 8000);
       }
     });
 
-    document.getElementById('font-decrease').addEventListener('click', () => {
-      if (currentFontSize > 14) {
-        currentFontSize -= 1;
-        document.documentElement.style.fontSize = currentFontSize + 'px';
-        localStorage.setItem('digital_book_font_size', currentFontSize);
-      }
-    });
-
-    // Mobile Sidebar Toggle
+    // =============================================================
+    // 4. SIDEBAR DRAWER TOGGLE & MOBILE BACKDROP
+    // =============================================================
     const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar');
+    const drawerCloseBtn = document.getElementById('drawer-close-btn');
+    const bookDrawer = document.getElementById('book-drawer');
+    const drawerBackdrop = document.getElementById('drawer-backdrop');
 
-    menuBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
+    function toggleDrawer(open) {
+      const isOpen = open !== undefined ? open : !bookDrawer.classList.contains('open');
+      if (isOpen) {
+        bookDrawer.classList.add('open');
+        drawerBackdrop.classList.add('open');
+        document.body.style.overflow = window.innerWidth <= 1024 ? 'hidden' : '';
+      } else {
+        bookDrawer.classList.remove('open');
+        drawerBackdrop.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
 
+    menuBtn.addEventListener('click', () => toggleDrawer());
+    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', () => toggleDrawer(false));
+    drawerBackdrop.addEventListener('click', () => toggleDrawer(false));
+
+    // Close drawer when clicking any link on mobile
     document.querySelectorAll('.toc-link').forEach(link => {
       link.addEventListener('click', () => {
-        sidebar.classList.remove('open');
+        if (window.innerWidth <= 1024) {
+          toggleDrawer(false);
+        }
       });
     });
 
-    // TOC Active Link on Scroll (Intersection Observer)
+    // =============================================================
+    // 5. INTERSECTION OBSERVER FOR ACTIVE TOC HIGHLIGHT
+    // =============================================================
     const sections = document.querySelectorAll('.book-chapter-section');
-    const navLinks = document.querySelectorAll('.toc-link');
+    const tocLinks = document.querySelectorAll('.toc-link');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const activeId = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
+          tocLinks.forEach(link => {
             if (link.getAttribute('data-target') === activeId) {
               link.classList.add('active');
+              link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
             } else {
               link.classList.remove('active');
             }
           });
         }
       });
-    }, { rootMargin: '-20% 0px -70% 0px' });
+    }, { rootMargin: '-20% 0px -65% 0px' });
 
-    sections.forEach(s => observer.observe(s));
+    sections.forEach(sec => observer.observe(sec));
 
-    // TOC Search Filter
-    const searchInput = document.getElementById('toc-search');
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
-      navLinks.forEach(link => {
+    // =============================================================
+    // 6. SEARCH FILTER IN DRAWER
+    // =============================================================
+    const tocSearch = document.getElementById('toc-search');
+    tocSearch.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      tocLinks.forEach(link => {
         const text = link.textContent.toLowerCase();
-        if (text.includes(query)) {
+        if (text.includes(term)) {
           link.style.display = 'flex';
         } else {
           link.style.display = 'none';
@@ -3249,24 +4118,59 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
       });
     });
 
-    // Share Modal Functionality
+    // =============================================================
+    // 7. CODE SNIPPET COPY BUTTONS
+    // =============================================================
+    document.querySelectorAll('.copy-code-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const codeElement = btn.parentElement.querySelector('code');
+        if (codeElement) {
+          navigator.clipboard.writeText(codeElement.innerText).then(() => {
+            const original = btn.innerHTML;
+            btn.innerHTML = '<span>✔ تم النسخ</span>';
+            btn.style.color = '#38bdf8';
+            setTimeout(() => {
+              btn.innerHTML = original;
+              btn.style.color = '';
+            }, 2000);
+          });
+        }
+      });
+    });
+
+    // =============================================================
+    // 8. CHECKLIST PERSISTENCE
+    // =============================================================
+    const checkboxes = document.querySelectorAll('.task-checkbox');
+    checkboxes.forEach((cb, idx) => {
+      const saved = localStorage.getItem('jankiz_check_' + idx);
+      if (saved === 'true') cb.checked = true;
+      
+      cb.addEventListener('change', () => {
+        localStorage.setItem('jankiz_check_' + idx, cb.checked);
+      });
+    });
+
+    // =============================================================
+    // 9. SHARE MODAL & SOCIAL CHANNELS
+    // =============================================================
     const shareBtn = document.getElementById('share-btn');
     const shareModal = document.getElementById('share-modal');
     const closeModalBtn = document.getElementById('close-modal-btn');
-    const copyLinkBtn = document.getElementById('copy-link-btn');
+    const copyUrlBtn = document.getElementById('copy-url-btn');
 
-    const shareUrl = window.location.href;
-    const shareText = encodeURIComponent("كتاب «الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك» — تأليف: جنكيز. اقرأ الكتاب مجاناً عبر الرابط:");
+    const shareUrl = window.location.href.split('#')[0];
+    const shareText = "كتاب «الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك» — تأليف: جنكيز. اقرأ الكتاب كاملاً ومجاناً عبر الرابط:";
 
-    document.getElementById('share-wa').href = `https://api.whatsapp.com/send?text=${shareText}%20${encodeURIComponent(shareUrl)}`;
-    document.getElementById('share-tg').href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${shareText}`;
-    document.getElementById('share-x').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${encodeURIComponent(shareUrl)}`;
+    document.getElementById('share-wa').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}%20${encodeURIComponent(shareUrl)}`;
+    document.getElementById('share-tg').href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+    document.getElementById('share-x').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
     document.getElementById('share-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
 
     shareBtn.addEventListener('click', () => {
       if (navigator.share) {
         navigator.share({
-          title: 'كتاب الوعي الرقمي — تأليف جنكيز',
+          title: 'كتاب الوعي الرقمي — تأليف: جنكيز',
           text: '«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين»',
           url: shareUrl
         }).catch(() => {
@@ -3287,11 +4191,11 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right
       }
     });
 
-    copyLinkBtn.addEventListener('click', () => {
+    copyUrlBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(shareUrl).then(() => {
-        copyLinkBtn.textContent = '✔ تم نسخ الرابط بنجاح!';
+        copyUrlBtn.textContent = '✔ تم نسخ الرابط بنجاح!';
         setTimeout(() => {
-          copyLinkBtn.textContent = '📋 نسخ الرابط المباشر';
+          copyUrlBtn.textContent = '📋 نسخ رابط القراءة';
         }, 2000);
       });
     });

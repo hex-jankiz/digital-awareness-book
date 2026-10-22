@@ -1,2 +1,5 @@
 backup_manuscript/
 *.tmp
+*.pdf
+*.epub
+temp_*.html

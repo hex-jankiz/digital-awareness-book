@@ -284,7 +284,7 @@ for idx, title, page_no in chapter_start_pages:
     toc_items_html.append(f'''<li class="toc-list-item" onclick="goToPage({page_no})">
   <span class="toc-item-title">{title}</span>
   <span class="toc-item-dots"></span>
-  <span class="toc-item-page">ص {page_no}</span>
+  <span class="toc-item-page">ص&nbsp;{page_no}</span>
 </li>''')
 
 toc_full_html = f'''<div class="toc-page-container">
@@ -851,36 +851,61 @@ reader_html = f'''<!DOCTYPE html>
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 9px 8px;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+      gap: 12px;
+      padding: 10px 12px;
+      margin-bottom: 6px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
       cursor: pointer;
-      border-radius: 4px;
-      transition: background 0.15s, color 0.15s;
+      border-radius: 8px;
+      transition: all 0.2s ease;
       font-size: 14.5px;
+      background: rgba(0, 0, 0, 0.02);
     }}
 
     .toc-list-item:hover {{
       background: var(--callout-bg);
       color: var(--accent-color);
+      transform: translateX(-3px);
     }}
 
     .toc-item-title {{
       font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.5;
+      flex: 1;
+      min-width: 0;
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: break-word;
+      color: var(--text-main);
+    }}
+
+    .toc-list-item:hover .toc-item-title {{
+      color: var(--accent-color);
     }}
 
     .toc-item-dots {{
       flex: 1;
       border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
-      margin: 0 10px;
+      margin: 0 8px;
+      min-width: 15px;
     }}
 
     .toc-item-page {{
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
       font-weight: 700;
       color: var(--accent-gold);
-      font-size: 13.5px;
+      font-size: 13px;
+      background: rgba(217, 119, 6, 0.12);
+      border: 1px solid rgba(217, 119, 6, 0.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+      min-width: 62px;
+      text-align: center;
+      letter-spacing: 0.5px;
     }}
 
     /* Slide-over TOC & Tools Drawer */
@@ -1083,6 +1108,30 @@ reader_html = f'''<!DOCTYPE html>
       .page-slider {{
         width: 100px;
       }}
+      .toc-list-item {{
+        padding: 9px 8px;
+        gap: 8px;
+        margin-bottom: 4px;
+      }}
+      .toc-item-title {{
+        font-size: 13.5px;
+        line-height: 1.45;
+      }}
+      .toc-item-dots {{
+        display: none;
+      }}
+      .toc-item-page {{
+        font-size: 12px;
+        padding: 3px 9px;
+        min-width: 54px;
+      }}
+      .side-drawer {{
+        width: 350px;
+        max-width: 92vw;
+      }}
+      .drawer-body {{
+        padding: 14px 14px;
+      }}
     }}
   </style>
 </head>
@@ -1214,13 +1263,13 @@ reader_html = f'''<!DOCTYPE html>
 
         <div class="drawer-section-title">النسخ الرقمية المعتمدة</div>
         <div class="download-group">
-          <a href="book_digital_awareness_complete.pdf" download class="download-btn-card">
+          <div class="download-btn-card" style="opacity: 0.9; cursor: default;">
             <span class="download-icon">📕</span>
             <div>
-              <div class="download-meta-title">نسخة PDF للطباعة والقراءة</div>
-              <div class="download-meta-desc">ملف بي دي إف رسمي متجهي عالي الدقة (A5)</div>
+              <div class="download-meta-title">نسخة PDF الرسمية المطبوعة (A4)</div>
+              <div class="download-meta-desc">حقوق النسخة المطبوعة محفوظة للمؤلف — للمطالعة عبر هذا الموقع</div>
             </div>
-          </a>
+          </div>
 
           <a href="book_digital_awareness.epub" download class="download-btn-card">
             <span class="download-icon">📱</span>
@@ -1478,11 +1527,14 @@ reader_html = f'''<!DOCTYPE html>
       TOC_CHAPTERS.forEach(([chIdx, title, pNum]) => {{
         const li = document.createElement('li');
         li.className = 'toc-list-item';
-        li.onclick = () => goToPage(pNum);
+        li.onclick = () => {{
+          goToPage(pNum);
+          closeDrawer();
+        }};
         li.innerHTML = `
           <span class="toc-item-title">${{title}}</span>
           <span class="toc-item-dots"></span>
-          <span class="toc-item-page">ص ${{pNum}}</span>
+          <span class="toc-item-page">ص&nbsp;${{pNum}}</span>
         `;
         list.appendChild(li);
       }});
@@ -1547,6 +1599,16 @@ reader_html = f'''<!DOCTYPE html>
           if (p > 1 && p <= TOTAL_PAGES) {{
             currentPage = p;
           }}
+        }}
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('page')) {{
+          const qp = parseInt(urlParams.get('page'), 10);
+          if (qp >= 1 && qp <= TOTAL_PAGES) {{
+            currentPage = qp;
+          }}
+        }}
+        if (urlParams.has('drawer')) {{
+          setTimeout(() => toggleDrawer(), 50);
         }}
       }} catch(e) {{}}
 

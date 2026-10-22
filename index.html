@@ -1,0 +1,3300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>كتاب الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك | تأليف: جنكيز</title>
+  
+  <meta name="description" content="كتاب عربي متكامل في الوعي الرقمي، البرمجة، الأمن السيبراني الدفاعي، الذكاء الاصطناعي، وتكنولوجيا خدمة المجتمع. تأليف: جنكيز.">
+  <meta name="author" content="جنكيز">
+  <meta name="keywords" content="الوعي الرقمي, جنكيز, الأمن السيبراني, البرمجة, بايثون, الذكاء الاصطناعي, حماية الخصوصية, كتب تقنية عربية">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="book">
+  <meta property="og:title" content="كتاب الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك">
+  <meta property="og:description" content="«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين» — تأليف: جنكيز. اقرأ الكتاب كاملاً أونلاين.">
+  <meta property="og:image" content="https://hex-jankiz.github.io/digital-awareness-book/front_cover.jpg">
+  <meta property="og:url" content="https://hex-jankiz.github.io/digital-awareness-book/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="كتاب الوعي الرقمي | تأليف جنكيز">
+  <meta name="twitter:description" content="دليل تطبيقي شامل في البرمجة والأمن السيبراني والذكاء الاصطناعي وحماية الأسرة.">
+  <meta name="twitter:image" content="https://hex-jankiz.github.io/digital-awareness-book/front_cover.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="front_cover.jpg">
+
+  <!-- Fonts: Cairo & Amiri & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-heading: 'Cairo', system-ui, -apple-system, sans-serif;
+      --font-body: 'Amiri', serif;
+      --font-code: 'JetBrains Mono', monospace;
+      
+      --base-font-size: 19px;
+      --line-height: 1.85;
+      --sidebar-width: 320px;
+      --header-height: 64px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* THEME: Cyber Dark (Default) */
+    [data-theme="dark"] {
+      --bg-canvas: #070b14;
+      --bg-surface: #0f172a;
+      --bg-surface-elevated: #1e293b;
+      --border-color: rgba(56, 189, 248, 0.18);
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent: #0ea5e9;
+      --accent-glow: rgba(14, 165, 233, 0.28);
+      --accent-hover: #38bdf8;
+      --code-bg: #030712;
+      --code-border: #1f2937;
+      --blockquote-bg: rgba(14, 165, 233, 0.07);
+      --blockquote-border: #0ea5e9;
+      --header-bg: rgba(7, 11, 20, 0.88);
+      --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+    }
+
+    /* THEME: Warm Sepia */
+    [data-theme="sepia"] {
+      --bg-canvas: #fbf0d9;
+      --bg-surface: #f4e4c1;
+      --bg-surface-elevated: #ecd6ab;
+      --border-color: #d6be96;
+      --text-primary: #2d241e;
+      --text-secondary: #5e4f43;
+      --text-muted: #8c7b6d;
+      --accent: #b45309;
+      --accent-glow: rgba(180, 83, 9, 0.2);
+      --accent-hover: #92400e;
+      --code-bg: #ecd6ab;
+      --code-border: #d6be96;
+      --blockquote-bg: rgba(180, 83, 9, 0.08);
+      --blockquote-border: #b45309;
+      --header-bg: rgba(251, 240, 217, 0.92);
+      --card-shadow: 0 8px 24px -8px rgba(90, 60, 30, 0.15);
+    }
+
+    /* THEME: Clean Light */
+    [data-theme="light"] {
+      --bg-canvas: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --border-color: #e2e8f0;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.2);
+      --accent-hover: #0369a1;
+      --code-bg: #f1f5f9;
+      --code-border: #cbd5e1;
+      --blockquote-bg: #f0f9ff;
+      --blockquote-border: #0284c7;
+      --header-bg: rgba(255, 255, 255, 0.92);
+      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: var(--base-font-size);
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: var(--line-height);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Reading Progress Bar */
+    #progress-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 4px;
+      background: transparent;
+      z-index: 1000;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), #38bdf8);
+      box-shadow: 0 0 12px var(--accent);
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Sticky Header */
+    header.top-header {
+      position: sticky;
+      top: 0;
+      height: var(--header-height);
+      background-color: var(--header-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 900;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    .header-brand .author-tag {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 7px 12px;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-smooth);
+    }
+    .icon-btn:hover {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* Layout Wrapper */
+    .app-layout {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: calc(100vh - var(--header-height));
+    }
+
+    /* Sidebar Navigation */
+    aside.book-sidebar {
+      width: var(--sidebar-width);
+      flex-shrink: 0;
+      position: sticky;
+      top: var(--header-height);
+      height: calc(100vh - var(--header-height));
+      overflow-y: auto;
+      padding: 24px 16px;
+      border-left: 1px solid var(--border-color);
+      background-color: var(--bg-surface);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-cover-card {
+      text-align: center;
+      padding: 14px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+    }
+    .sidebar-cover-card img {
+      width: 130px;
+      height: auto;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    .sidebar-cover-card img:hover {
+      transform: scale(1.04);
+    }
+    .sidebar-book-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .sidebar-book-author {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .toc-search-wrap input {
+      width: 100%;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      outline: none;
+      transition: var(--transition-smooth);
+    }
+    .toc-search-wrap input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    nav.toc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      overflow-y: auto;
+    }
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      line-height: 1.4;
+      transition: var(--transition-smooth);
+    }
+    .toc-link:hover {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      transform: translateX(-4px);
+    }
+    .toc-link.active {
+      background: var(--accent-glow);
+      color: var(--accent);
+      font-weight: 700;
+      border-right: 3px solid var(--accent);
+    }
+    .toc-badge {
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .toc-link.active .toc-badge {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    /* Main Book Content Stage */
+    main.book-content {
+      flex: 1;
+      min-width: 0;
+      padding: 40px 48px;
+    }
+
+    /* Hero Book Card */
+    .book-hero {
+      display: flex;
+      gap: 36px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 56px;
+      box-shadow: var(--card-shadow);
+      align-items: center;
+    }
+    .hero-cover-col img {
+      width: 240px;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+    .hero-info-col {
+      flex: 1;
+    }
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+    .hero-quote {
+      background: var(--blockquote-bg);
+      border-right: 4px solid var(--accent);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+    .hero-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .hero-meta-item {
+      background: var(--bg-surface-elevated);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+    }
+    .hero-meta-item span {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+    .hero-meta-item strong {
+      color: var(--text-primary);
+      font-size: 1rem;
+    }
+
+    /* Chapter Cards */
+    .book-chapter-section {
+      margin-bottom: 64px;
+      scroll-margin-top: calc(var(--header-height) + 20px);
+    }
+    .chapter-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 44px 50px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+    }
+    .chapter-badge-wrap {
+      margin-bottom: 18px;
+    }
+    .chapter-pill-badge {
+      background: var(--accent);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
+    /* Typography inside content */
+    .chapter-inner-content h1 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 24px;
+      line-height: 1.3;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 12px;
+    }
+    .chapter-inner-content h2 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-top: 36px;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chapter-inner-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    .chapter-inner-content p {
+      margin-bottom: 18px;
+      text-align: justify;
+      color: var(--text-primary);
+      font-size: 1.05rem;
+    }
+    .chapter-inner-content ul, 
+    .chapter-inner-content ol {
+      margin: 16px 28px 24px;
+      padding-right: 12px;
+    }
+    .chapter-inner-content li {
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    .chapter-inner-content blockquote {
+      background: var(--blockquote-bg);
+      border-right: 4px solid var(--blockquote-border);
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-primary);
+    }
+    .chapter-inner-content hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 32px 0;
+    }
+
+    /* Specialized Box */
+    .chapter-inner-content div[style*="border-right: 4px solid"] {
+      background: var(--blockquote-bg) !important;
+      border: 1px solid var(--border-color) !important;
+      border-right: 5px solid var(--accent) !important;
+      border-radius: var(--radius-md) !important;
+      padding: 24px !important;
+      margin: 32px 0 !important;
+      box-shadow: 0 4px 18px var(--accent-glow);
+    }
+
+    /* Tables */
+    .chapter-inner-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-family: var(--font-heading);
+      font-size: 0.92rem;
+      overflow-x: auto;
+      display: block;
+    }
+    .chapter-inner-content th, 
+    .chapter-inner-content td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      text-align: right;
+    }
+    .chapter-inner-content th {
+      background: var(--bg-surface-elevated);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .chapter-inner-content tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Code Blocks */
+    .chapter-inner-content pre {
+      background: var(--code-bg);
+      border: 1px solid var(--code-border);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      overflow-x: auto;
+      font-family: var(--font-code);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin: 24px 0;
+      direction: ltr;
+      text-align: left;
+    }
+    .chapter-inner-content code {
+      font-family: var(--font-code);
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      border: 1px solid var(--border-color);
+    }
+    .chapter-inner-content pre code {
+      background: transparent;
+      padding: 0;
+      border: 0;
+    }
+
+    /* Checklists */
+    input[type="checkbox"] {
+      margin-left: 8px;
+      accent-color: var(--accent);
+      width: 17px;
+      height: 17px;
+      cursor: pointer;
+    }
+
+    /* Floating Quick Actions */
+    .floating-actions {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 800;
+    }
+    .floating-btn {
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px var(--accent-glow);
+      transition: var(--transition-smooth);
+    }
+    .floating-btn:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 8px 22px var(--accent-glow);
+    }
+
+    /* Share Modal Popup */
+    #share-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      max-width: 460px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    .share-links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .share-channel-btn {
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: opacity 0.2s;
+    }
+    .share-channel-btn:hover { opacity: 0.9; }
+    .btn-wa { background: #25D366; }
+    .btn-tg { background: #0088cc; }
+    .btn-x { background: #000000; border: 1px solid #333; }
+    .btn-fb { background: #1877F2; }
+    .btn-copy { background: var(--bg-surface-elevated); color: var(--text-primary); border: 1px solid var(--border-color); grid-column: span 2; }
+
+    /* Print Styles */
+    @media print {
+      #progress-container,
+      header.top-header,
+      aside.book-sidebar,
+      .floating-actions,
+      #share-modal {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+      }
+      .app-layout {
+        display: block !important;
+        max-width: 100% !important;
+      }
+      main.book-content {
+        padding: 0 !important;
+      }
+      .chapter-card {
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        page-break-after: always;
+      }
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 1024px) {
+      aside.book-sidebar {
+        position: fixed;
+        right: -340px;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        z-index: 1500;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      aside.book-sidebar.open {
+        right: 0;
+      }
+      .menu-toggle {
+        display: inline-flex;
+      }
+      main.book-content {
+        padding: 24px 20px;
+      }
+      .book-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+      }
+      .chapter-card {
+        padding: 24px 18px;
+      }
+      .hero-cover-col img {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button id="menu-btn" class="icon-btn menu-toggle" aria-label="فتح الفهرس">
+        <span>☰</span>
+        <span>الفهرس</span>
+      </button>
+      <a href="#hero" class="header-brand">
+        <span class="author-tag">جنكيز</span>
+        <span>الوعي الرقمي</span>
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <!-- Theme Switcher -->
+      <button id="theme-btn" class="icon-btn" title="تغيير مظهر القراءة">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-label" style="display:none;">الوضع</span>
+      </button>
+
+      <!-- Font Resizing -->
+      <button id="font-decrease" class="icon-btn" title="تصغير الخط">A-</button>
+      <button id="font-increase" class="icon-btn" title="تكبير الخط">A+</button>
+
+      <!-- Print Button -->
+      <button onclick="window.print()" class="icon-btn" title="طباعة أو تصدير PDF">
+        <span>🖨️</span>
+        <span class="btn-text-resp">PDF</span>
+      </button>
+
+      <!-- Share Button -->
+      <button id="share-btn" class="icon-btn" style="background: var(--accent); color: #fff;" title="مشاركة الكتاب">
+        <span>🔗</span>
+        <span>مشاركة</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- App Layout -->
+  <div class="app-layout">
+    
+    <!-- Sidebar -->
+    <aside class="book-sidebar" id="sidebar">
+      <div class="sidebar-cover-card">
+        <img src="front_cover.jpg" alt="غلاف كتاب الوعي الرقمي">
+        <div class="sidebar-book-title">الوعي الرقمي</div>
+        <div class="sidebar-book-author">تأليف: جنكيز</div>
+      </div>
+
+      <div class="toc-search-wrap">
+        <input type="text" id="toc-search" placeholder="🔍 ابحث في عناوين الفصول...">
+      </div>
+
+      <nav class="toc-nav" id="toc-nav">
+        
+    <a href="#front-matter" class="toc-link" data-target="front-matter">
+      <span class="toc-badge">تمهيد</span>
+      <span class="toc-text">الصفحات التمهيدية</span>
+    </a>
+    
+
+    <a href="#ch1" class="toc-link" data-target="ch1">
+      <span class="toc-badge">فصل 1</span>
+      <span class="toc-text">الفصل الأول: الإنسان في العصر الرقمي</span>
+    </a>
+    
+
+    <a href="#ch2" class="toc-link" data-target="ch2">
+      <span class="toc-badge">فصل 2</span>
+      <span class="toc-text">الفصل الثاني: كيف تعمل البرامج والتطبيقات؟</span>
+    </a>
+    
+
+    <a href="#ch3" class="toc-link" data-target="ch3">
+      <span class="toc-badge">فصل 3</span>
+      <span class="toc-text">الفصل الثالث: البرمجة وفن التفكير المنطقي</span>
+    </a>
+    
+
+    <a href="#ch4" class="toc-link" data-target="ch4">
+      <span class="toc-badge">فصل 4</span>
+      <span class="toc-text">الفصل الرابع: الأمن السيبراني وفهم المخاطر</span>
+    </a>
+    
+
+    <a href="#ch5" class="toc-link" data-target="ch5">
+      <span class="toc-badge">فصل 5</span>
+      <span class="toc-text">الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟</span>
+    </a>
+    
+
+    <a href="#ch6" class="toc-link" data-target="ch6">
+      <span class="toc-badge">فصل 6</span>
+      <span class="toc-text">الفصل السادس: بناء البرمجيات والأنظمة الآمنة</span>
+    </a>
+    
+
+    <a href="#ch7" class="toc-link" data-target="ch7">
+      <span class="toc-badge">فصل 7</span>
+      <span class="toc-text">الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان</span>
+    </a>
+    
+
+    <a href="#ch8" class="toc-link" data-target="ch8">
+      <span class="toc-badge">فصل 8</span>
+      <span class="toc-text">الفصل الثامن: أخطاء رقمية قد تغير حياتك</span>
+    </a>
+    
+
+    <a href="#ch9" class="toc-link" data-target="ch9">
+      <span class="toc-badge">فصل 9</span>
+      <span class="toc-text">الفصل التاسع: التكنولوجيا في خدمة المجتمع</span>
+    </a>
+    
+
+    <a href="#ch10" class="toc-link" data-target="ch10">
+      <span class="toc-badge">فصل 10</span>
+      <span class="toc-text">الفصل العاشر: من المعرفة إلى التأثير (الخطة)</span>
+    </a>
+    
+
+    <a href="#back-matter" class="toc-link" data-target="back-matter">
+      <span class="toc-badge">المراجع والختام</span>
+      <span class="toc-text">الخاتمة ومعجم المصطلحات والمراجع</span>
+    </a>
+    
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="book-content">
+      
+      <!-- Book Hero Section -->
+      <section id="hero" class="book-hero">
+        <div class="hero-cover-col">
+          <img src="front_cover.jpg" alt="غلاف كتاب الوعي الرقمي الكامل">
+        </div>
+        <div class="hero-info-col">
+          <h1 class="hero-title">الوعي الرقمي</h1>
+          <div class="hero-subtitle">المعرفة التي تحميك وتصنع مستقبلك</div>
+          
+          <div class="hero-quote">
+            «المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».
+          </div>
+
+          <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+              <span>المؤلف</span>
+              <strong>جنكيز</strong>
+            </div>
+            <div class="hero-meta-item">
+              <span>عدد الفصول</span>
+              <strong>10 فصول كاملة</strong>
+            </div>
+            <div class="hero-meta-item">
+              <span>الصفحات التقديرية</span>
+              <strong>140 صفحة</strong>
+            </div>
+            <div class="hero-meta-item">
+              <span>اللغة والنوع</span>
+              <strong>عربية فصحى / تقني دفاعي</strong>
+            </div>
+          </div>
+
+          <a href="#front-matter" class="icon-btn" style="background: var(--accent); color:#fff; font-size: 1.05rem; padding: 10px 24px; border-radius: 999px;">
+            <span>📖 ابدأ القراءة الآن</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Chapters Sections -->
+      
+    <section id="front-matter" class="book-chapter-section" data-title="الصفحات التمهيدية">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">تمهيد</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الوعي الرقمي</h1>
+<h2>المعرفة التي تحميك وتصنع مستقبلك</h2>
+<hr />
+<h3>تأليف: جنكيز</h3>
+<blockquote>
+<p>«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».</p>
+</blockquote>
+<hr />
+<div style="page-break-after: always;"></div>
+
+<h2>صفحة حقوق النشر والبيانات الببليوغرافية</h2>
+<p><strong>عنوان الكتاب:</strong> الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك<br />
+<strong>المؤلف:</strong> جنكيز<br />
+<strong>لغة الكتاب:</strong> العربية الفصحى الحديثة<br />
+<strong>الطبعة:</strong> الأولى<br />
+<strong>سنة الإصدار:</strong> 2026م / 1447هـ  </p>
+<hr />
+<p><strong>بيانات النشر والتوثيق (قابلة للتعبئة عند استكمال متطلبات الطباعة الرسمية):</strong><br />
+* <strong>الرقم الدولي المعياري للكتاب (ISBN):</strong> [قابل للتعبئة: ___ - ___ - _____ - ___ - _]<br />
+* <strong>دار النشر والتوزيع:</strong> [قابل للتعبئة: اسم دار النشر / النشر الذاتي الرقمي]<br />
+* <strong>رقم الإيداع القانوني:</strong> [قابل للتعبئة: رقم الإيداع لدى المكتبة الوطنية]<br />
+* <strong>التصنيف الموضوعي:</strong> علوم الحاسب / الأمن السيبراني / البرمجة والتعليم التقني / الثقافة الرقمية</p>
+<hr />
+<h3>إشعار حقوق الملكية الفكرية</h3>
+<p>جميع الحقوق محفوظة للمؤلف © 2026 جنكيز.<br />
+لا يجوز نسخ أي جزء من هذا الكتاب، أو تخزينه في أي نظام استرجاع إلكتروني، أو نقله بأي شكل من الأشكال أو بأي وسيلة—إلكترونية، أو ميكانيكية، أو تصويرية، أو تسجيلية—بقصد الاستغلال التجاري دون إذن كتابي مسبق من المؤلف. يُسمح بالاقتباس العلمي القصير لأغراض المراجعة والتدريس والتوعية المجتمعية غير الربحية مع الإشارة الصريحة للمصدر.</p>
+<hr />
+<h3>تنويه إخلاء المسؤولية التعليمي والدفاعي (Security &amp; Legal Disclaimer)</h3>
+<p>المعلومات والنماذج والأكواد البرمجية الواردة في هذا الكتاب مُعدة حصرياً لأغراض تعليمية، وتوعوية، وتثقيفية، ودفاعية لتعزيز الأمن الرقمي الشخصي والمؤسسي، وحماية الأنظمة والبيانات، ونشر الفكر البرمجي الإيجابي.</p>
+<p>المؤلف والناشر يُخليان مسؤوليتهما القانونية والأخلاقية الكاملة عن أي استخدام غير مشروع، أو غير مصرح به، أو أي محاولة لإساءة توظيف المفاهيم التقنية الواردة هنا لاختراق الأنظمة، أو التعدي على خصوصية الأفراد، أو انتهاك القوانين واللوائح التنظيمية المحلية والدولية لمكافحة الجرائم المعلوماتية. إن تطبيق أي تقييم أمني عملي يجب أن يتم حصرياً داخل بيئات افتراضية معزولة، أو على أنظمة يمتلك المستخدم إذناً خطياً ورسمياً مسبقاً باختبارها.</p>
+<hr />
+<div style="page-break-after: always;"></div>
+
+<h2>الإهداء</h2>
+<div align="center">
+
+إلى كل إنسان يسعى لفهم هذا العالم الرقمي المتسارع،  
+ويحرص على حماية أسرته ومجتمعه من مخاطره...
+
+إلى الشباب والمبرمجين ورواد الغد،  
+الذين يحملون شغف التعلم،  
+ويؤمنون بأن الأسطر البرمجية ليست مجرد أوامر لآلة،  
+بل هي أدوات للبناء وصناعة الأثر...
+
+وإلى كل من جعل من علمه جسراً يرفعه الآخرون،  
+تذكيراً بالرسالة الراسخة:  
+**«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».**
+
+أهدي هذا العمل.
+
+</div>
+
+<hr />
+<div style="page-break-after: always;"></div>
+
+<h2>كلمة المؤلف: جنكيز</h2>
+<p><em>(المسودة المقترحة المعروضة على المؤلف للاعتماد قبل الطباعة)</em></p>
+<p>بسم الله الرحمن الرحيم،</p>
+<p>نعيش اليوم في زمن لم تعد فيه التكنولوجيا أداة ثانوية نلجأ إليها لإنجاز بعض المهام، بل أضحت الفضاء الحيوي الذي تدور فيه تفاصيل حياتنا كلها؛ من اتصالاتنا وعلاقاتنا الإنسانية، إلى تعاملاتنا المالية، وتطوير معارفنا، وحفظ ذكرياتنا وخصوصياتنا.</p>
+<p>ومع هذا التحول الجذري والمتسارع، اتسعت فجوة مقلقة في مجتمعاتنا: فبينما يزداد استخدامنا للأجهزة والتطبيقات يوماً بعد يوم، يبقى فهمنا الداخلي لكيفية عمل هذه المنظومات وتأمينها متأخراً عن وتيرة الاعتماد عليها. لقد بات المستخدم العادي يتعامل مع هاتفه كصندوق سحري أسود، يثق فيه ثقة مطلقة دون أن يدرك ما يجري خلف زجاجه البراق من تدفق للبيانات، أو ما يحيط به من تحديات تستهدف خصوصيته وأمانه.</p>
+<p>من هنا، ومن واقع عملي واهتمامي المستمر بمجالات البرمجة وتطوير الأنظمة والأمن السيبراني، ولدت فكرة هذا الكتاب. لم يكن الهدف أبداً إضافة كتاب تنظيري آخر إلى المكتبة العربية، أو رصّ مصطلحات تقنية جافة تُشعر القارئ بالعجز، بل كان الدافع هو <strong>سد هذه الفجوة المعرفية بلغة عربية فصيحة، أصيلة، واضحة، ومنهجية</strong>.</p>
+<p>لقد حرصت في هذا الكتاب على صياغة كل فكرة بميزان دقيق: أن يجد فيه القارئ المبتدئ والآباء والأمهات دليلاً عملياً بسيطاً يحميهم ويجيب عن تساؤلاتهم الواقعية، وأن يجد فيه طالب التقنية والمبرمج مرجعاً متماسكاً يحترم عقليته، يستند إلى المعايير الهندسية والدولية المعترف بها عالمياً، ويحثه على البرمجة الآمنة والأخلاقية.</p>
+<p>إن أثمن ما نملكه في هذا العصر هو «الوعي». فالأمان الرقمي لا يُشترى ببرامج حماية باهظة، بل يبدأ من عقلٍ واعٍ يدرك أين يضع قدمه في العالم الافتراضي. وإذا كان الكود البرمجي قادراً على تشييد أنظمة هائلة، فإن الأخلاق والمسؤولية المجتمعية هي التي تضمن أن تظل هذه الأنظمة في خدمة الإنسان، لا أن تنقلب عبئاً عليه.</p>
+<p>أضع هذا الكتاب بين يديك راجياً أن يكون لك مصباحاً ينير دروب هذا الفضاء الفسيح، ولبنة تسهم في بناء مجتمع عربي واعٍ رقمياً، وقادرٍ على حماية حاضره وصناعة مستقبله.</p>
+<p><strong>جنكيز</strong></p>
+<hr />
+<div style="page-break-after: always;"></div>
+
+<h2>المقدمة: لماذا نحتاج إلى الوعي الرقمي؟</h2>
+<p>لم يشهد التاريخ البشري تحولاً في أنماط العيش والتواصل والعمل بالسرعة والعمق اللذين أحدثتهما الثورة الرقمية خلال العقود القليلة الماضية. فقبل ثلاثين عاماً فقط، كان الاتصال الفوري عبر القارات حلماً نادراً، وكانت قواعد البيانات والمعالجات الإلكترونية حكراً على المؤسسات العسكرية والجامعات البحثية الكبرى. أما اليوم، فإن كل واحد منا يحمل في جيبه حاسوباً يفوق في قدرته الحسابية الحواسيب التي أدارت أولى رحلات الإنسان إلى الفضاء، متصلاً بشبكة تضم مليارات البشر، وتتحرك عبرها تريليونات الدولارات وتدفقات لا نهائية من البيانات والمعلومات في كل لحظة.</p>
+<p>غير أن هذا التطور المذهل حمل معه مفارقة لافتة: <strong>كلما ازدادت التكنولوجيا ذكاءً وسهولة في الاستخدام، قلّت بالضرورة حاجة المستخدم العادي للتفكير في كيفية عملها</strong>. لقد صُممت واجهات التطبيقات الحديثة لتكون فائقة السلاسة والإغراء، بحيث يستطيع طفل صغير أو شيخ مسن أن يتفاعل معها بلمسة إصبع. ولكن، خلف هذه الواجهات المصقولة اللامعة، تكمن منظومة برمجية وشبكية وأمنية شديدة التعقيد، تدار فيها معارك حقيقية حول البيانات والخصوصية والسيطرة.</p>
+<p>وهنا بالضبط تكمن نقطة الضعف القاتلة في المجتمعات الحديثة؛ فالجهل بأسس العالم الرقمي لم يعد مجرد نقص في الثقافة العامة، بل تحول إلى <strong>ثغرة أمنية وإنسانية</strong> تنفذ منها حوادث الاحتيال المالي، وسرقة الهويات، وتدمير الخصوصيات الأسرية، وابتزاز المراهقين والأطفال، بل وتعطيل المؤسسات والبنى التحتية الحيوية.</p>
+<h3>رسالة الكتاب وفلسفته</h3>
+<p>يقوم كتاب «الوعي الرقمي» على ثلاث ركائز محورية لا تنفصل:</p>
+<ol>
+<li>
+<p><strong>الوعي بوصفه خط الدفاع الأول:</strong> إن أفضل جدران الحماية (Firewalls) وأعتى برامج مكافحة الفيروسات تصبح بلا جدوى عندما ينقر مستخدم غافل على رابط احتيالي أو يسلّم رمز التحقق السري لمهاجم عبر مكالمة هاتفية ذكية. الأمن الحقيقي يبدأ من الوعي البشري، والمعرفة هي خط الدفاع المنيع الذي لا يمكن اختراقه إلا بالغفلة.</p>
+</li>
+<li>
+<p><strong>البرمجة والتفكير المنطقي كمهارة حياة:</strong> لا يهدف هذا الكتاب إلى تحويل جميع قرائه إلى مهندسي برمجيات محترفين، ولكنه يوقن بأن تعلم «كيف يفكر الحاسوب» وكيف تُبنى الخوارزميات يمنح الإنسان قدرة فائقة على التفكير المنطقي، وتحليل المشكلات المعقدة وتفكيكها إلى خطوات قابلة للحل. إن فهم لغة البرمجة يحرر الإنسان من موقع «المستهلك السلبي» للتقنية إلى موقع «الفاعل الواعي» القادر على الابتكار وصناعة الحلول.</p>
+</li>
+<li>
+<p><strong>المسؤولية الأخلاقية والاجتماعية:</strong> إن التكنولوجيا ليست غاية في حد ذاتها، بل هي وسيلة ومضخّم للقيم البشرية. فالقوة المعرفية والبرمجية الهائلة التي نملكها اليوم إن لم تُوجَّه بقيم أخلاقية رصينة ونية صادقة لخدمة المجتمع وحماية المستضعفين ودعم نهضة الأوطان، فإنها تتحول إلى أداة للهدم والاستغلال. من هنا جاء الشعار الذي يزين صدر هذا الكتاب: <strong>«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين»</strong>.</p>
+</li>
+</ol>
+<h3>كيف تستفيد من هذا الكتاب؟</h3>
+<p>تم تنظيم فصول الكتاب العشرة في مسار تصاعدي متسق:<br />
+* يبدأ <strong>الفصل الأول والثاني</strong> بتفكيك بنية الإنترنت والشبكات وتطبيقات الويب والهواتف، ليرى القارئ ما يدور في الكواليس بوضوح لا غموض فيه.<br />
+* ينتقل <strong>الفصل الثالث</strong> إلى عالم البرمجة والتفكير الخوارزمي مقدماً شروحاً عملية تطبيقية بلغة بايثون (Python) دون تعقيد.<br />
+* ثم يعالج <strong>الفصل الرابع والخامس والسادس</strong> أركان الأمن السيبراني والحماية الشخصية والأسرية وصولاً إلى ممارسات البرمجة الآمنة للأنظمة.<br />
+* ويناقش <strong>الفصل السابع</strong> ثورة الذكاء الاصطناعي بواقعية نقدية توازن بين فرصه ومخاطره.<br />
+* ويستعرض <strong>الفصل الثامن</strong> سيناريوهات واقعية لأخطاء حقيقية غيرت مسارات حياة أصحابها وكيفية تجنبها وعلاجها.<br />
+* ويتوج <strong>الفصل التاسع والعاشر</strong> الرحلة بتقديم أفكار لمشاريع تقنية في خدمة المجتمع، مع خطة عمل تطبيقية لمدة 30 يوماً تضمن نقل كل ما تعلمته من حيز المعرفة الذهنية إلى واقع التطبيق اليومي الملموس.</p>
+<p>لقد صِيغت كل صفحة من صفحات هذا الكتاب لتخاطب عقلك بلغة راقية وأمثلة حية من واقعك اليومي، مع تخصيص مربعات <strong>«للقارئ المتخصص»</strong> لكل من يريد الغوص في أسرار الهندسة العميقة والبروتوكولات الدولية.</p>
+<p>أهلاً بك في هذه الرحلة المعرفية الشيقة، متمنياً لك قراءة ممتعة تُحدث في حياتك الرقمية فرقاً حقيقياً ومستداماً.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch1" class="book-chapter-section" data-title="الفصل الأول: الإنسان في العصر الرقمي">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 1</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل الأول: الإنسان في العصر الرقمي</h1>
+<hr />
+<blockquote>
+<p>«إن أعظم تحول في تاريخ البشرية الحديث لم يكن في بناء ناطحات السحاب أو غزو الفضاء، بل كان في بناء شبكة غير مرئية تربط عقول مليارات البشر وأجهزتهم في نبضة واحدة».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: العالم الذي نستيقظ فيه كل صباح</h2>
+<p>تأمل معي مشهداً يتكرر مليارات المرات كل صباح في مختلف بقاع الأرض:<br />
+يدق منبه الهاتف الذكي في غرفتك؛ تمد يدك لتوقفه بلمسة خفيفة. في تلك اللحظة بالذات، وقبل أن تغادر فراشك، تنظر إلى شاشة جهازك لتشاهد خريطة الطقس المحدثة لحظياً عبر الأقمار الاصطناعية، وتقرأ خبراً عاجلاً وقع قبل دقيقة واحدة في قارة أخرى، وتستلم رسالة صوتية من صديق يبعد عنك آلاف الكيلومترات، وتدفع فاتورة الكهرباء عبر تطبيقك البنكي، ثم تطلب وسيلة نقل تقلك إلى عملك وتتابع حركتها الدقيقة على الخريطة عبر إشارات نظام تحديد المواقع العالمي (GPS).</p>
+<p>كل هذا يحدث في أقل من خمس دقائق، دون أن تلتفت إلى المعجزة العلمية والهندسية التي جعلت ذلك ممكناً.</p>
+<p>لقد أصبح العالم الرقمي هو الفضاء الطبيعي الثاني للإنسان الحديث. نحن نأكل، ونتعلم، ونعمل، ونتواصل، ونحفظ ذكرياتنا، وندير مدخراتنا، ونعبر عن آرائنا عبر هذا الفضاء. ولكن، كم منا يعرف حقاً ما الذي يحدث خلف هذا الزجاج الأملس اللامع عندما ننقر بإصبعنا على الشاشة؟ كيف تنتقل أصواتنا وصورنا وأموالنا عبر الهواء؟ وما الثمن الذي ندفعه مقابل هذه الراحة المطلقة؟</p>
+<p>إن الهدف من هذا الفصل الأول ليس تقديم سرد تاريخي ممل، بل <strong>نزع الغموض عن العالم الرقمي</strong>؛ لتبدأ رحلتك في هذا الكتاب وأنت تفهم الأرضية التي تقف عليها، وتدرك لماذا أصبح الوعي الرقمي طوق نجاة لا غنى عنه لكل إنسان.</p>
+<hr />
+<h2>2. ما هو التحول الرقمي وما مستوياته؟</h2>
+<p>كثيراً ما نسمع مصطلح <strong>«التحول الرقمي» (Digital Transformation)</strong> في الأخبار وخطابات الحكومات والشركات، ولكن ما معناه الدقيق بعيداً عن الرنين التسويقي؟</p>
+<p>لنفهم التحول الرقمي، يجب أن نميز بين ثلاثة مستويات متراتبة:</p>
+<ol>
+<li>
+<p><strong>الرقمنة المادية (Digitization):</strong><br />
+   هي تحويل المعلومات من صيغتها الفيزيائية التقليدية (ورق، صور مطبوعة، أشرطة صوتية) إلى صيغة رقمية ثنائية تفهمها الحواسيب (أصفار وآحاد). مثال ذلك: مسح وثيقة ورقية ضوئياً وتحويلها إلى ملف PDF.</p>
+</li>
+<li>
+<p><strong>رقمنة العمليات (Digitalization):</strong><br />
+   هي توظيف التكنولوجيا الرقمية لتحسين إجراء أو معاملة معينة وجعلها أسرع وأكثر كفاءة. مثال ذلك: بدلاً من الوقوف في طابور طويل لتجديد رخصة القيادة، تقوم بملء نموذج عبر موقع إلكتروني.</p>
+</li>
+<li>
+<p><strong>التحول الرقمي الشامل (Digital Transformation):</strong><br />
+   هو تغيير جذري في نموذج التفكير والعمل والحياة، بحيث تصبح التكنولوجيا هي الأساس الذي يُعاد بناء المجتمع والخدمات والعلاقات وفقاً له. لم يعد الأمر مجرد «أتمتة» لما هو قديم، بل خلق أساليب حياة واقتصاد ومعرفة لم تكن ممكنة من قبل.</p>
+</li>
+</ol>
+<p>إن التحول الرقمي لا يعني استبدال الورق بالشاشات فحسب، بل يعني انتقال مركز الثقل الإنساني إلى عالم تتدفق فيه البيانات بسرعة الضوء.</p>
+<hr />
+<h2>3. كيف يعمل الإنترنت فيزيائياً؟ (حقائق خلف السحاب)</h2>
+<p>عندما نتحدث عن «الحوسبة السحابية» أو «رفع الملفات إلى الإنترنت»، يتخيل الكثير من الناس أن معلوماتهم تطفو حرفياً في الهواء الطلق أو بين الغيوم! </p>
+<p>الحقيقة الصادمة لمعظم المبتدئين هي أن <strong>الإنترنت شبكة فيزيائية ملموسة بنسبة تفوق 95%</strong>. </p>
+<p>إذا انقطعت الكابلات المادية، يتوقف الإنترنت فوراً.</p>
+<h3>كابلات الأعماق: شرايين الكوكب الرقمي</h3>
+<p>في هذه اللحظة التي تقرأ فيها هذه السطور، هناك ما يزيد عن <strong>1.4 مليون كيلومتر</strong> من كابلات الألياف الضوئية الممتدة في قيعان المحيطات والبحار، تربط القارات بعضها ببعض. هذه الكابلات ليست بحجم أنابيب النفط الضخمة، بل إن قطر الكابل في الأعماق لا يتجاوز خرطوم مياه الحديقة، ولكنه مغلف بطبقات فولاذية وعوازل تحميه من ضغط المياه وأسماك القرش والحركات التكتونية.</p>
+<p>داخل هذا الكابل الصغير، توجد شعيرات زجاجية بالغة الدقة (أرق من شعرة الإنسان)، تنقل البيانات ليس ككهرباء، بل على شكل <strong>ومضات ضوئية من الليزر (Light Pulses)</strong> تسير بسرعة تقارب 200,000 كيلومتر في الثانية!</p>
+<h3>مراكز البيانات: قلاع المعلومات</h3>
+<p>أين تستقر صورك ورسائلك وحساباتك؟ إنها في مبانٍ خرسانية عملاقة تُعرف باسم <strong>«مراكز البيانات» (Data Centers)</strong>، تنتشر حول العالم في مناطق باردة ومؤمنة بأعلى درجات الحراسة وأنظمة التبريد ومولدات الطاقة الاحتياطية. تحتوي هذه المراكز على آلاف الرفوف الممتلئة بالحواسيب العملاقة والخوادم (Servers) التي تعمل دون انقطاع ثانية واحدة على مدار العام.</p>
+<hr />
+<h2>4. الفرق الحقيقي بين الإنترنت وشبكة الويب</h2>
+<p>يستخدم معظم الناس كلمتي «الإنترنت» و«الويب» وكأنهما مترادفان، لكن بينهما فرقاً علمياً جوهرياً يشبه الفرق بين <strong>«شبكة الطرق السريعة» و«السيارات التي تسير عليها»</strong>.</p>
+<ul>
+<li>
+<p><strong>الإنترنت (The Internet):</strong><br />
+  هو <strong>البنية التحتية العالمية الهائلة</strong>؛ أي الأسلاك، والكابلات البحرية، والأقمار الاصطناعية، والموجهات (Routers)، والخوادم، وأجهزة الحواسيب والهواتف المتصلة ببعضها وفق بروتوكولات اتصال موحدة. الإنترنت هو شبكة الشبكات التي تنقل الإشارات.</p>
+</li>
+<li>
+<p><strong>الويب (The World Wide Web - WWW):</strong><br />
+  هو <strong>أحد التطبيقات والخدمات التي تعمل فوق الإنترنت</strong>. ابتكره العالم البريطاني «تيم بيرنرز لي» عام 1989، وهو منظومة الصفحات والمستندات المترابطة بواسطة الروابط التشعبية (Hyperlinks)، والتي تتصفحها باستخدام متصفح الويب (مثل Chrome أو Firefox أو Safari) عبر بروتوكول HTTP/HTTPS.</p>
+</li>
+</ul>
+<p><strong>المعنى العملي:</strong><br />
+عندما تتصفح موقعاً إلكترونياً، فأنت تستخدم الويب عبر الإنترنت. أما عندما تجري مكالمة صوتية عبر WhatsApp، أو تلعب لعبة فيديو أونلاين، أو ترسل بريداً عبر تطبيق خاص، فأنت تستخدم شبكة الإنترنت دون المرور بالويب بالضرورة!</p>
+<hr />
+<h2>5. ما هي البيانات الرقمية؟ رحلة من الصفر والواحد إلى الصورة الحية</h2>
+<p>كل ما تراه على شاشتك: من فيلم سينمائي فائق الجودة، إلى مقطع صوتي، أو رسالة نصية، أو عملية تحويل بنكي، يتحول في نهاية المطاف داخل دوائر السيليكون في جهازك إلى شيئين اثنين فقط: <strong>(0) و (1)</strong>.</p>
+<h3>لماذا 0 و 1؟</h3>
+<p>لأن الحواسيب كائنات كهربائية. أبسط وأكثر طريقة مضمونة لحفظ ونقل الإشارات دون تلف هي الاعتماد على حالتين فيزيائيتين للمفتاح الإلكتروني (الترانزستور):<br />
+* <strong>0:</strong> غياب التيار الكهربائي (أو شحنة منخفضة / مطفأ).<br />
+* <strong>1:</strong> وجود التيار الكهربائي (أو شحنة مرتفعة / مشتعل).</p>
+<p>يُسمى هذا العنصر الأصغر <strong>«البت» (Bit)</strong>. وعندما نجمع 8 بتات معاً، نحصل على <strong>«البايت» (Byte)</strong>، وهو الحجم الكافي لتخزين حرف أبجدي واحد. ومنها تتصاعد الأحجام:<br />
+* <strong>الكيلوبايت (KB):</strong> ألف بايت تقريباً (صفحة نصية قصيرة).<br />
+* <strong>الميجابايت (MB):</strong> مليون بايت (أغنية صوتية أو صورة عالية الدقة).<br />
+* <strong>الجيجابايت (GB):</strong> مليار بايت (فيلم سينمائي بجودة عالية).<br />
+* <strong>التيرابايت (TB):</strong> ألف مليار بايت (مكتبة ضخمة تضم ملايين الكتب).</p>
+<hr />
+<h2>6. رحلة المعلومة: ماذا يحدث في أجزاء من الثانية عندما تفتح موقعاً؟</h2>
+<p>تخيل أنك فتحت متصفحك وكتبت: <code>www.example.com</code> ثم ضغطت على زر الإدخال (Enter). ما الذي يحدث خلال الـ 200 مللي ثانية التالية؟</p>
+<ol>
+<li>
+<p><strong>الترجمة عبر نظام أسماء النطاقات (DNS):</strong><br />
+   الحواسيب والشبكات لا تفهم الأسماء البشرية مثل <code>example.com</code>. إنها تتعامل مع عناوين رقمية تُعرف بـ <strong>عنوان بروتوكول الإنترنت (IP Address)</strong> مثل <code>93.184.216.34</code>.<br />
+   يقوم جهازك بالاتصال بدليل هاتف رقمي عالمي يُسمى <strong>DNS (Domain Name System)</strong> يسأله: "ما هو الـ IP التابع لهذا الاسم؟"، فيرد عليه في غمضة عين بالرقم الصحيح.</p>
+</li>
+<li>
+<p><strong>تقطيع البيانات إلى حزم (Packets):</strong><br />
+   الإنترنت لا يرسل الصفحات والملفات ككتلة واحدة ضخمة. بدلاً من ذلك، تُقطع البيانات إلى مئات أو آلاف <strong>«الحزم الصغيرة» (Packets)</strong>. كل حزمة تحتوي على جزء من المحتوى، ملصقاً عليها عنوان المرسل وعنوان المستقبل ورقم تسلسلي.</p>
+</li>
+<li>
+<p><strong>الارتحال عبر الموجهات (Routers):</strong><br />
+   تنطلق هذه الحزم عبر أسلاك الواي فاي إلى الراوتر المنزلي، ومنه إلى مزود الخدمة (ISP)، ثم تعبر القارات عبر الكابلات البحرية، متنقلة بين عشرات الموجهات (Routers) التي تقرر في كل ميكروثانية أي المسارات أسرع وأقل ازدحاماً.</p>
+</li>
+<li>
+<p><strong>إعادة التجميع والمصافحة:</strong><br />
+   تصل الحزم إلى خادم الموقع في ولاية أو دولة أخرى، فيقوم بتجميعها والتأكد من عدم ضياع أي حزمة، ثم يرسل صفحة الويب المطلوبة بنفس الطريقة إلى جهازك ليقوم متصفحك برسمها وتنسيقها أمام عينيك.</p>
+</li>
+</ol>
+<p>كل هذه الرحلة المعقدة الممتدة لآلاف الكيلومترات حدثت في لمح البصر وأنت ترمش عينك!</p>
+<hr />
+<h2>7. دور الخوادم والشبكات ومزودي الخدمة</h2>
+<p>لكي تتخيل شبكة الإنترنت بوضوح، فكر فيها كهيكل هرمي متماسك:</p>
+<ul>
+<li>
+<p><strong>مزود خدمة الإنترنت (ISP - Internet Service Provider):</strong><br />
+  هو الشركة المحلية التي تشتري منها اشتراك الإنترنت المنزلي أو باقة الهاتف المحمول. هذه الشركات بدورها تتصل بشركات اتصالات دولية عملاقة تملك الكابلات القارية والأقمار الصناعية (تسمى مشغلي المستوى الأول Tier-1).</p>
+</li>
+<li>
+<p><strong>العميل (Client):</strong><br />
+  هو جهازك (هاتفك، حاسوبك الشخصي، جهازك اللوحي) الذي يطلب الخدمة أو الصفحة.</p>
+</li>
+<li>
+<p><strong>الخادم (Server):</strong><br />
+  هو حاسوب عالي الكفاءة والمواصفات، متصل بالإنترنت طوال اليوم برابط سريع جداً، دوره هو «خدمة» العملاء والاستجابة لطلباتهم بتسليمهم البيانات المخزنة لديه.</p>
+</li>
+<li>
+<p><strong>الموجه (Router):</strong><br />
+  هو شرطي المرور الرقمي؛ يستلم حزم البيانات، ويقرأ وجهتها النهائية، ويوجهها إلى المسار السلكي أو اللاسلكي الأنسب دون أن تتصادم أو تضيع.</p>
+</li>
+</ul>
+<hr />
+<h2>8. للقارئ المتخصص: نموذج TCP/IP ومفهوم التغليف (Encapsulation)</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+تقوم شبكة الإنترنت عالمياً على معمارية معيارية موحدة هي **نموذج TCP/IP المكون من أربع طبقات رئيسية**:
+
+1. **طبقة التطبيقات (Application Layer):**  
+   تتعامل مع البروتوكولات المباشرة للبرمجيات مثل HTTP/HTTPS لتصفح الويب، وDNS لترجمة الأسماء، وSMTP لنقل البريد، وSSH للاتصال الآمن عن بُعد.
+2. **طبقة النقل (Transport Layer):**  
+   المسؤولة عن إدارة الاتصال بين البرامج من طرف لطرف. أشهر بروتوكولين فيها:
+   * **TCP (Transmission Control Protocol):** موثوق، يتطلب تأسيس اتصال عبر **المصافحة الثلاثية (3-Way Handshake: SYN -> SYN-ACK -> ACK)**، ويضمن وصول جميع الحزم بالترتيب مع إعادة إرسال الحزم المفقودة.
+   * **UDP (User Datagram Protocol):** سريع وخفيف، لا يتطلب مصافحة ولا يضمن الترتيب، وهو مثالي للبث الحي والصوتيات والألعاب الشبكية.
+3. **طبقة الإنترنت (Internet / Network Layer):**  
+   تعتمد بروتوكول IP (بنسختيه IPv4 و IPv6) ومهمتها العنونة المنطقية والتوجيه (Routing) عبر مسارات الشبكات المختلفة.
+4. **طبقة الوصول للشبكة (Link / Network Access Layer):**  
+   تتعامل مع العناوين الفيزيائية للأجهزة (MAC Addresses) وتحويل الإشارات إلى نبضات كهربائية عبر كابلات الإيثرنت أو موجات راديو (Wi-Fi) أو ضوئية في الألياف.
+
+#### مفهوم التغليف وفك التغليف (Encapsulation & Decapsulation):
+عندما يرسل تطبيقك رسالة، تهبط البيانات من أعلى إلى أسفل:
+* تضيف طبقة النقل ترويسة (Header) تضم أرقام المنافذ (Ports) لتصبح **Segment**.
+* تضيف طبقة الإنترنت ترويسة الـ IP (عناوين المصدر والوجهة) لتصبح **Packet**.
+* تضيف طبقة الربط ترويسة وتذييلاً بـ MAC Address لتصبح **Frame**.
+* تتحول إلى **Bits** في الوسط الفيزيائي.  
+وعند الطرف المستقبل، تنعكس العملية (Decapsulation) صعوداً حتى تصل الرسالة نظيفة إلى التطبيق المعني.
+
+</div>
+
+<hr />
+<h2>9. لماذا أصبحت المعرفة الرقمية ضرورة وجودية؟</h2>
+<p>في القرون الماضية، كانت الأمية تعني عدم القدرة على القراءة والكتابة. أما في القرن الحادي والعشرين، فإن الأمية الحقيقية هي <strong>الأمية الرقمية</strong>.</p>
+<p>إن الإنسان الذي يجهل كيف تعمل التكنولوجيا في محيطه يعيش في حالة استضعاف مستمر:<br />
+* <strong>استضعاف أمام المراقبة والتتبع:</strong> لا يدري من يجمع بياناته، ولا كيف يتم تصنيف اهتماماته وسلوكياته وبيعها لشبكات الإعلانات والتحليل.<br />
+* <strong>استضعاف أمام الاستغلال والاحتيال:</strong> ينخدع بسهولة برسائل التخويف أو وعود الثراء السريع، ويسلّم مفاتيحه وأمواله طواعية للمهاجمين.<br />
+* <strong>استضعاف مهني ومستقبلي:</strong> يفقد القدرة على المنافسة في سوق عمل يعيد تشكيل نفسه يومياً حول الأتمتة والذكاء الاصطناعي وإدارة البيانات.</p>
+<p>الوعي الرقمي ليس ترفاً للمهووسين بالتكنولوجيا أو المتخصصين بالأمن، بل هو درع أساسي لكل أب وأم، وموظف، وطالب، وطبيب، ورجل أعمال لحماية أسرار حياته وأمان أسرته.</p>
+<hr />
+<h2>10. الفرص الكبرى مقابل المخاطر الرقمية</h2>
+<p>يقف الإنسان في العصر الرقمي أمام مشهد ذي وجهين شديدي التباين:</p>
+<h3>الوجه المشرق: الفرص غير المسبوقة</h3>
+<ul>
+<li><strong>دمقرطة المعرفة:</strong> أصبح بإمكان أي شاب في قرية نائية أن يتعلم علوم الحاسب والفيزياء والاقتصاد من أقوى جامعات العالم مجاناً وبضغطة زر.</li>
+<li><strong>التمكين الاقتصادي والعمل المرن:</strong> فتح الإنترنت الباب للعمل عن بُعد، والوصول إلى أسواق العمل العالمية، وبناء مشاريع تجارية ناجحة برؤوس أموال متناهية الصغر.</li>
+<li><strong>التواصل الإنساني والتكافل:</strong> إمكانية حشد المجتمعات لنصرة القضايا الإنسانية، وجمع التبرعات، وإنقاذ الأرواح، وتبادل الخبرات عبر الحدود الجغرافية.</li>
+</ul>
+<h3>الوجه المظلم: التحديات والمخاطر الداهمة</h3>
+<ul>
+<li><strong>تآكل الخصوصية:</strong> تحولت بيانات المستخدمين وسلوكياتهم إلى «النفط الجديد»، وغالباً ما يدفع المستخدم خصوصيته ثمناً للخدمات «المجانية».</li>
+<li><strong>الجريمة السيبرانية المنظمة:</strong> هجمات الفدية، وسرقة الهويات، والابتزاز الإلكتروني، واختراق الحسابات البنكية.</li>
+<li><strong>الإدمان الرقمي والتشتت:</strong> خوارزميات مصممة خصيصاً لاستنزاف انتباه الإنسان ووصفحات التواصل التي تغذي مشاعر القلق والمقارنة الاجتماعية.</li>
+<li><strong>التضليل والتزييف:</strong> انتشار الأخبار الكاذبة والمواد المصنوعة بالذكاء الاصطناعي بسرعة تفوق سرعة انتشار الحقائق بمراحل.</li>
+</ul>
+<p>إن دور هذا الكتاب ليس أن يدعوك للانسحاب من التكنولوجيا والعزلة في كهف، بل العكس تماماً: <strong>أن يدخل بك إلى العالم الرقمي وأنت مسلح بالوعي والقوة والتمكن</strong>.</p>
+<hr />
+<h2>11. ملخص الفصل الأول</h2>
+<ul>
+<li>العالم الرقمي ليس فضاءً خيالياً، بل بنية تحتية فيزيائية هائلة تعتمد على كابلات الألياف الضوئية الممتدة في قيعان المحيطات ومراكز البيانات العالمية.</li>
+<li><strong>الإنترنت</strong> هو شبكة الطرق والبنية التحتية، بينما <strong>الويب</strong> هو إحدى السيارات والخدمات التي تسير فوق هذه الشبكة.</li>
+<li>جميع البيانات مهما بلغت درجة تعقيدها تُختزل إلى نبضات كهربائية أو ضوئية تمثل الأصفار والآحاد (Bits).</li>
+<li>تنتقل البيانات عبر الشبكة مقطعة إلى حزم صغيرة (Packets) تقودها الموجهات وتترجم أسماءها خوادم الـ DNS لتصل في أجزاء من الثانية.</li>
+<li>الوعي الرقمي لم يعد خياراً ثانوياً، بل هو الأداة الأساسية لصيانة كرامة الإنسان، وحماية أسرته، وبناء مستقبله المهني في عصر تسوده البيانات.</li>
+</ul>
+<hr />
+<h2>12. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>ما الفارق الجوهري بين شبكة الإنترنت وشبكة الويب العالمية؟ اذكر مثالاً لخدمة تستخدم الإنترنت دون استخدام الويب.</strong></li>
+<li><strong>لماذا تعتمد الحواسيب نظام العد الثنائي (0 و 1) بدلاً من النظام العشري الذي يستخدمه البشر؟</strong></li>
+<li><strong>اشرح باختصار وظيفة نظام أسماء النطاقات (DNS) ولماذا يُشبه بدليل الهاتف.</strong></li>
+<li><strong>ما الفرق الرئيسي بين بروتوكول TCP وبروتوكول UDP في نقل البيانات، ومتى يُفضل استخدام كل منهما؟</strong></li>
+</ol>
+<hr />
+<h2>13. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>W3C (World Wide Web Consortium):</strong> المعايير التأسيسية لتطور شبكة الويب العالمية عبر الموقع الرسمي: <code>w3.org</code>.</li>
+<li><strong>RFC 793 - Transmission Control Protocol:</strong> الوثيقة المعيارية التاريخية المؤسسة لبروتوكول TCP عبر منظومة <code>ietf.org</code>.</li>
+<li><strong>MDN Web Docs - How the Internet Works:</strong> دليل شبكة مطوري موزيلا التأسيسي للمبتدئين حول ميكانيزمات الاتصال الشبكي.</li>
+<li><strong>Submarine Cable Map (<code>submarinecablemap.com</code>):</strong> خريطة تفاعلية عالمية موثوقة تستعرض مسارات الكابلات البحرية الممتدة في قيعان المحيطات.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch2" class="book-chapter-section" data-title="الفصل الثاني: كيف تعمل البرامج والتطبيقات؟">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 2</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل الثاني: كيف تعمل البرامج والتطبيقات؟</h1>
+<hr />
+<blockquote>
+<p>«البرمجيات ليست سحراً غامضاً، بل هي سلسلة من الأوامر المنطقية الدقيقة التي تجعل قطعة من السيليكون والزجاج تفهم رغبة الإنسان وتنفذها في كسر من الثانية».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: الصندوق الأسود الذي يرافقنا في كل مكان</h2>
+<p>كل صباح ومساء، تفتح عشرات التطبيقات على هاتفك أو حاسوبك: تطبيق مراسلة، تطبيق بنكي، متصفح، لعبة ثلاثية الأبعاد، منصة فيديو. تنقر بإصبعك، فتتحرك الأزرار، وتصل الرسائل فوراً، وتُخصم الأموال بدقة متناهية.</p>
+<p>بالنسبة للأغلبية الساحقة من الناس، يُعد هذا التطبيق "صندوقاً أسود" سحرياً: تضغط هنا، فيحدث ذلك هناك!</p>
+<p>ولكن، عندما تتعامل مع الشيء كصندوق سحري غامض، فأنت عاجز عن معرفة:<br />
+* أين تذهب أسرارك عند كتابتها؟<br />
+* ما الذي يملكه مطورو التطبيق من قدرة للوصول إلى هاتفك؟<br />
+* ولماذا تتوقف بعض التطبيقات فجأة أو تخبرك بأن "الخادم لا يستجيب"؟</p>
+<p>في هذا الفصل، سنفتح هذا الصندوق الأسود معاً، ونفكك مكوناته قطعة قطعة بلغة بسيطة تبدأ من المعالج الصغير في جهازك، مروراً بقواعد البيانات السحابية، ووصولاً إلى واجهات برمجة التطبيقات (APIs).</p>
+<hr />
+<h2>2. ما هي البرمجيات؟ وطبقة التجريد بين العتاد والإنسان</h2>
+<p>لنتفق أولاً على قاعدة أساسية: <strong>الحاسوب في حد ذاته كائن "غبي" للغاية لكنه خارق السرعة والدقة</strong>. </p>
+<p>المعالج (CPU) لا يفهم ما هو "الحب"، ولا يعرف ما هي "الصورة"، ولا يدرك معنى "حساب بنكي". المعالج ليس سوى مجموعة هائلة من الترانزستورات (مليارات المفاتيح الكهربائية الدقيقة) التي تتبدل بين حالتين فقط: يمر تيار (1) أو لا يمر تيار (0).</p>
+<h3>مفهوم طبقة التجريد (Abstraction):</h3>
+<p>كيف ننقل فكرة بشرية معقدة (مثل: "اعرض لي قائمة أصدقائي المتصلين الآن") إلى كهرباء؟ <br />
+هنا يأتي دور <strong>طبقات التجريد (Layers of Abstraction)</strong>:<br />
+1. <strong>العتاد (Hardware):</strong> المعالج، والذاكرة العشوائية (RAM)، ووحدة التخزين، وشاشة اللمس.<br />
+2. <strong>لغة الآلة (Machine Code):</strong> الأصفار والآحاد التي يتلقاها المعالج مباشرة.<br />
+3. <strong>لغة التجميع ولغات البرمجة (Assembly &amp; High-Level Languages):</strong> كلمات مفهومة للبشر (مثل <code>if</code>, <code>while</code>, <code>print</code>).<br />
+4. <strong>نظام التشغيل (Operating System):</strong> المدير العام الذي ينظم استخدام المعالج والذاكرة.<br />
+5. <strong>التطبيق (Application):</strong> الواجهة النهائية الرسومية التي يتفاعل معها المستخدم.</p>
+<p>بفضل هذه الطبقات، لا يحتاج المبرمج اليوم إلى معرفة شحنة الترانزستور بالمللي فولت ليكتب تطبيقاً؛ فالتكنولوجيا تخفي التعقيد المنخفض لتسمح للإنسان بالتركيز على حل المشكلة.</p>
+<hr />
+<h2>3. أنظمة التشغيل (OS): المدير العام وحارس البوابة</h2>
+<p>لو لم تكن هناك أنظمة تشغيل، لكان عليك في كل مرة تريد فيها كتابة نص على الشاشة أن تبرمج وحدة معالجة الرسوميات وشاشة اللمس من الصفر!</p>
+<p><strong>نظام التشغيل (Operating System - OS)</strong> مثل (Android, iOS, Windows, macOS, Linux) هو أهم برنامج في الجهاز على الإطلاق. إنه بمثابة <strong>حكومة الجهاز ومدير موارده</strong>:</p>
+<ul>
+<li><strong>إدارة المعالج والذاكرة:</strong> يقرر أي تطبيق يعمل الآن في الذاكرة العشوائية (RAM)، وكم ميجابايت يحصل عليها، ويفصل التطبيقات عن بعضها حتى لا يعطل تطبيق فاشل بقية البرامج.</li>
+<li><strong>إدارة الأمان والبيئة المعزولة (Sandboxing):</strong> يمنع أي تطبيق خبيث أو عادي من التجسس على ذاكرة تطبيق آخر؛ فمثلاً تطبيق اللعبة لا يستطيع قراءة محادثات تطبيق المراسلة لأن نظام التشغيل يضع كل تطبيق في "صندوق رمل" معزول.</li>
+<li><strong>إدارة العتاد والأذونات:</strong> عندما يطلب تطبيق ما استخدام الكاميرا أو الميكروفون، يتدخل نظام التشغيل فوراً ويسألك: "هل تسمح لهذا التطبيق بالوصول إلى الكاميرا؟". إذا رفضت، يقطع النظام الإشارة المادية عن التطبيق.</li>
+</ul>
+<hr />
+<h2>4. كيف يترجم الحاسوب التعليمات البرمجية؟</h2>
+<p>عندما يكتب مبرمج كوداً بلغة مثل بايثون (Python) أو جافا سكريبت (JavaScript) أو سي بلس بلس (C++)، كيف يُنفذ هذا الكود؟</p>
+<p>هناك طريقتان رئيسيتان:</p>
+<ol>
+<li>
+<p><strong>الترجمة المسبقة (Compilation):</strong><br />
+   يتم فحص الكود بالكامل مرة واحدة بواسطة برنامج يُسمى <strong>المترجم (Compiler)</strong> وتحويله مسبقاً إلى ملف تنفيذي بلغة الآلة الصرفة (مثل ملفات <code>.exe</code> في ويندوز). هذه البرامج تكون فائقة السرعة عند التشغيل (مثل لغات C و C++ و Rust و Go).</p>
+</li>
+<li>
+<p><strong>التفسير الفوري (Interpretation):</strong><br />
+   يتم قراءة الكود سطراً بسطر بواسطة برنامج وسيط يُسمى <strong>المُفسر (Interpreter)</strong> أثناء تشغيل البرنامج وتنفيذه فوراً. هذه البرامج أسهل في التطوير والتعلم (مثل لغة Python).</p>
+</li>
+</ol>
+<hr />
+<h2>5. تشريح أنواع التطبيقات: الهواتف، الويب، وسطح المكتب</h2>
+<p>ليست كل البرامج مبنية بنفس الأسلوب؛ فهناك بيئات مختلفة تفرض هندسة متباينة:</p>
+<h3>تطبيقات الهاتف الذكي (Mobile Apps)</h3>
+<ul>
+<li><strong>التطبيقات الأصيلة (Native Apps):</strong> كُتبت خصيصاً لنظام معين (بـ Kotlin/Java لنظام Android، أو بـ Swift لنظام iOS). تتميز بالسرعة الفائقة والوصول الكامل لعتاد الهاتف (مستشعرات الحركة، الكاميرا بدقة كاملة).</li>
+<li><strong>التطبيقات الهجينة ومتعددة المنصات (Cross-Platform Apps):</strong> تُكتب مرة واحدة (باستخدام أدوات مثل Flutter أو React Native) لتعمل على Android و iOS معاً، مما يوفر وقت التطوير وتكلفة الصيانة.</li>
+</ul>
+<h3>تطبيقات الويب (Web Applications)</h3>
+<p>تطبيقات لا تحتاج إلى تثبيتها من متجر؛ بل تعمل داخل متصفح الإنترنت مباشرة (مثل محرر مستندات جوجل، أو موقع فيسبوك). تنقسم بنيتها إلى شقين:<br />
+* <strong>الواجهة الأمامية (Frontend):</strong> كل ما تراه عيناك وتلمسه أصابعك في المتصفح، وتُبنى بتقنيات (HTML للهيكل، CSS للتصميم والألوان، وJavaScript للحركات والتفاعل).<br />
+* <strong>الواجهة الخلفية (Backend):</strong> العقل المدبر الذي يعمل على خوادم بعيدة، يعالج المنطق الحسابي، يتحقق من صلاحياتك، ويتعامل مع قواعد البيانات.</p>
+<h3>التطبيقات المكتبية (Desktop Applications)</h3>
+<p>تطبيقات تُثبت محلياً على الحواسيب الشخصية وتستفيد من كامل عتاد الحاسوب والقرص الصلب والبطاقة الرسومية القوية (مثل برامج المونتاج Photoshop وPremiere، وألعاب الفيديو الضخمة).</p>
+<hr />
+<h2>6. قواعد البيانات: مستودعات الذاكرة الرقمية</h2>
+<p>لو كان التطبيق إنساناً، لكان المعالج هو «عقله المفكر»، والواجهة هي «ملامحه وصوته»، ولكانت <strong>قاعدة البيانات (Database)</strong> هي «ذاكرته الدائمة».</p>
+<p>بدون قاعدة البيانات، ينسى التطبيق كل شيء بمجرد إغلاقه!</p>
+<p>تنقسم قواعد البيانات الحديثة أساساً إلى نوعين:<br />
+1. <strong>قواعد البيانات العلائقية (Relational / SQL):</strong><br />
+   تخزن البيانات في جداول منتظمة ومحكمة تشبه جداول Excel لكن بقدرات عملاقة، تربط بينها علاقات صارمة (مثل PostgreSQL و MySQL). ممتازة للبيانات المالية والحسابات التي تتطلب دقة متناهية لا تحتمل الخطأ.<br />
+2. <strong>قواعد البيانات غير العلائقية (NoSQL):</strong><br />
+   تخزن البيانات كوثائق مرنة ومفتوحة (مثل MongoDB)، ممتازة للشبكات الاجتماعية والبيانات الضخمة المتغيرة السرعة.</p>
+<hr />
+<h2>7. الخوادم السحابية ونماذج الحوسبة (IaaS, PaaS, SaaS)</h2>
+<p>في السابق، كانت أي شركة تريد إطلاق تطبيق تضطر لشراء حواسيب ضخمة ووضعها في غرفة مبردة واستئجار خطوط إنترنت باهظة وفريق صيانة. أما اليوم، فالحوسبة السحابية (Cloud Computing) أتاحت استئجار هذه الموارد بضغطة زر.</p>
+<p>تنقسم الخدمات السحابية عالمياً إلى ثلاثة نماذج مشهورة:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">النموذج</th>
+<th style="text-align: left;">الاسم الكامل</th>
+<th style="text-align: left;">المعنى البسيط</th>
+<th style="text-align: left;">مثال واقعي</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>IaaS</strong></td>
+<td style="text-align: left;">البنية التحتية كخدمة</td>
+<td style="text-align: left;">تستأجر عتاداً افتراضياً خاماً (معالج، رام، قرص) وتثبت عليه ما تشاء</td>
+<td style="text-align: left;">AWS EC2, Google Cloud Compute</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PaaS</strong></td>
+<td style="text-align: left;">المنصة كخدمة</td>
+<td style="text-align: left;">تستأجر بيئة جاهزة لتشغيل كودك دون أن تقلق بشأن تحديث نظام التشغيل</td>
+<td style="text-align: left;">Render, Heroku, Firebase</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SaaS</strong></td>
+<td style="text-align: left;">البرنامج كخدمة</td>
+<td style="text-align: left;">تستخدم التطبيق النهائي مباشرة دون أدنى علاقة بما يدور خلفه</td>
+<td style="text-align: left;">Gmail, Google Drive, Office 365</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. واجهات برمجة التطبيقات (APIs): جسور التفاهم الرقمي</h2>
+<p>إذا أردت أن تفهم سحر العالم الرقمي الحديث، فعليك أن تفهم ما هو <strong>الـ API (Application Programming Interface)</strong>.</p>
+<p><strong>تشبيه المطعم الشهير:</strong><br />
+تخيل أنك في مطعم:<br />
+* أنت (العميل) تجلس على الطاولة، وتريد طبقاً معيناً.<br />
+* المطبخ (الخادم وقاعدة البيانات) هو المكان الذي تُحضر فيه الوجبات ولديه كل المكونات السرية.<br />
+* لا يُسمح لك بالدخول إلى المطبخ بنفسك والعبث بالأواني!<br />
+* من الذي يربط بينك وبين المطبخ؟ <strong>«النادل» (الـ API)</strong>.<br />
+  يأتي إليك، يأخذ طلبك المنظم، يوصله إلى المطبخ، ثم يعود إليك بالطبق المطلوب!</p>
+<h3>مثال واقعي:</h3>
+<p>عندما تحجز تذكرة طيران عبر تطبيق مقارنة أسعار، كيف يعرف التطبيق مواعيد وأسعار 50 شركة طيران مختلفة في ثانية واحدة؟<br />
+هل يدخل قاعدة بيانات كل شركة طيران؟ مستحيل!<br />
+بدلاً من ذلك، توفر كل شركة طيران <strong>API آمن</strong> يستقبل سؤال التطبيق: "ما الرحلات المتاحة من دبي إلى لندن يوم الأحد؟"، فيرد الـ API بالبيانات الدقيقة المشفرة فوراً.</p>
+<p>الـ APIs هي الشرايين التي جعلت التطبيقات تتحدث مع بعضها وتتكامل في منظومة عالمية واحدة.</p>
+<hr />
+<h2>9. تفكيك رحلة واقعية: ماذا يحدث عند تسجيل الدخول في تطبيق؟</h2>
+<p>لندمج ما تعلمناه في سيناريو واحد دقيق: أنت تفتح تطبيقك البنكي، وتكتب اسم المستخدم وكلمة المرور، ثم تضغط "تسجيل الدخول". ماذا يجري خلف الكواليس؟</p>
+<pre><code>[هاتفك الذكي] ---&gt; (طلب مشفر بـ HTTPS) ---&gt; [بوابة الـ API]
+                                                   |
+                                                   v
+                                          [خادم التوثيق]
+                                                   |
+                                                   v
+                                          [قاعدة البيانات المشفرة]
+</code></pre>
+<ol>
+<li><strong>التحقق المحلي (Client-side Validation):</strong> يتأكد التطبيق في هاتفك من أنك لم تترك الحقول فارغة وأن صيغة البريد صحيحة.</li>
+<li><strong>التشفير عبر النقل (TLS/HTTPS):</strong> تُشفر كلمة المرور في حزمة بيانات آمنة قبل خروجها من هاتفك حتى لا يقرأها أي شخص يتنصت على شبكة الواي فاي.</li>
+<li><strong>الاستقبال لدى بوابة الـ API:</strong> يستلم خادم البنك الطلب ويوجهه إلى "خدمة التوثيق والهوية" (Auth Service).</li>
+<li><strong>التجزئة والمطابقة (Hashing):</strong> البنك الآمن <strong>لا يخزن كلمة مرورك كنص صريح أبداً</strong>؛ بل يمرر ما كتبته عبر خوارزمية رياضية معقدة لإنتاج "بصمة رقمية" ومقارنتها بالبصمة المحفوظة في قاعدة البيانات (سنشرح هذا بالتفصيل في الفصل السادس).</li>
+<li><strong>توليد رمز الجلسة (Token Generation):</strong> إذا تطابقت البصمة، ينشئ الخادم رمزاً مشفراً مؤقتاً يُسمى (Access Token) مثل بطاقة دخول الفندق الرقمية، ويرسله إلى هاتفك.</li>
+<li><strong>فتح الواجهة:</strong> يحفظ هاتفك هذا الرمز ويستخدمه مع كل طلب قادم ليثبت للخادم أنك أنت، وتفتح شاشتك الرئيسية لترى رصيدك المالي بسلام!</li>
+</ol>
+<hr />
+<h2>10. دورة حياة تطوير البرمجيات (SDLC)</h2>
+<p>بناء التطبيقات ليس مجرد جلوس مبرمج أمام شاشة سوداء ليكتب أكواداً عشوائية طوال الليل كما تصور أفلام هوليوود!<br />
+إن هندسة البرمجيات تتبع دورة حياة منهجية منضبطة تُعرف بـ <strong>SDLC (Software Development Life Cycle)</strong>:</p>
+<ol>
+<li><strong>التحليل وجمع المتطلبات (Requirements):</strong> ما المشكلة التي نريد حلها؟ ومن هو المستخدم المستهدف؟</li>
+<li><strong>التصميم (UI/UX Design):</strong> رسم الواجهات وتجربة المستخدم قبل كتابة أي سطر كود.</li>
+<li><strong>التطوير البرمجي (Implementation / Coding):</strong> بناء الواجهات الأمامية والأنظمة الخلفية وقواعد البيانات.</li>
+<li><strong>الاختبار وضمان الجودة (Testing &amp; QA):</strong> فحص التطبيق لكشف الأخطاء والثغرات والتأكد من تحمله للضغط.</li>
+<li><strong>النشر والإطلاق (Deployment):</strong> رفع التطبيق إلى المتاجر والخوادم السحابية للمستخدمين.</li>
+<li><strong>الصيانة والتحديث المستمر (Maintenance &amp; Updates):</strong> سد الثغرات المكتشفة، وتحسين الأداء، وإضافة ميزات جديدة استجابة لآراء المستخدمين.</li>
+</ol>
+<hr />
+<h2>11. للقارئ المتخصص: معمارية RESTful APIs وبروتوكول HTTP</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+تعتبر معمارية **REST (Representational State Transfer)** النمط الأكثر شيوعاً لتصميم واجهات الويب البرمجية عبر بروتوكول HTTP.
+
+#### المبادئ الستة الأساسية لمعمارية REST:
+1. **فصل العميل عن الخادم (Client-Server Separation):** استقلالية منطق الواجهات عن منطق معالجة البيانات وتخزينها.
+2. **انعدام الحالة (Statelessness):** كل طلب HTTP يرسله العميل يجب أن يحتوي على جميع المعلومات اللازمة لفهمه ومعالجته بصورة مستقلة، دون أن يعتمد الخادم على تخزين حالة الجلسة في ذاكرته.
+3. **قابلية التخزين المؤقت (Cacheability):** يجب أن تحدد الاستجابات صراحة ما إذا كانت قابلة للتخزين المؤقت أم لا لتقليل استهلاك الشبكة.
+4. **الواجهة الموحدة (Uniform Interface):** استخدام عناوين URIs قياسية لتمثيل الموارد (Resources).
+5. **النظام الطبقي (Layered System):** يمكن للطلب أن يمر عبر طبقات وسيطة (Load Balancers, API Gateways, Firewalls) دون علم العميل.
+6. **الكود عند الطلب (Code on Demand - اختياري):** إمكانية إرسال سكربتات لتنفيذها على العميل.
+
+#### أفعال HTTP القياسية (HTTP Verbs):
+* `GET`: لاسترجاع مورد (آمن وغير معدل للحالة Idempotent).
+* `POST`: لإنشاء مورد جديد داخل النظام.
+* `PUT`: لتحديث كامل لمورد موجود.
+* `PATCH`: لتحديث جزئي لمورد موجود.
+* `DELETE`: لحذف مورد محدد.
+
+#### فئات رموز الحالة (HTTP Status Codes):
+* `2xx (Success)`: أشهرها `200 OK` للنجاح العادي، و`201 Created` لنجاح الإنشاء.
+* `3xx (Redirection)`: أشهرها `301 Moved Permanently` و`304 Not Modified`.
+* `4xx (Client Error)`: أشهرها `400 Bad Request` للبيانات الخاطئة، و`401 Unauthorized` لغياب التوثيق، و`403 Forbidden` لمنع الوصول، و`404 Not Found` لعدم وجود المورد.
+* `5xx (Server Error)`: أشهرها `500 Internal Server Error` و`502 Bad Gateway` و`503 Service Unavailable`.
+
+</div>
+
+<hr />
+<h2>12. ملخص الفصل الثاني</h2>
+<ul>
+<li>البرمجيات ليست سحراً، بل طبقات تجريد منطقية تبدأ من مفاتيح السيليكون في المعالج وحتى الواجهات الرسومية البراقة.</li>
+<li>نظام التشغيل هو المدير وحارس البوابة؛ يفصل بين البرامج، ويمنح الموارد، ويحمي الأجهزة من استغلال التطبيقات.</li>
+<li>تنقسم البرمجيات إلى تطبيقات هواتف أصيلة وهجينة، وتطبيقات ويب (واجهة أمامية وخلفية)، وتطبيقات مكتبية.</li>
+<li>قواعد البيانات هي المستودعات الدائمة للمعلومات، والحوسبة السحابية أتاحت استئجار البنية التحتية بنماذج (IaaS, PaaS, SaaS).</li>
+<li>واجهات برمجة التطبيقات (APIs) هي جسور التفاهم الآمنة بين النظم الرقمية المختلفة وبدونها لا يمكن للتطبيقات التكامل.</li>
+<li>بناء البرمجيات عملية هندسية تتبع دورة حياة دقيقة تبدأ بالتخطيط وتنتهي بالصيانة والتحديث المستمر.</li>
+</ul>
+<hr />
+<h2>13. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>ما هي وظيفة «نظام التشغيل» في حماية أمن التطبيقات وعزلها عن بعضها (Sandboxing)؟</strong></li>
+<li><strong>اشرح مفهوم «الـ API» مستخدماً تشبيه المطعم أو مثالاً واقعياً من اختيارك.</strong></li>
+<li><strong>ما الفرق بين الواجهة الأمامية (Frontend) والواجهة الخلفية (Backend) في تطبيقات الويب؟</strong></li>
+<li><strong>لماذا يُعد تسجيل الدخول الآمن عملية متعددة الخطوات تتطلب التشفير والتجزئة بدلاً من إرسال كلمة المرور بنص صريح؟</strong></li>
+</ol>
+<hr />
+<h2>14. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>MDN Web Docs - Client-Server Overview:</strong> الدليل المعياري لتشريح الاتصال بين الواجهات الأمامية والخوادم عبر شبكة موزيلا.</li>
+<li><strong>OpenAPI Specification (OAS):</strong> المواصفة العالمية القياسية لتوثيق وتصميم واجهات برمجة التطبيقات RESTful APIs عبر <code>openapis.org</code>.</li>
+<li><strong>Postman API Architecture Guide:</strong> مقالات تعليمية موثوقة حول تصميم وتكامل واجهات برمجة التطبيقات واختبارها.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch3" class="book-chapter-section" data-title="الفصل الثالث: البرمجة وفن التفكير المنطقي">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 3</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل الثالث: البرمجة وفن التفكير المنطقي</h1>
+<hr />
+<blockquote>
+<p>«البرمجة لا تعلمك فقط كيف تتحدث إلى الآلة، بل تعلمك قبل ذلك كيف ترتب أفكارك، وكيف تفكك المشكلات الكبيرة إلى خطوات صغيرة تستطيع حلها بهدوء».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: هل البرمجة للمبرمجين فقط؟</h2>
+<p>هناك خرافة شائعة تقول: <em>"البرمجة مهارة مقتصرة على العباقرة وخبراء الرياضيات الذين يجلسون أمام شاشات زرقاء في غرف مظلمة!"</em>.</p>
+<p>الحقيقة على النقيض من ذلك تماماً: <strong>البرمجة هي فن التفكير المنظم</strong>.</p>
+<p>عندما تتعلم البرمجة، أنت لا تتعلم حفظ مصطلحات إنجليزية غريبة، بل تكتسب <strong>"عقلية جديدة"</strong> في التعامل مع الحياة:<br />
+* تتعلم ألا تصاب بالذعر أمام المشاكل الضخمة؛ بل تقسمها إلى أجزاء صغيرة يمكن إدارتها.<br />
+* تتعلم البحث عن السبب الجذري للخلل بدلاً من الاكتفاء بالشكوى من النتيجة.<br />
+* تتعلم الدقة؛ فالأشياء إما أن تكون صحيحة ومحددة أو أنها لا تعمل!</p>
+<p>في هذا الفصل، سنخطو معاً أولى خطواتنا في عالم البرمجة باستخدام لغة <strong>بايثون (Python)</strong>—أشهر وأجمل لغات العالم اليوم وأقربها للغة الإنسانية الطبيعية. سنفهم القواعد الجوهرية التي تبنى عليها كل برامج الأرض، ونبني معاً في نهاية الفصل برنامجاً عملياً نافعاً يخدم المجتمع.</p>
+<hr />
+<h2>2. ما هي البرمجة؟ وما هي الخوارزمية؟</h2>
+<p><strong>البرمجة (Programming)</strong> ببساطة هي: إعطاء مجموعة من التعليمات المرتبة منطقياً للحاسوب ليقوم بمهمة محددة.</p>
+<p>والقلب النابض لأي برنامج في العالم هو <strong>«الخوارزمية» (Algorithm)</strong>.</p>
+<h3>ما أصل الخوارزمية؟</h3>
+<p>سُميت الخوارزمية بهذا الاسم نسبة إلى العالم المسلم العبقري <strong>أبي عبد الله محمد بن موسى الخوارزمي</strong> (عاش في القرن التاسع الميلادي)، مؤسس علم الجبر وأول من وضع أسس الخطوات المنطقية المتسلسلة لحل المعادلات الحسابية.</p>
+<h3>تشبيه وصفة الطهي:</h3>
+<p>فكر في الخوارزمية كوصفة دقيقة لإعداد كعكة:<br />
+1. أحضر ثلاثة أكواب من الطحين وملعقة سكر.<br />
+2. اخفق البيض جيداً لمدة دقيقتين.<br />
+3. امزج الخليط في وعاء واسع.<br />
+4. ضعه في الفرن عند درجة حرارة 180 مئوية لمدة نصف ساعة.</p>
+<p>إذا عكست خطوة رقم 4 قبل خطوة رقم 2، فلن تحصل على كعكة أبداً!<br />
+الحاسوب بالضبط كالمطبخ: ينفذ تعليماتك بحرفية شديدة وبنفس الترتيب الذي كتبته له. إذا كانت خوارزميتك واضحة، نجح البرنامج؛ وإذا كان فيها خلل، أخطأ الحاسوب.</p>
+<hr />
+<h2>3. لغة بايثون (Python): لماذا هي بوابتنا المثالية؟</h2>
+<p>تتميز لغة بايثون بأنها صُممت من الأساس لتكون <strong>مقروءة، وبسيطة، وأنيقة</strong>. فبينما تتطلب بعض اللغات كتابة 10 أسطر معقدة لطباعة جملة، تفعلها بايثون في سطر واحد بديهي:</p>
+<pre><code class="language-python">print(&quot;مرحباً بك في عالم الوعي الرقمي!&quot;)
+</code></pre>
+<p>تُستخدم بايثون اليوم في كبرى الشركات العالمية والجامعات: في تطوير مواقع الويب، في تحليل البيانات، في تطبيقات الأمن السيبراني الدفاعي، وفي أبحاث الذكاء الاصطناعي الأكثر تطوراً.</p>
+<hr />
+<h2>4. اللبنات التأسيسية للبرمجة (The Core Building Blocks)</h2>
+<p>مهما بلغت درجة تعقيد أي برنامج في العالم—من لعبة ثلاثية الأبعاد إلى نظام توجيه الصواريخ—فإنه مبني في جوهره من أربعة عناصر رئيسية:</p>
+<h3>أ) المتغيرات وأنواع البيانات (Variables &amp; Data Types)</h3>
+<p><strong>المتغير</strong> هو بمثابة "صندوق تخزين يحمل اسماً" داخل ذاكرة الحاسوب المؤقتة (RAM)، تضع فيه قيمة لاستخدامها لاحقاً:</p>
+<pre><code class="language-python"># أمثلة على المتغيرات في بايثون
+user_name = &quot;جنكيز&quot;           # نص (String / str)
+user_age = 25                 # عدد صحيح (Integer / int)
+account_balance = 1500.75     # عدد عشري (Float / float)
+is_authenticated = True       # قيمة منطقية (Boolean: True أو False)
+</code></pre>
+<h3>ب) الشروط واتخاذ القرار (Conditionals: if / else)</h3>
+<p>البرنامج الذكي هو الذي يعرف كيف يتخذ قرارات وفق المعطيات:</p>
+<pre><code class="language-python">password_attempts = 3
+
+if password_attempts &gt;= 3:
+    print(&quot;تم قفل الحساب مؤقتاً لحمايتك!&quot;)
+else:
+    print(&quot;يمكنك محاولة كتابة كلمة المرور مجدداً.&quot;)
+</code></pre>
+<h3>ج) التكرار الذكي والحلقات (Loops: for / while)</h3>
+<p>إذا طلبت من إنسان كتابة جملة 1000 مرة، فسيشعر بالملل والإرهاق بعد المرة العاشرة. أما الحاسوب، فيكرر المهمة ملايين المرات في ثانية واحدة دون أدنى تذمر:</p>
+<pre><code class="language-python"># فحص قائمة الرسائل الواردة لكشف الروابط المشبوهة
+messages = [&quot;أهلاً بك&quot;, &quot;مبروك ربحت مليون دولار! انقر هنا&quot;, &quot;اجتماع العمل غداً&quot;]
+
+for msg in messages:
+    if &quot;مبروك ربحت&quot; in msg:
+        print(f&quot;تحذير: رسالة احتيال محتملة -&gt; {msg}&quot;)
+</code></pre>
+<h3>د) الدوال وإعادة الاستخدام (Functions &amp; Modularity)</h3>
+<p>بدلاً من إعادة كتابة نفس الكود 50 مرة في أماكن مختلفة، نجمع الخطوات داخل <strong>«دالة» (Function)</strong> ونناديها باسمها كلما احتجنا إليها:</p>
+<pre><code class="language-python">def calculate_tax(amount):
+    &quot;&quot;&quot;دالة تحسب الضريبة بنسبة 15%&quot;&quot;&quot;
+    return amount * 0.15
+
+# استدعاء الدالة بسهولة
+final_tax = calculate_tax(200)
+print(f&quot;قيمة الضريبة هي: {final_tax} ريال&quot;)
+</code></pre>
+<hr />
+<h2>5. معالجة الأخطاء والتعامل مع الاستثناءات (Error Handling)</h2>
+<p>المبرمج المبتدئ يفترض دائماً أن المستخدم سيكتب مدخلات مثالية ولن تقع أية مشكلة في الشبكة. أما المبرمج المحترف، فيتوقع الخطأ قبل وقوعه ويحصن برنامجه ضده!</p>
+<p>ماذا يحدث لو طلب برنامجك من المستخدم إدخال عمره، فكتب كلمة "خمسة وعشرون" بالحروف بدلاً من الأرقام؟<br />
+بدون حماية، سينهار البرنامج ويتوقف فوراً (Crashes).</p>
+<p>لحماية البرنامج، نستخدم ما يُسمى <strong>كتلة الحماية (try / except)</strong>:</p>
+<pre><code class="language-python">try:
+    age_input = input(&quot;من فضلك اكتب عمرك بالأرقام: &quot;)
+    age = int(age_input) # محاولة تحويل النص إلى رقم
+    print(f&quot;عمرك المسجل هو: {age} عاماً&quot;)
+except ValueError:
+    print(&quot;تنبيه لطيف: يرجى إدخال أرقام صحيحة فقط (مثال: 25) وليس كلمات.&quot;)
+</code></pre>
+<p>بهذه الطريقة البسيطة، يظل البرنامج ثابتاً ورصيناً ويرشد المستخدم باحترام دون أن ينهار.</p>
+<hr />
+<h2>6. قواعد الكود النظيف (Clean Code)</h2>
+<p>الكود البرمجي لا يُكتب فقط لتقرأه الآلة وتنفذه، بل يُكتب في المقام الأول <strong>ليقرأه إنسان آخر يفهمه ويطوره</strong>.</p>
+<p>لذلك، يجب أن تتبع هذه القواعد الذهبية:<br />
+1. <strong>اختر أسماء ذات معنى للمتغيرات:</strong> استخدم <code>user_email</code> بدلاً من <code>x</code> أو <code>a1</code>.<br />
+2. <strong>اكتب دوال صغيرة ومركزة:</strong> كل دالة يجب أن تؤدي مهمة واحدة واضحة ومحددة.<br />
+3. <strong>أضف التعليقات التوضيحية المفيدة:</strong> اشرح <em>«لماذا»</em> قمت بهذا الحل، وليس مجرد إعادة سرد ما يفعله الكود بديهياً.<br />
+4. <strong>التنسيق والمسافات البادئة:</strong> لغة بايثون تعتمد على المسافات البادئة (Indentation) لترتيب الكتل المنطقية؛ حافظ على تناسقها.</p>
+<hr />
+<h2>7. مشروع الفصل التطبيقي: برنامج إدارة الميزانية والتبرع المجتمعي</h2>
+<p>تطبيقاً عملياً لرسالة هذا الكتاب في ربط البرمجة بخدمة المجتمع، سنقوم الآن بكتابة وتشغيل برنامج متكامل بلغة بايثون لإدارة المصروفات الشهرية وحساب نسبة مخصصة للتبرع ودعم المحتاجين.</p>
+<p>هذا البرنامج آمن تماماً، ويعمل محلياً، ويجمع بين: المتغيرات، الدوال، الحلقات، الشروط، ومعالجة الأخطاء.</p>
+<pre><code class="language-python"># ==============================================================
+# مشروع الفصل الثالث: مدير الميزانية والمساهمة المجتمعية
+# تأليف وفكرة: كتاب الوعي الرقمي - جنكيز
+# ==============================================================
+
+def calculate_budget(income, expenses, donation_rate=0.05):
+    &quot;&quot;&quot;
+    دالة لحساب صافي الميزانية وتخصيص نسبة للتبرع المجتمعي
+    :param income: إجمالي الدخل الشهري
+    :param expenses: قائمة بقيم المصروفات
+    :param donation_rate: نسبة العطاء المجتمعي المقترحة (الافتراضي 5%)
+    :return: قاموس يحتوي على الملخص المالي
+    &quot;&quot;&quot;
+    total_expenses = sum(expenses)
+    remaining_balance = income - total_expenses
+
+    # حساب نسبة التبرع من الرصيد المتبقي إذا كان إيجابياً
+    if remaining_balance &gt; 0:
+        suggested_donation = remaining_balance * donation_rate
+        net_savings = remaining_balance - suggested_donation
+    else:
+        suggested_donation = 0.0
+        net_savings = remaining_balance
+
+    return {
+        &quot;income&quot;: income,
+        &quot;total_expenses&quot;: total_expenses,
+        &quot;remaining_balance&quot;: remaining_balance,
+        &quot;donation&quot;: suggested_donation,
+        &quot;net_savings&quot;: net_savings
+    }
+
+def display_report(summary):
+    &quot;&quot;&quot;طباعة تقرير مالي ومجتمعي منسق للمستخدم&quot;&quot;&quot;
+    print(&quot;\n&quot; + &quot;=&quot; * 48)
+    print(&quot;      📊 تقرير ميزانيتك ووعيك المالي والمجتمعي      &quot;)
+    print(&quot;=&quot; * 48)
+    print(f&quot;💰 إجمالي الدخل الشهري      : {summary['income']:.2f}&quot;)
+    print(f&quot;📉 إجمالي المصروفات        : {summary['total_expenses']:.2f}&quot;)
+    print(f&quot;💵 الرصيد المتبقي           : {summary['remaining_balance']:.2f}&quot;)
+    print(&quot;-&quot; * 48)
+
+    if summary['remaining_balance'] &gt; 0:
+        print(f&quot;🤝 حصة العطاء المجتمعي (5%)  : {summary['donation']:.2f}&quot;)
+        print(f&quot;🌱 صافي الادخار الشخصي       : {summary['net_savings']:.2f}&quot;)
+        print(&quot;💡 رسالة: «المعرفة قوة، وقيمتها فيما نقدمه للآخرين»&quot;)
+    else:
+        print(&quot;⚠️ تنبيه: مصروفاتك تجاوزت دخلك! راجع بنود الإنفاق بعناية.&quot;)
+    print(&quot;=&quot; * 48 + &quot;\n&quot;)
+
+# تجربة تشغيل البرنامج بأرقام واقعية
+if __name__ == &quot;__main__&quot;:
+    monthly_income = 5000.0  # دخل شهري افتراضي
+    monthly_expenses = [1200.0, 450.0, 300.0, 650.0]  # إيجار، طعام، إنترنت، فواتير
+
+    report = calculate_budget(monthly_income, monthly_expenses)
+    display_report(report)
+</code></pre>
+<h3>تفكيك الكود البرمجي:</h3>
+<ul>
+<li><strong><code>def calculate_budget(...)</code></strong>: تعريف دالة مرنة تقبل الدخل وقائمة المصروفات وتحسب العمليات بدقة متناهية.</li>
+<li><strong><code>sum(expenses)</code></strong>: استخدام الدوال المدمجة في بايثون لجمع كافة عناصر القائمة في سطر واحد.</li>
+<li><strong>الشرط المنطقي <code>if remaining_balance &gt; 0</code></strong>: التأكد من أن التبرع لا يُقترح إلا إذا كان هناك فائض مالي إيجابي يحمي كرامة المستخدم وميزانيته الأساسية.</li>
+<li><strong>التنسيق <code>:.2f</code></strong>: أمر بايثون بعرض الأرقام العشرية بخانتين فقط بعد الفاصلة، لتبدو الأرقام كعملات مالية احترافية.</li>
+</ul>
+<hr />
+<h2>8. للقارئ المتخصص: التعقيد الخوارزمي ونظرية Big O</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+لا يقاس الكود البرمجي الاحترافي بمجرد أنه "يعمل"، بل يقاس أيضاً بـ **كفاءته واستهلاكه لموارد النظام (الزمن والذاكرة)** مع تضخم حجم المدخلات $N$.
+
+يُعبر علماء الحاسوب عن هذا المفهوم بـ **ترميز Big O (Big O Notation)**:
+
+1. **التعقيد الثابت $O(1)$:**  
+   العملية تستغرق نفس الزمن دائماً بصرف النظر عن حجم البيانات (مثال: استخراج عنصر من مصفوفة عبر فهرسه المباشر `array[0]`).
+2. **التعقيد اللوغاريتمي $O(\log N)$:**  
+   كفاءة فائقة؛ يتضاعف حجم البيانات ملايين المرات بينما يزيد زمن المعالجة بنسب طفيفة (أشهر مثال: **خوارزمية البحث الثنائي Binary Search** في قائمة مرتبة).
+3. **التعقيد الخطي $O(N)$:**  
+   يزيد الزمن طردياً وبصورة مباشرة مع زيادة البيانات (مثال: حلقة تمر على كل عناصر قائمة غير مرتبة للبحث عن اسم).
+4. **التعقيد التربيعي $O(N^2)$:**  
+   حلقات متداخلة (Nested Loops) حيث تفحص كل عنصر مقابل كل العناصر الأخرى؛ يعتبر كارثياً عند التعامل مع قواعد بيانات تضم ملايين السجلات ويجب تجنبه في الأنظمة الحساسة.
+
+#### نصيحة هندسية دفاعية:
+في برمجيات الأمن وتطبيقات الويب، يمكن لخوارزمية غير كفؤة ذات تعقيد $O(N^2)$ أن تفتح الباب لما يُعرف بـ **هجمات حجب الخدمة الخوارزمية (Algorithmic Denial of Service)**، حيث يرسل المهاجم مدخلات مصممة خصيصاً لتستهلك 100% من قدرة المعالج وتعطل الخادم!
+
+</div>
+
+<hr />
+<h2>9. ملخص الفصل الثالث</h2>
+<ul>
+<li>البرمجة ليست مجرد كتابة تعليمات لآلة، بل هي منهجية لتنظيم التفكير وحل المشكلات وتفكيك المعضلات إلى خطوات واضحة.</li>
+<li>الخوارزمية هي وصفة الحل المنطقي الدقيق، وسُميت تكريماً للعالم المسلم محمد بن موسى الخوارزمي.</li>
+<li>لغة بايثون هي الأداة المثالية لبدء تعلم البرمجة نظراً لبساطتها وقوتها وانتشارها في كافة المجالات التقنية الحديثة.</li>
+<li>اللبنات الأربع لأي برنامج: المتغيرات، الجمل الشرطية، الحلقات التكرارية، والدوال القابلة لإعادة الاستخدام.</li>
+<li>معالجة الأخطاء (Error Handling) عبر كتل <code>try/except</code> تميز المبرمج المحترف وتمنع انهيار البرامج أمام المستخدمين.</li>
+<li>كتابة الكود النظيف والمقروء مسؤولية أخلاقية تضمن استدامة الأنظمة وتيسر تعاون فرق العمل لخدمة المجتمع.</li>
+</ul>
+<hr />
+<h2>10. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>ما هي الخوارزمية؟ ولماذا لا يستطيع الحاسوب حل المشكلة إذا كانت خطوات الخوارزمية غير مرتبة منطقياً؟</strong></li>
+<li><strong>ما الفارق بين المتغير من النوع العددي الصحيح (int) والمتغير المنطقي (boolean)؟ اذكر مثالاً لكل منهما.</strong></li>
+<li><strong>كيف تحمي كتلة <code>try/except</code> البرامج من الانهيار المفاجئ عند إدخال بيانات غير متوقعة؟</strong></li>
+<li><strong>في نظرية Big O، لماذا يفضل مهندسو البرمجيات خوارزمية ذات تعقيد $O(\log N)$ على خوارزمية ذات تعقيد $O(N^2)$ في قواعد البيانات الكبيرة؟</strong></li>
+</ol>
+<hr />
+<h2>11. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>Python Official Documentation (<code>docs.python.org</code>):</strong> الدليل الرسمي المعتمد للغة بايثون وتوثيق مكتبتها المعيارية.</li>
+<li><strong>Automate the Boring Stuff with Python (Al Sweigart):</strong> كتاب مرجعي عملي للمبتدئين لتوظيف بايثون في حل المهام اليومية النافعة.</li>
+<li><strong>Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin):</strong> المرجع العالمي الأهم في كتابة الشيفرات البرمجية النظيفة والمستدامة.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch4" class="book-chapter-section" data-title="الفصل الرابع: الأمن السيبراني وفهم المخاطر">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 4</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل الرابع: الأمن السيبراني وفهم المخاطر الرقمية</h1>
+<hr />
+<blockquote>
+<p>«الأمن السيبراني لا يتعلق بحماية الآلات والأسلاك، بل بحماية كرامة الإنسان، وأسراره، ومستقبله، واستقرار مجتمعه في فضاء بلا حدود جغرافية».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: وهم الحصن المنيع</h2>
+<p>يعتقد كثير من الناس أن الأمن السيبراني مسألة تخص الحكومات والبنوك الكبرى والجيوش فقط، وأن "المستخدم البسيط" ليس لديه ما يخسره أو ما يثير اهتمام القراصنة.</p>
+<p>وهذا هو الخطأ القاتل الأول!</p>
+<p>في العالم الرقمي، أنت لست مستهدفاً فقط لأنك تملك ملايين الدولارات في حسابك، بل قد تُستهدف لأنك:<br />
+* تملك <strong>هاتفاً متصلاً بالإنترنت</strong> يمكن تحويله إلى جهاز ضمن شبكة روبوتية (Botnet) لمهاجمة مستشفى أو تعطيل محطة كهرباء دون علمك!<br />
+* تملك <strong>حساب بريد إلكتروني موثوقاً</strong> يمكن استغلاله لخداع أصدقائك أو أفراد عائلتك ومطالبتهم بأموال باسمك.<br />
+* تملك <strong>بيانات وذكريات شخصية وصوراً أسرية</strong> يمكن لبرمجية خبيثة تشفيرها وابتزازك لدفع فدية مالية لاستعادتها.</p>
+<p>الأمن السيبراني في جوهره ليس أداة للسيطرة أو الهجوم، بل هو <strong>علم وفن الدفاع</strong> عن الفضاء الحيوي الذي نعيش فيه جميعاً.</p>
+<hr />
+<h2>2. ما هو الأمن السيبراني الدفاعي؟</h2>
+<p><strong>الأمن السيبراني (Cybersecurity):</strong> هو مجموعة الممارسات والتقنيات والسياسات والإجراءات الهندسية المصممة لحماية الأنظمة، والشبكات، والبرمجيات، والبيانات من الوصول غير المصرح به، أو التعديل، أو التخريب، أو الاستغلال.</p>
+<h3>لماذا نركز في هذا الكتاب على "الأمن الدفاعي"؟</h3>
+<p>لأن نشر المعرفة الهجومية وأساليب الاعتداء والاختراق غير المصرح بها هو عمل ضار بالمجتمع ومخالف للقوانين والأخلاق. أما <strong>الأمن الدفاعي (Defensive Security)</strong>، فهو الذي يبني الدروع، ويسد الثغرات، ويعلم الأسر والشركات كيف تحمي كرامتها وخصوصيتها.</p>
+<p>إن معرفة كيف يفكر المهاجم لا تكون إلا لغرض واحد نبيل: <strong>أن تعرف أين تضع خط دفاعك لتحمي الأبرياء</strong>.</p>
+<hr />
+<h2>3. معادلة الخطر: الفرق بين التهديد، الثغرة، والمخاطرة</h2>
+<p>لكي تتحدث وتفكر كخبير أمني واعي، يجب أن تضبط الفروق بين ثلاثة مصطلحات يخلط بينها الكثيرون:</p>
+<ol>
+<li>
+<p><strong>التهديد (Threat):</strong><br />
+   هو أي خطر خارجي محتمل يملك القدرة على إلحاق الأذى. (مثال: محتال إلكتروني، برمجية خبيثة، فيضان مائي قد يغرق خوادم الشركة).<br />
+<em>التهديد كائن موجود في البيئة لا تملك السيطرة على وجوده.</em></p>
+</li>
+<li>
+<p><strong>الثغرة الأمنية (Vulnerability):</strong><br />
+   هي نقطة ضعف أو خطأ في تصميم البرنامج أو إعدادات النظام أو سلوك المستخدم تسمح للتهديد بالنفاذ. (مثال: ترك باب المنزل دون قفل، أو استخدام كلمة مرور من أربعة أرقام "1234").<br />
+<em>الثغرة هي مسؤوليتك أنت، وتستطيع إغلاقها.</em></p>
+</li>
+<li>
+<p><strong>المخاطرة (Risk):</strong><br />
+   هي الاحتمالية الرياضية والعملية لحدوث ضرر ناتج عن استغلال <strong>تهديد</strong> معين لـ <strong>ثغرة</strong> موجودة، وحجم الأثر الناتج عن ذلك.</p>
+</li>
+</ol>
+<p>$$\text{المخاطرة (Risk)} = \text{التهديد (Threat)} \times \text{الثغرة (Vulnerability)} \times \text{الأثر (Impact)}$$</p>
+<p>إذا وُجد تهديد كبير (لصوص في المنطقة) لكن منزلك محصن تماماً بأقفال ذكية وكاميرات (الثغرة صفر)، فإن مستوى المخاطرة يقترب من الصفر!<br />
+لذلك، فإن وظيفة الوعي الرقمي هي <strong>سد الثغرات</strong> حتى تبطل مفعول التهديدات المحيطة بك.</p>
+<hr />
+<h2>4. ثالوث الأمان المعلوماتي الكلاسيكي (CIA Triad)</h2>
+<p>على مدار أكثر من أربعة عقود، اعتمد مهندسو الأمن العالميون نموذجاً قياسياً يمثل الأضلاع الثلاثة الأساسية لحماية أي معلومة أو نظام، يُعرف عالمياً بـ <strong>ثالوث CIA</strong>:</p>
+<pre><code>                  [السرية - Confidentiality]
+                           /\
+                          /  \
+                         /    \
+                        /      \
+  [السلامة - Integrity] -------- [التوافر - Availability]
+</code></pre>
+<h3>أ) السرية (Confidentiality): "لا يقرأها إلا من يحق له"</h3>
+<p>ضمان أن البيانات لا يطلع عليها إلا الأشخاص أو الأنظمة المصرح لهم فقط.<br />
+<em>أدوات تحقيقها:</em> التشفير، كلمات المرور القوية، الصلاحيات المحدودة.</p>
+<h3>ب) السلامة والتكامل (Integrity): "لا يُعدل عليها إلا بحق"</h3>
+<p>ضمان أن البيانات تظل دقيقة، وصحيحة، وكاملة، ولم يتم التلاعب بها أو تغييرها أثناء التخزين أو النقل.<br />
+<em>مثال:</em> عندما تحول 100 ريال لصديقك، يجب ألا يستطيع مهاجم في الطريق تغيير المبلغ إلى 1000 ريال!<br />
+<em>أدوات تحقيقها:</em> دوال التجزئة الرياضية (Hashing)، والتوقيعات الرقمية (Digital Signatures).</p>
+<h3>ج) التوافر والجاهزية (Availability): "تجدها عندما تحتاجها"</h3>
+<p>ضمان أن النظام والخدمات والبيانات تظل متاحة وجاهزة للعمل كلما طلبها المستخدم المصرح له.<br />
+<em>مثال:</em> تطبيق الطوارئ أو البنك يجب ألا يتعطل عندما يحتاجه المريض أو العميل في منتصف الليل.<br />
+<em>أدوات تحقيقها:</em> الخوادم الاحتياطية (Redundancy)، النسخ الاحتياطي المنتظم، والحماية ضد هجمات حجب الخدمة (DDoS).</p>
+<hr />
+<h2>5. الهندسة الاجتماعية (Social Engineering): اختراق العقل البشري</h2>
+<p>يقول خبير الأمن العالمي الشهير كيفن ميتنيك في كتابه <em>فن الخداع</em>:  </p>
+<blockquote>
+<p>«إن أصعب جدران الحماية الرقمية وأقوى خوارزميات التشفير الرياضية تصبح عديمة القيمة تماماً أمام مكالمة هاتفية ذكية تستغل طيبة الموظف أو خوفه!».</p>
+</blockquote>
+<p><strong>الهندسة الاجتماعية:</strong> هي فن التلاعب النفسي بالبشر لدفعهم إلى ارتكاب أخطاء أمنية، أو إفشاء معلومات سرية، أو منح صلاحيات دخول دون أن يشعروا بأنهم يتعرضون لهجوم.</p>
+<h3>المحركات النفسية الأربعة التي يستغلها المحتالون:</h3>
+<ol>
+<li><strong>الخوف والذعر (Fear):</strong> <em>"حسابك البنكي سيتوقف خلال ساعتين وسيتم حجز أموالك! اضغط هنا فوراً لتفادي الإيقاف"</em>. الخوف يعطل التفكير المنطقي ويدفع للاندفاع.</li>
+<li><strong>الطمع والإغراء (Greed):</strong> <em>"مبروك! لقد تم اختيار رقمك للفوز بجائزة 100 ألف دولار؛ أدخل بياناتك لاستلام الشيك"</em>.</li>
+<li><strong>الفضول (Curiosity):</strong> <em>"شاهد الصور المسربة لزملائك في العمل في هذا الرابط السري!"</em>.</li>
+<li><strong>الرغبة في المساعدة وحسن النية (Helpfulness):</strong> ينتحل المهاجم صفة شخص محتاج أو موظف دعم فني يستغيث لمساعدته في حل مشكلة تقنية طارئة.</li>
+</ol>
+<p>تذكر دائماً: <strong>المهاجم لا يخترق أجهزتك دائماً عبر شاشات معقدة؛ بل يخترق أحياناً عواطفك وفضولك!</strong>.</p>
+<hr />
+<h2>6. تشريح تقنيات التصيد الاحتيالي (Phishing)</h2>
+<p>التصيد هو أشهر تطبيقات الهندسة الاجتماعية اليوم، وينقسم إلى أشكال متعددة:</p>
+<ul>
+<li><strong>التصيد العام (Phishing):</strong> رسائل بريد إلكتروني عشوائية تُرسل لملايين الأشخاص في نفس الوقت، تنتحل صفة شركات عالمية مثل (Netflix, Apple, PayPal).</li>
+<li><strong>التصيد الموجه (Spear Phishing):</strong> هجوم مخصص لشخص بعينه؛ يدرس المهاجم حساباتك على وسائل التواصل، ويعرف اسم مديرك أو أفراد عائلتك، ويرسل لك رسالة تبدو صادرة من شخص تعرفه تماماً!</li>
+<li><strong>التصيد عبر الرسائل النصية القصيرة (Smishing):</strong> رسالة SMS تدعي أنها من شركة شحن وتطلب منك تحديث عنوانك عبر رابط مشبوه لدفع رسوم طفيفة.</li>
+<li><strong>التصيد الصوتي (Vishing):</strong> اتصال هاتفي يدعي فيه المتصل أنه من البنك المركزي أو قسم مكافحة الجرائم الإلكترونية ويطلب قراءة رمز التحقق الذي وصلك على الهاتف.</li>
+</ul>
+<hr />
+<h2>7. تصنيف البرمجيات الخبيثة من منظور دفاعي</h2>
+<p><strong>البرمجية الخبيثة (Malware):</strong> هي أي برنامج أو كود مصمم خصيصاً لإلحاق الضرر بالجهاز أو سرقة بياناته أو التجسس عليه دون موافقة صاحبه.</p>
+<p>تنقسم البرمجيات الخبيثة إلى عائلات رئيسية:<br />
+1. <strong>برمجيات الفدية (Ransomware):</strong><br />
+   أخطر كوابيس العصر؛ تقوم بتشفير كافة ملفاتك وصورك وقواعد بياناتك بمفتاح تشفير معقد، وتظهر لك رسالة تطلب دفع مبالغ مالية بالعملات الرقمية مقابل إعطائك مفتاح فك التشفير.<br />
+2. <strong>أحصنة طروادة (Trojans):</strong><br />
+   برامج تتنكر في شكل تطبيقات مفيدة أو ألعاب مجانية أو أدوات كسر الحماية (Cracks)، وعندما تثبتها، تفتح باباً خلفياً (Backdoor) في جهازك يسمح للمهاجم بالتحكم فيه عن بُعد.<br />
+3. <strong>برامج التجسس (Spyware):</strong><br />
+   برمجيات تعمل في الخفاء التام لمراقبة ما تكتبه على لوحة المفاتيح (Keyloggers)، وتسجيل لقطات شاشتك، والتجسس على محادثاتك وسرقة كلمات المرور المحفوظة في المتصفح.<br />
+4. <strong>الديدان الرقمية (Worms):</strong><br />
+   برمجيات ذاتية التناسخ تنتشر تلقائياً عبر الشبكات المحلية من جهاز مصاب إلى الأجهزة المجاورة مستغلة ثغرات غير محدثة دون أي تدخل من المستخدم.</p>
+<hr />
+<h2>8. تسريب البيانات: أين تذهب أسرار الملايين؟</h2>
+<p>في كل شهر، تطالعنا الأخبار عن تسريب بيانات 50 مليون مستخدم من شركة كبرى أو متجر إلكتروني. كيف يحدث ذلك؟</p>
+<p>غالبًا ما يحدث التسريب نتيجة:<br />
+* ثغرات في خوادم الشركة أو قواعد بياناتها تركت مفتوحة على الإنترنت بدون كلمة مرور قوية.<br />
+* هجوم تصيد نجح في الاستيلاء على حساب أحد مسؤولي النظام (System Administrators).<br />
+* هجوم على أحد الموردين الخارجيين الذين يقدمون خدمات فرعية للشركة (Supply Chain Attack).</p>
+<p>تُباع هذه البيانات المسربة في شبكات الإنترنت المظلم (Dark Web)، وتُستخدم في شن هجمات جديدة تُعرف بـ <strong>«حشو بيانات الاعتماد» (Credential Stuffing)</strong>: حيث يأخذ المهاجم قائمة تضم ملايين كلمات المرور المسربة من موقع قديم، ويجربها تلقائياً ببرامج روبوتية على البنوك ومنصات البريد، آملاً أن يكون الضحية قد استخدم نفس كلمة المرور في أكثر من مكان!</p>
+<hr />
+<h2>9. التحديثات الأمنية: سدادات الثغرات وليست مجرد رفاهية</h2>
+<p>كثير من المستخدمين يؤجلون تحديث هواتفهم وحواسيبهم لأسابيع وشهور بحجة: "لا أريد إضاعة باقة الإنترنت" أو "الجهاز يعمل جيداً، لماذا أحدثه؟".</p>
+<p>هذا التصرف يشبه شخصاً يرى نافذة منزله مكسورة ويقول: "لا بأس، سأصلحها العام القادم!".</p>
+<p>عندما تكتشف الشركات ثغرة خطيرة في نظام التشغيل يستغلها المهاجمون، تسارع فوراً لبرمجة "رقعة أمنية" (Security Patch) وترسلها لك على شكل تحديث. <strong>إذا لم تقم بالتحديث فوراً، فأنت تبقي الباب مفتوحاً لمهاجمين يعرفون بالفعل كيف يقتحمون جهازك</strong>.</p>
+<hr />
+<h2>10. الاختبار الأمني المصرح به مقابل القرصنة غير المشروعة</h2>
+<p>يجب أن نميز تمييزاً قاطعاً بين ممارستين متباعدتين كبعد المشرق عن المغرب:</p>
+<ul>
+<li>
+<p><strong>القرصنة غير المصرح بها (Malicious Hacking):</strong><br />
+  أي محاولة لاختراق نظام، أو فحص شبكة، أو الدخول على حساب شخص أو مؤسسة دون إذن رسمي وصريح ومكتوب. هذا فعل مجرّم أخلاقياً وقانونياً في جميع دساتير وقوانين العالم وتترتب عليه عقوبات جنائية صارمة.</p>
+</li>
+<li>
+<p><strong>التقييم الأمني المصرح به (Authorized Penetration Testing):</strong><br />
+  عمل مهني وأخلاقي نبيل، يقوم فيه مهندسو أمن مرخصون بالتعاقد مع جهة مالكة للنظام لفحص ثغراته في بيئة اختبارية مضبوطة ومحددة بدقة، بهدف كتابة تقرير سري للمؤسسة لتسد ثغراتها قبل أن يستغلها الأشرار.</p>
+</li>
+</ul>
+<p>المعيار الذهبي الذي يفصل بين الجريمة والعمل المهني هو كلمة واحدة: <strong>«التصريح الخطي المسبق (Explicit Authorization)»</strong>.</p>
+<hr />
+<h2>11. للقارئ المتخصص: نموذج التهديد STRIDE ومصفوفة MITRE ATT&amp;CK</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+في هندسة النظم وتأمين المنشآت الحساسة، يعتمد المتخصصون على أطر عمل دولية لتصنيف وتقييم التهديدات الأمنية:
+
+#### نموذج STRIDE لنمذجة التهديدات (Threat Modeling):
+ابتكرته شركة Microsoft ويصنف التهديدات التي تواجه أي برنامج إلى ست فئات رئيسية، كل فئة تقابل انتهاكاً لأحد معايير الأمان:
+
+| حرف النموذج | التهديد الأمني | المعيار الأمني المنتهك | الشرح الهندسي |
+| :---: | :--- | :--- | :--- |
+| **S** | انتحال الشخصية (Spoofing) | التوثيق (Authentication) | تظاهر المهاجم بأنه مستخدم أو خادم موثوق |
+| **T** | التلاعب بالبيانات (Tampering) | السلامة (Integrity) | تعديل غير مصرح به على البيانات في الذاكرة أو القرص أو الشبكة |
+| **R** | إنكار الفعل (Repudiation) | عدم الإنكار (Non-Repudiation) | قدرة المهاجم على ارتكاب فعل ومحو أثره بحيث يعجز السجل عن إثباته |
+| **I** | تسريب المعلومات (Information Disclosure) | السرية (Confidentiality) | كشف بيانات حساسة للمستخدمين غير المصرح لهم |
+| **D** | حجب الخدمة (Denial of Service) | التوافر (Availability) | إغراق موارد الخادم لتعطيله عن خدمة المستخدمين الشرعيين |
+| **E** | تصعيد الصلاحيات (Elevation of Privilege) | التفويض (Authorization) | اكتساب مستخدم عادي لصلاحيات مسؤول النظام الكاملة (Root / Admin) |
+
+#### مصفوفة MITRE ATT&CK:
+قاعدة معرفية عالمية توثق سلوكيات وتكتيكات المهاجمين في العالم الحقيقي (Adversary Tactics, Techniques, and Common Knowledge).  
+تساعد فرق الدفاع السيبراني (Blue Teams) على رسم رحلة الهجوم من الاستطلاع المبدئي (Reconnaissance) واختراق الحصن الأولي (Initial Access) وصولاً إلى التسلل الجانبي داخل الشبكة (Lateral Movement) وسرقة البيانات الحيوية (Exfiltration).
+
+</div>
+
+<hr />
+<h2>12. ملخص الفصل الرابع</h2>
+<ul>
+<li>الأمن السيبراني هو درع المجتمع لحماية الأفراد والأسر والبنى التحتية، وهو مسؤولية كل متصل بالإنترنت.</li>
+<li>ثالوث الأمان الكلاسيكي (CIA) يقوم على صيانة: السرية، السلامة، والتوافر.</li>
+<li>معادلة الخطر توضح أنك لا تستطيع إلغاء التهديدات الخارجية، ولكنك تستطيع خفض المخاطرة لسد ثغراتك الذاتية.</li>
+<li>الهندسة الاجتماعية تخترق السلوك البشري عبر الخوف والطمع والفضول، وتعد أسلوب الاختراق الأكثر نجاحاً اليوم.</li>
+<li>التحديثات الأمنية المستمرة تسد المنافذ المفتوحة في أجهزتك، وإهمالها مخاطرة غير محسوبة.</li>
+<li>الخط الفاصل بين العمل الأمني الأخلاقي والجريمة المعلوماتية هو الحصول على التصريح الرسمي الصريح.</li>
+</ul>
+<hr />
+<h2>13. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>اشرح ثالوث CIA مع تقديم مثال واقعي لكيفية انتهاك كل ضلع من أضلاعه الثلاثة.</strong></li>
+<li><strong>ما الفارق الجوهري بين "التهديد" و"الثغرة الأمنية"؟</strong></li>
+<li><strong>لماذا تركز الهندسة الاجتماعية على إثارة مشاعر الخوف والذعر لدى الضحية؟ وكيف تتصرف عندما تتلقى رسالة تهددك بإيقاف حسابك خلال دقائق؟</strong></li>
+<li><strong>في نموذج STRIDE لنمذجة التهديدات، ماذا يعني مصطلح (Tampering) وما هو المعيار الأمني الذي يحمي ضده؟</strong></li>
+</ol>
+<hr />
+<h2>14. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>NIST Cybersecurity Framework (CSF 2.0):</strong> الإطار الرسمي للمعهد الوطني الأمريكي للمعايير والتقنية لإدارة المخاطر السيبرانية عبر <code>nist.gov/cyberframework</code>.</li>
+<li><strong>CISA Cyber Hygiene Services:</strong> إرشادات التوعية وحماية البنى التحتية الصادرة عن وكالة الأمن السيبراني الأمريكية عبر <code>cisa.gov</code>.</li>
+<li><strong>MITRE ATT&amp;CK Framework (<code>attack.mitre.org</code>):</strong> الموسوعة المفتوحة الأكبر في العالم لتحليل سلوكيات المهاجمين والتكتيكات الدفاعية.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch5" class="book-chapter-section" data-title="الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 5</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل الخامس: كيف تحمي نفسك وعائلتك رقمياً؟ (الدليل العملي)</h1>
+<hr />
+<blockquote>
+<p>«الأمان الرقمي ليس برنامجاً تشتريه ببطاقتك الائتمانية وتنساه، بل هو مجموعة من العادات اليومية الواعية التي تبني بها جداراً منيعاً يحمي خصوصيتك وأحباءك».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: خطة حماية المنزل التي نسيناها في العالم الرقمي</h2>
+<p>لو سألت أي شخص: <em>هل تخرج من بيتك وتترك الباب مفتوحاً للشارع؟ هل تضع مفتاح سيارتك معلقاً في مقبض الباب الخارجي؟ هل تترك وثائق عائلتك وأسرارك المالية ملقاة على طاولة في مقهى عام؟</em><br />
+لسخر منك وقال: "بالتأكيد لا! هذا جنون مطبق!".</p>
+<p>ومع ذلك، فإن ملايين البشر يفعلون ما يعادل ذلك تماماً في الفضاء الرقمي كل يوم:<br />
+* يستخدمون نفس كلمة المرور "السهلة" لبريدهم، وحساباتهم البنكية، وشبكات التواصل منذ سنوات!<br />
+* يضغطون على أي رابط تقع عليه أعينهم في الرسائل!<br />
+* يمنحون تطبيقات الألعاب صلاحية فتح الكاميرا وقراءة جهات الاتصال دون أن يسألوا أنفسهم: لماذا تحتاج لعبة سباق سيارات إلى قراءة أرقام هواتف عائلتي؟<br />
+* يتركون أطفالهم الصغار يبحرون بمفردهم في محيط الإنترنت دون أدنى توعية أو حماية!</p>
+<p>هذا الفصل هو <strong>دليلك الميداني العملي خطوة بخطوة</strong>. لن نكتفي فيه بالنظريات، بل سنطبق أفضل المعايير الأمنية العالمية المعتمدة لتدريع حياتك وحياة عائلتك رقمياً.</p>
+<hr />
+<h2>2. هندسة كلمات المرور الحديثة وفق إرشادات NIST</h2>
+<p>لسنوات طويلة، دربتنا الشركات والمواقع على نصيحة خاطئة عفا عليها الزمن: <em>"اختر كلمة مرور قصيرة ومعقدة مثل <code>P@$$w0rd!19</code> وغيرّها كل 30 يوماً!"</em>.</p>
+<p>ما النتيجة الحقيقية لهذه النصيحة القديمة؟<br />
+أصبح الناس ينسون كلماتهم المعقدة، فيكتبونها على ورقة ملصقة على الشاشة، أو يغيرون رقماً واحداً فقط (مثل جعلها <code>P@$$w0rd!20</code>)!</p>
+<h3>معايير المعهد الوطني للمعايير والتقنية الحديثة (NIST SP 800-63B):</h3>
+<p>أثبتت الأبحاث الأمنية الحديثة أن الحواسيب الخارقة تكسر الكلمات القصيرة المعقدة في ثوانٍ، بينما تعجز تماماً أمام <strong>الكلمات الطويلة</strong>.</p>
+<p>لذلك، ولدت فكرة <strong>«عبارة المرور» (Passphrase)</strong>:<br />
+بدلاً من كلمة واحدة معقدة وصعبة الحفظ، اختر <strong>أربع أو خمس كلمات عشوائية غير مترابطة منطقياً</strong>، تفصل بينها مسافات أو علامات:</p>
+<ul>
+<li><strong>مثال ضعيف وقديم:</strong> <code>J@nk!z99</code> (يمكن لبرامج التخمين كسرها بسرعة).</li>
+<li><strong>مثال قوي وحديث:</strong> <code>نجم-شمس-فضاء-حاسوب-فارس</code> أو <code>blue-tiger-coffee-window-run</code></li>
+</ul>
+<p><strong>لماذا تعد عبارة المرور أفضل بملايين المرات؟</strong><br />
+1. سهلة جداً في التذكر بالنسبة للعقل البشري لأنها كلمات مألوفة.<br />
+2. طويلة جداً (تتجاوز 20 حرفاً)، مما يجعل كسرها عبر هجمات التخمين الشامل (Brute Force) يحتاج إلى آلاف السنين بمقاييس الحوسبة الحالية!</p>
+<hr />
+<h2>3. مدراء كلمات المرور (Password Managers): خزينتك المشفرة</h2>
+<p>السؤال المنطقي الذي يطرحه كل قارئ:<br />
+<em>"لدي أكثر من 60 حساباً وموقعاً أستخدمها، كيف يُعقل أن أحفظ 60 عبارة مرور مختلفة وطويلة دون أن أفقد عقلي؟!"</em>.</p>
+<p>الجواب القاطع والوحيد من خبراء الأمن السيبراني: <strong>استخدم مدير كلمات المرور (Password Manager)</strong>.</p>
+<h3>كيف يعمل مدير كلمات المرور؟</h3>
+<ul>
+<li>تطبيق موثوق (مثل Bitwarden أو 1Password أو KeePassXC) يعمل على هاتفك وحاسوبك.</li>
+<li>يقوم بإنشاء كلمات مرور عشوائية فائقة القوة لكل موقع، ويحفظها في <strong>خزينة رقمية مشفرة</strong> بتشفير عسكري من نوع AES-256.</li>
+<li><strong>أنت لا تحفظ إلا كلمة مرور واحدة رئيسية فقط (Master Password)</strong> لفتح هذه الخزينة.</li>
+<li>عندما تفتح أي موقع، يقوم التطبيق بتعبئة اسم المستخدم وكلمة المرور تلقائياً في لمح البصر.</li>
+</ul>
+<h3>مبدأ "انعدام المعرفة" (Zero-Knowledge Architecture):</h3>
+<p>الشركات الموثوقة لمدراء كلمات المرور تصمم خوادمها بحيث يتم تشفير وفك تشفير بياناتك <strong>محلياً داخل هاتفك فقط</strong>. حتى لو اقتحم مهاجم خوادم الشركة نفسها، فلن يجد سوى كتل مشفرة غير مفهومة؛ لأن مفتاح فك التشفير الوحيد موجود في عقلك أنت فقط!</p>
+<hr />
+<h2>4. المصادقة متعددة العوامل (MFA): خط الدفاع الثاني المنيع</h2>
+<p>تخيل أن كلمة مرورك قد سُربت بالفعل في اختراق لأحد المواقع؛ هل يعني هذا نهاية حسابك وسرقته فوراً؟</p>
+<p>ليس إذا كنت قد فعّلت <strong>«المصادقة متعددة العوامل» (Multi-Factor Authentication - MFA)</strong>!</p>
+<p>تقوم المصادقة على ثلاثة عناصر لإثبات هويتك:<br />
+1. <strong>شيء تعرفه (Something you know):</strong> مثل كلمة المرور أو رمز PIN.<br />
+2. <strong>شيء تملكه (Something you have):</strong> مثل هاتفك الذكي أو مفتاح أمان فيزيائي.<br />
+3. <strong>شيء في ذاتك (Something you are):</strong> مثل بصمة الإصبع أو بصمة الوجه.</p>
+<h3>ترتيب وسائل التحقق الثنائي من الأضعف إلى الأقوى:</h3>
+<ol>
+<li><strong>الرسائل النصية القصيرة (SMS Verification) - [أضعف وسيلة]:</strong><br />
+   رغم أنها أفضل من عدم وجود حماية مطلقاً، إلا أنها معرضة لهجمات "تبديل الشريحة" (SIM Swapping) والتنصت على شبكات الاتصالات الخلوية.</li>
+<li><strong>تطبيقات توليد الرموز المؤقتة (Authenticator Apps) - [ممتازة وموصى بها بشدة]:</strong><br />
+   تطبيقات مثل (Google Authenticator, Microsoft Authenticator, Aegis) تولد رمزاً من 6 أرقام يتغير كل 30 ثانية بدون الحاجة إلى شبكة هاتف أو إنترنت!</li>
+<li><strong>مفاتيح الأمان الفيزيائية وتقنية مفاتيح المرور (FIDO2 / Hardware Keys &amp; Passkeys) - [الأعلى أماناً في العالم]:</strong><br />
+   مفاتيح صغيرة تُوصل بالهاتف أو الحاسوب (مثل YubiKey) أو تقنية Passkeys الحديثة، وهي الوسيلة الوحيدة عالمياً المقاومة تماماً للتصيد الإلكتروني (Phishing-Resistant).</li>
+</ol>
+<hr />
+<h2>5. حماية وتدريع البريد الإلكتروني الشخصي</h2>
+<p>بريدك الإلكتروني الأساسي ليس مجرد صندوق رسائل، بل هو <strong>«المفتاح الرئيسي لعمارة حياتك الرقمية كلها»</strong>!</p>
+<p>إذا اخترق أحد بريدك الإلكتروني، فإنه يستطيع الضغط على زر "نسيت كلمة المرور" في البنك، وفي وسائل التواصل، وفي حسابك السحابي، ليستولي على كل شيء في دقائق.</p>
+<h3>القواعد الذهبية لتدريع بريدك:</h3>
+<ul>
+<li><strong>عزل الحسابات (Account Segregation):</strong> لا تستخدم بريدك المصرفي المهم للتسجيل في المواقع الترفيهية العشوائية ومواقع التخفيضات. اجعل لديك بريداً خاصاً بالمعاملات الحساسة، وبريداً ثانوياً للمواقع العامة.</li>
+<li><strong>تفعيل المصادقة الثنائية القوية فوراً</strong> عبر تطبيق توثيق وتأمين خيارات استرداد الحساب.</li>
+<li><strong>مراجعة الأجهزة المتصلة باستمرار:</strong> ادخل على إعدادات الأمان واطرد أي جلسة دخول قديمة أو جهاز غير معروف.</li>
+</ul>
+<hr />
+<h2>6. حماية الهواتف الذكية وضبط الصلاحيات (Permissions Hygiene)</h2>
+<p>هاتفك الذكي يعرف عنك أكثر مما يعرفه أقرب أصدقائك: يعرف موقعك الجغرافي اللحظي، ويستمع لما تقوله، ويحفظ صورك، ويسجل دقات قلبك.</p>
+<h3>كيف تحصن هاتفك؟</h3>
+<ol>
+<li><strong>قفل الشاشة الإلزامي:</strong> استخدم رمز مرور لا يقل عن 6 أرقام (أو عبارة مرور أبجدية) مع البصمة البيومترية، وتجنب استخدام نمط الرسم البسيط (Pattern) الذي يسهل تخمينه من آثار الأصابع على الزجاج.</li>
+<li><strong>حظر التثبيت من مصادر مجهولة:</strong> لا تثبت أي تطبيق خارجي من خارج متجري Google Play و Apple App Store؛ فالغالبية الساحقة من البرمجيات الخبيثة تأتي عبر روابط خارجية ومتاجر غير رسمية.</li>
+<li><strong>مراجعة الصلاحيات الصارمة (Permissions Review):</strong><br />
+   ادخل إلى إعدادات الهاتف وافحص التطبيقات واحداً تلو الآخر:</li>
+<li>هل يحتاج تطبيق الآلة الحاسبة للوصول إلى جهات الاتصال؟ <strong>(الجواب: لا! الغِ الصلاحية فوراً).</strong></li>
+<li>اختر خيار <em>"أثناء استخدام التطبيق فقط"</em> للموقع الجغرافي بدلاً من <em>"السماح طوال الوقت"</em>.</li>
+<li>راجع إذن الوصول إلى (الميكروفون، الكاميرا، الصور، وسجل المكالمات).</li>
+</ol>
+<hr />
+<h2>7. كشف الروابط الاحتيالية والرسائل المزيفة</h2>
+<p>المحتالون محترفون في صناعة مواقع تشبه المواقع الأصلية بنسبة 99% لخداعك. فكيف تكشفهم؟</p>
+<h3>فحص عنوان النطاق (Domain Inspection):</h3>
+<p>المحتال يستطيع تزوير كل شيء في الصفحة: الشعارات، الألوان، الخطوط، ولكن <strong>الشيء الوحيد الذي لا يستطيع تزويره هو العنوان الأصلي للموقع في شريط المتصفح!</strong></p>
+<p>تأمل هذه الأمثلة على التزييف الخادع (Typosquatting):<br />
+* الموقع الأصلي للبنك: <code>www.alrajhibank.com.sa</code><br />
+* الرابط الاحتيالي: <code>www.alrajhi-security-update.com</code><br />
+* الرابط المزيف عبر تبديل الحروف: <code>www.paypal-verify.com</code> بدلاً من <code>www.paypal.com</code></p>
+<p><strong>القاعدة الذهبية:</strong><br />
+إذا وصلتك رسالة تطلب منك تحديث بياناتك أو دفع رسوم، <strong>لا تنقر على الرابط مطلقاً</strong>؛ بل افتح متصفحك واكتب عنوان الموقع الرسمي بنفسك أو ادخل من تطبيقك المعتاد!</p>
+<hr />
+<h2>8. حماية الأطفال والمراهقين على الفضاء الرقمي</h2>
+<p>إن حماية النشء في العالم الرقمي لا تتحقق بالتجسس القمعي عليهم، بل بـ <strong>بناء جسور الثقة والمصارحة والوعي المشترك</strong>.</p>
+<h3>خطوات الأمان الأسري الرشيد:</h3>
+<ol>
+<li><strong>قاعدة المصارحة بلا عقاب:</strong><br />
+   علم أطفالك دائماً: <em>"إذا رأيت شيئاً يخيفك، أو أخطأت وضغطت على رابط غريب، أو حاول شخص ابتزازك، تعال إليّ فوراً ولن أعاقبك بل سأحميك وأساعدك"</em>. إن خوف الطفل من عقاب والديه هو السلاح الأكبر الذي يستخدمه المبتزون لعزل الطفل وتدميره نفسياً.</li>
+<li><strong>الرقابة الأبوية الذكية (Parental Controls):</strong><br />
+   استخدم أدوات مثل (Google Family Link أو Apple Screen Time) لتحديد أوقات الشاشات، ومنع تثبيت التطبيقات بدون إذن الوالدين، وفلترة المحتوى الإباحي والعنيف.</li>
+<li><strong>التوعية بمخاطر مشاركة الصور والمعلومات:</strong><br />
+   علمهم ألا ينشروا صور غرفهم، أو اسم مدرستهم، أو جدول تدريباتهم، وألا يقبلوا إضافة أي شخص لا يعرفونه وجهاً لوجه في الحياة الحقيقية.</li>
+</ol>
+<hr />
+<h2>9. قاعدة النسخ الاحتياطي الذهبية (3-2-1)</h2>
+<p>تخيل أن هاتفك سقط في البحر الآن، أو أن حاسوبك أصابته برمجية فدية شفرت كل ذكريات طفولة أبنائك ومستندات عملك الهامة. ماذا تفعل؟</p>
+<p>إذا كنت تطبق <strong>قاعدة 3-2-1 للنسخ الاحتياطي المعتمدة عالمياً</strong>، فستبتسم وتشتري جهازاً جديداً وتستعيد كل شيء في نصف ساعة!</p>
+<pre><code>القاعدة الذهبية (3-2-1):
+[ 3 ] احتفظ بثلاث نسخ من بياناتك المهمة (النسخة الأصلية + نسختان احتياطيتان).
+[ 2 ] خزن النسخ على نوعين مختلفين من وسائط التخزين (قرص صلب خارجي + خدمة سحابية).
+[ 1 ] احتفظ بنسخة واحدة على الأقل في موقع جغرافي بعيد خارج منزلك (نسخة سحابية مشفرة).
+</code></pre>
+<hr />
+<h2>10. خطط الطوارئ الفورية (Emergency Response Playbooks)</h2>
+<h3>السيناريو أ: ماذا تفعل فوراً إذا فُقد أو سُرق هاتفك؟</h3>
+<ol>
+<li><strong>الإغلاق الفوري عن بُعد:</strong> من أي حاسوب آخر، ادخل فوراً إلى خدمة <code>Find My iPhone</code> (لأجهزة أبل) أو <code>Find My Device</code> (لأجهزة أندرويد) واضغط على <strong>"وضع الفقدان" (Lost Mode)</strong> أو قفل ومسح الجهاز عن بُعد (Erase Device).</li>
+<li><strong>إلغاء شريحة الاتصال (SIM Card):</strong> اتصل بشركة الاتصالات فوراً وأوقف الشريحة حتى لا يستقبل اللص رموز التحقق للبنك عبر الـ SMS.</li>
+<li><strong>تغيير كلمة مرور البريد الأساسي والحسابات البنكية:</strong> واختيار تسجيل الخروج من كافة الأجهزة.</li>
+</ol>
+<h3>السيناريو ب: ماذا تفعل فوراً إذا شككت باختراق أحد حساباتك؟</h3>
+<ol>
+<li><strong>فصل الاتصال وتغيير كلمة المرور فوراً</strong> من جهاز آخر نظيف وموثوق.</li>
+<li><strong>تسجيل الخروج من كافة الجلسات النشطة (Log out from all sessions).</strong></li>
+<li><strong>تفعيل المصادقة الثنائية (MFA)</strong> إذا لم تكن مفعلة مسبقاً.</li>
+<li><strong>مراجعة إعدادات الأمان:</strong> تأكد من أن المخترق لم يضف بريداً إلكترونياً أو رقم هاتف يخصه كخيار استرداد احتياطي، وتأكد من عدم وجود قواعد إعادة توجيه (Forwarding rules) في بريدك الإلكتروني.</li>
+</ol>
+<hr />
+<h2>11. قائمة الفحص الذاتي للأمن الرقمي (Personal Security Checklist)</h2>
+<p>ضع علامة (✔) أمام كل معيار تطبقه حالياً لتقيس مستوى درعك الرقمي:</p>
+<ul>
+<li>[ ] 1. أستخدم عبارات مرور طويلة ومختلفة لكل حساب من حساباتي ولا أكرر كلمة مرور أبداً.</li>
+<li>[ ] 2. أستخدم مدير كلمات مرور موثوق يحفظ بياناتي في خزينة مشفرة.</li>
+<li>[ ] 3. فعلت المصادقة الثنائية (MFA) عبر تطبيق توثيق لبريدي وحساباتي البنكية والاجتماعية.</li>
+<li>[ ] 4. لا أشارك رموز التحقق (OTP) مع أي كائن كان، حتى لو ادعى أنه موظف البنك.</li>
+<li>[ ] 5. شاشة هاتفي مقفلة برمز مرور معقد لا يقل عن 6 أرقام مع القياسات البيومترية.</li>
+<li>[ ] 6. أحدث نظام تشغيل هاتفي وحاسوبي وتطبيقاتي بانتظام دون تأجيل.</li>
+<li>[ ] 7. أغلقت إمكانية تثبيت التطبيقات من مصادر مجهولة على جهازي.</li>
+<li>[ ] 8. راجعت صلاحيات التطبيقات وأغلقت وصول الكاميرا والميكروفون عن البرامج التي لا تحتاجهما.</li>
+<li>[ ] 9. أمتلك نسختين احتياطيتين من ملفاتي وصوري الهامة وفق قاعدة (3-2-1).</li>
+<li>[ ] 10. لا أنقر على روابط الشحنات أو تحديث البيانات في الرسائل النصية القصيرة (SMS).</li>
+<li>[ ] 11. أتأكد من شريط عنوان المتصفح بدقة قبل كتابة بيانات دخولي في أي موقع.</li>
+<li>[ ] 12. لدي بريد إلكتروني خاص ومحمي للمعاملات الرسمية منفصل عن بريد الترفيه والتسوق.</li>
+<li>[ ] 13. راجعت إعدادات الخصوصية في منصات التواصل وجعلت منشوراتي العائلية مقتصرة على الأصدقاء فقط.</li>
+<li>[ ] 14. لا أتصل بشبكات الواي فاي العامة في المقاهي لإجراء معاملات مالية أو فتح بريد العمل إلا عبر شبكة افتراضية خاصة (VPN) موثوقة.</li>
+<li>[ ] 15. علمت أطفالي مبدأ المصارحة التامة في حال تعرضهم لأي موقف مريب على الإنترنت.</li>
+<li>[ ] 16. مفعل ميزة العثور على جهازي عن بُعد وقادر على مسحه في حال السرقة.</li>
+<li>[ ] 17. قمت بتشفير القرص الصلب لحاسوبي الشخصي (عبر BitLocker في ويندوز أو FileVault في ماك).</li>
+<li>[ ] 18. أتحقق دورياً من قائمة الجلسات والأجهزة المتصلة بحساباتي وأطرد الأجهزة القديمة.</li>
+<li>[ ] 19. قمت بتغطية كاميرا الحاسوب بغطاء فيزيائي عند عدم الاستخدام.</li>
+<li>[ ] 20. أنقل هذه المعرفة لأهلي وأصدقائي تذكيراً بشعار: «المعرفة قوة، وقيمتها فيما نقدمه بها للآخرين».</li>
+</ul>
+<p><em>(إذا حققت أكثر من 16 علامة: فأنت تتمتع بحصانة رقمية ممتازة تحمي بها نفسك ومجتمعك!)</em></p>
+<hr />
+<h2>12. للقارئ المتخصص: خوارزمية TOTP والتحقق الزمني المشفر</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+كيف يستطيع تطبيق التوثيق في هاتفك توليد رمز متطابق مع رمز الخادم في نفس الثانية حتى لو كان هاتفك في وضع الطيران وبلا أي اتصال بالإنترنت؟
+
+السر يكمن في **المعيار القياسي الدولي (RFC 6238): خوارزمية TOTP (Time-Based One-Time Password)**:
+
+#### الآلية الرياضية:
+1. **المفتاح السري المشترك (Shared Secret $K$):**  
+   عند تفعيل المصادقة ومسح رمز الـ QR، يتم تبادل مفتاح سري عشوائي مشفر بين هاتفك والخادم مرة واحدة فقط ويُحفظ محلياً.
+2. **العداد الزمني ($T$):**  
+   يتم أخذ الوقت الحالي بالثواني وفق توقيت غرينتش (Unix Epoch Time) وقسمته على نافذة زمنية مدتها 30 ثانية:
+   $$T = \lfloor \frac{\text{Current Time} - T_0}{30} \rfloor$$
+3. **التجزئة المشفرة المبنية على الرسائل (HMAC-SHA1 / HMAC-SHA256):**  
+   يتم حساب الـ Hash المشترك بين المفتاح السري $K$ والعداد الزمني $T$:
+   $$HS = \text{HMAC}(K, T)$$
+4. **اقتطاع الرمز الديناميكي (Dynamic Truncation):**  
+   يتم اقتطاع 4 بايتات من ناتج الـ Hash واستخراج باقي القسمة على $10^6$ لإنتاج رقم مكون من **6 خانات** يتطابق تماماً في جهازك وعلى الخادم، وينتهي مفعوله تلقائياً بعد انقضاء الـ 30 ثانية.
+
+</div>
+
+<hr />
+<h2>13. ملخص الفصل الخامس</h2>
+<ul>
+<li>اختيار عبارات مرور طويلة مألوفة للإنسان وعصية على الحواسيب يمثل جوهر إرشادات الأمان الحديثة (NIST).</li>
+<li>مدير كلمات المرور أداة لا غنى عنها لإدارة العشرات من كلمات المرور القوية بمفتاح رئيسي واحد بهندسة انعدام المعرفة.</li>
+<li>المصادقة متعددة العوامل (MFA) عبر تطبيقات التوثيق أو مفاتيح FIDO2 تحمي حسابك حتى في حال تسرب كلمة المرور.</li>
+<li>بريدك الإلكتروني هو المفتاح الرئيسي لهويتك الرقمية ويجب عزله وتدريعه بأعلى الإجراءات الأمنية.</li>
+<li>حماية الأسرة والأطفال تبدأ من بناء ثقافة الحوار والمصارحة الآمنة والرقابة التقنية الرشيدة.</li>
+<li>تطبيق قاعدة 3-2-1 للنسخ الاحتياطي يضمن استعادة حياتك الرقمية وبياناتك الحيوية مهما بلغت جسامة الكوارث.</li>
+</ul>
+<hr />
+<h2>14. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>لماذا تفوقت "عبارة المرور" الطويلة على كلمات المرور القصيرة المعقدة في معايير NIST الحديثة؟</strong></li>
+<li><strong>كيف يحميك مدير كلمات المرور الموثوق وفق مبدأ "انعدام المعرفة" (Zero-Knowledge) حتى لو تم اختراق خوادم الشركة؟</strong></li>
+<li><strong>لماذا يفضل خبراء الأمن تطبيقات التوثيق (Authenticator Apps) ومفاتيح Passkeys على رسائل التحقق النصية (SMS)؟</strong></li>
+<li><strong>ما هي الخطوات الثلاث الأولى التي يجب عليك اتخاذها في الدقائق الأولى من اكتشاف سرقة هاتفك الذكي؟</strong></li>
+</ol>
+<hr />
+<h2>15. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>NIST Special Publication 800-63B:</strong> إرشادات الهوية الرقمية وإدارة دورة حياة المصادقة وكلمات المرور عبر <code>pages.nist.gov/800-63-3/sp800-63b.html</code>.</li>
+<li><strong>FIDO Alliance Standards (<code>fidoalliance.org</code>):</strong> المواصفات العالمية لمفاتيح الأمان الفيزيائية وتقنيات المصادقة بدون كلمات مرور (Passkeys).</li>
+<li><strong>Electronic Frontier Foundation (EFF) - Surveillance Self-Defense:</strong> دليل مؤسسة الجبهة الإلكترونية العالمي لحماية الخصوصية الرقمية والأمان الشخصي عبر <code>ssd.eff.org</code>.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch6" class="book-chapter-section" data-title="الفصل السادس: بناء البرمجيات والأنظمة الآمنة">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 6</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل السادس: بناء البرمجيات والأنظمة الآمنة</h1>
+<hr />
+<blockquote>
+<p>«بناء برمجيات آمنة لا يعني إضافة قفل حديدي على باب خشبي متهالك، بل يعني هندسة البيت بأكمله من أساساته ليكون مقاوماً للعواصف والهزات منذ اللحظة الأولى لتصميمه».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: البرمجة السريعة وثمن الغفلة الباهظ</h2>
+<p>في عالم تطوير البرمجيات اليوم، يدور سباق محموم حول السرعة: الشركات تريد إطلاق التطبيقات في أسواق العمل بأسرع وقت ممكن، والمطورون يتعرضون لضغوط هائلة لتسليم الميزات البرمجية (Features) قبل المواعيد المحددة.</p>
+<p>وفي خضم هذا السباق، غالباً ما يُعامل "الأمان" كعنصر ثانوي مزعج يُؤجل إلى ما بعد الإطلاق:<br />
+<em>"دعنا نبني التطبيق أولاً ونطلقه للناس، ثم سنفكر في تأمينه لاحقاً عندما نجد وقتاً!"</em>.</p>
+<p>هذه العقلية هي السبب المباشر وراء كبرى الكوارث السيبرانية التي نسمع عنها يومياً في الأخبار: شركات تخسر مليارات الدولارات، وبيانات ملايين المستخدمين تُلقى على قارعة الإنترنت، وتنهار سمعة مؤسسات بُنيت على مدار عقود في لحظة واحدة!</p>
+<p>إن قاعدة الذهب في هندسة البرمجيات تقول:<br />
+<strong>«معالجة ثغرة أمنية أثناء مرحلة التصميم والبرمجة تكلف بضعة دولارات ودقائق معدودة؛ أما معالجتها بعد وقوع الاختراق في بيئة الإنتاج فتكلف ملايين الدولارات وقد تدمر المشروع بأكمله»</strong>.</p>
+<p>في هذا الفصل، سننتقل إلى كواليس التطوير الآمن: كيف يفكر مهندس البرمجيات الواعي؟ وكيف تصمم أنظمة وبرامج تحمي بيانات مستخدميها وتلتزم بأرقى المعايير العالمية مثل <strong>OWASP</strong> و <strong>NIST</strong>؟</p>
+<hr />
+<h2>2. مبدأ الأمان منذ التصميم (Secure by Design &amp; Default)</h2>
+<p>أطلقت وكالات الأمن السيبراني الرائدة في العالم (وعلى رأسها CISA الأمريكية) مبادرة عالمية تاريخية بعنوان: <strong>«آمن منذ التصميم وآمن افتراضياً (Secure by Design &amp; Secure by Default)»</strong>.</p>
+<h3>ماذا يعني ذلك للمطور؟</h3>
+<ol>
+<li><strong>الأمان بالتصميم (Secure by Design):</strong><br />
+   أن يكون التفكير الأمني حاضراً في جلسة التخطيط الأولى: كيف ستتحرك البيانات؟ أين تُخزن؟ من يملك حق قراءتها؟ ما أسوأ سيناريو يمكن أن يحدث لو تعطل هذا الخادم؟ بدلاً من إنهاء البرمجة ثم استدعاء فريق أمني لمحاولة "ترقيع" الثغرات.</li>
+<li><strong>الأمان افتراضياً (Secure by Default):</strong><br />
+   أن يأتي البرنامج فور تثبيته بأعلى إعدادات الأمان تلقائياً، دون أن تطلب من المستخدم العادي الذهاب إلى القوائم وتفعيل الحماية بنفسه؛ لأن أغلب المستخدمين لن يغيروا الإعدادات الافتراضية أبداً! (مثال: تشفير البيانات مفعّل تلقائياً، وتفعيل المصادقة الثنائية إلزامي).</li>
+</ol>
+<hr />
+<h2>3. القاعدة الذهبية: عدم الثقة بالمدخلات أبداً (Never Trust User Input)</h2>
+<p>إذا سألت أي خبير أمني: <em>ما السبب الأول لمعظم ثغرات تطبيقات الويب في العالم؟</em><br />
+لسارع بالإجابة: <strong>الثقة العمياء بمدخلات المستخدم!</strong></p>
+<p>المطور الساذج يفترض أن المستخدم في خانة "الاسم" سيكتب اسمه، وفي خانة "العمر" سيكتب رقماً.<br />
+أما المهاجم، فيكتب في خانة البحث أو الاسم <strong>أكواداً خبيثة</strong> تستهدف إرباك قاعدة البيانات أو السيطرة على الخادم!</p>
+<h3>درعا الحماية الإلزاميان:</h3>
+<ol>
+<li><strong>التحقق من صحة المدخلات (Input Validation):</strong><br />
+   فحص المدخلات بدقة والتأكد من أنها تطابق النمط المتوقع تماماً (مثلاً: التحقق من أن حقل العمر يحتوي على أرقام صحيحة بين 1 و 120 فقط، ولا يحتوي على حروف أو رموز غريبة).</li>
+<li><strong>التعقيم والترميز (Sanitization &amp; Output Encoding):</strong><br />
+   تحويل الرموز الخاصة التي قد تفهمها لغة البرمجة أو قاعدة البيانات كأوامر (مثل الرمز <code>'</code> أو <code>&lt;script&gt;</code>) إلى نصوص خام غير قابلة للتنفيذ.</li>
+</ol>
+<p>تذكر دائماً: <strong>كل ما يأتي من خارج خادمك هو مدخل غير موثوق حتى تثبت سلامته بالدليل القاطع!</strong>.</p>
+<hr />
+<h2>4. الفرق الحاسم بين المصادقة والتفويض</h2>
+<p>في كل نظام برمجي يتعامل مع مستخدمين، هناك حارسان يقفان عند الباب، ويخلط الكثيرون بين وظيفتيهما:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">المفهوم</th>
+<th style="text-align: left;">المصطلح الإنجليزي</th>
+<th style="text-align: left;">السؤال الذي يجيب عنه</th>
+<th style="text-align: left;">المثال البسيط</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>المصادقة</strong></td>
+<td style="text-align: left;"><strong>Authentication (AuthN)</strong></td>
+<td style="text-align: left;"><strong>من أنت؟</strong></td>
+<td style="text-align: left;">تقديم جواز سفرك أو كتابة كلمة المرور لتثبت أنك فلان.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>التفويض</strong></td>
+<td style="text-align: left;"><strong>Authorization (AuthZ)</strong></td>
+<td style="text-align: left;"><strong>ماذا يحق لك أن تفعل؟</strong></td>
+<td style="text-align: left;">بعد إثبات هويتك، هل يحق لك دخول قمرة القيادة في الطائرة؟ أم مقعدك في الدرجة السياحية فقط؟</td>
+</tr>
+</tbody>
+</table>
+<h3>الخطأ البرمجي الشائع:</h3>
+<p>قد ينجح المبرمج في التحقق من أن المستخدم مسجل بالفعل (نجاح المصادقة)، لكنه ينسى فحص صلاحياته (فشل التفويض)!<br />
+فمثلاً: يقوم المستخدم العادي بتغيير الرقم في رابط المتصفح من:<br />
+<code>https://example.com/invoice/105</code> إلى <code>https://example.com/invoice/106</code><br />
+فإذا كان النظام رديء التصميم ولا يتحقق من أن الفاتورة رقم 106 تخص هذا المستخدم بعينه، فسيسمح له بقراءة فواتير الآخرين! تُعرف هذه الثغرة الكارثية عالمياً بـ <strong>(BOLA / IDOR)</strong>.</p>
+<hr />
+<h2>5. التعامل البرمجي الصحيح مع كلمات المرور: علم التجزئة (Hashing)</h2>
+<p>أكبر جريمة يرتكبها مبرمج في حق مستخدميه هي <strong>تخزين كلمات المرور كنص صريح (Plaintext) في قاعدة البيانات!</strong></p>
+<p>لو تم اختراق خادم هذا المطور، لقرأ المهاجم كلمات مرور جميع المستخدمين فوراً واستخدمها لاختراق بريدهم وبنوكهم.</p>
+<h3>ما الفرق بين التشفير والتجزئة؟</h3>
+<ul>
+<li><strong>التشفير (Encryption) - عملية ذات اتجاهين:</strong><br />
+  تحويل النص الصريح إلى نص مبهم بمفتاح سري، <strong>ويمكن فك التشفير</strong> وإعادة النص لأصله باستخدام نفس المفتاح أو مفتاح مقابل. يُستخدم لنقل وحفظ البيانات التي نحتاج لقراءتها لاحقاً (مثل الرسائل والملفات).</li>
+<li><strong>التجزئة (Hashing) - عملية ذات اتجاه واحد فقط:</strong><br />
+  تمرير النص في خوارزمية رياضية تحوله إلى "بصمة رقمية" ثابتة الطول، <strong>ويستحيل رياضياً إعادة هذه البصمة إلى كلمتها الأصلية!</strong></li>
+</ul>
+<h3>كيف يتحقق الخادم من كلمة مرورك إذاً؟</h3>
+<p>عندما تسجل دخولك، يأخذ الخادم الكلمة التي كتبتها ويجزئها بنفس المعادلة؛ فإذا تطابقت البصمتان، سمح لك بالدخول، دون أن يعرف الخادم نفسه ما هي كلمتك الأصلية!</p>
+<h3>الملح المشفر (Salt) و الفلفل (Pepper):</h3>
+<p>لمنع المهاجمين من استخدام قواميس البصمات الجاهزة (Rainbow Tables)، يضيف المطور المحترف قيمة عشوائية فريدة تُسمى <strong>«الملح» (Salt)</strong> إلى كل كلمة مرور قبل تجزئتها، مما يضمن أنه حتى لو استخدم شخصان نفس كلمة المرور تماماً، فستكون بصمتاهما مختلفتين كلياً في قاعدة البيانات!</p>
+<h3>ما الخوارزميات المعتمدة عالمياً لتخزين كلمات المرور؟</h3>
+<ul>
+<li><strong>خوارزميات قديمة ومحرمة أمنياً:</strong> MD5, SHA-1, SHA-256 (لأنها صُممت لتكون فائقة السرعة، مما يسمح للمهاجم بتجربة مليارات الاحتمالات في الثانية!).</li>
+<li><strong>الخوارزميات الدفاعية المعتمدة (بطيئة عمداً ومكلفة في الذاكرة لتكبيل المهاجمين):</strong><br />
+<strong>Argon2id</strong> (الفائز بالمسابقة العالمية للتجزئة والموصى به من OWASP)، و <strong>bcrypt</strong>، و <strong>PBKDF2</strong>.</li>
+</ul>
+<hr />
+<h2>6. تطبيق عملي بـ Python: مقارنة برمجية بين التجزئة الخاطئة والآمنة</h2>
+<p>دعنا نرى كيف يُترجم هذا المفهوم في كود بايثون احترافي:</p>
+<pre><code class="language-python"># ==============================================================
+# مقارنة هندسية بين التخزين الخاطئ والآمن لكلمات المرور
+# كتاب الوعي الرقمي - تأليف: جنكيز
+# ==============================================================
+import hashlib
+import os
+
+# --- أولاً: الممارسة الخاطئة وغير الآمنة إطلاقاً (DO NOT USE) ---
+def unsafe_hash_password(password):
+    &quot;&quot;&quot;
+    استخدام SHA-256 مجردة بدون ملح: ممارسة كارثية
+    تسمح للمهاجم بكشف الكلمات الشائعة عبر الجداول المعكوسة (Rainbow Tables)
+    &quot;&quot;&quot;
+    return hashlib.sha256(password.encode()).hexdigest()
+
+# --- ثانياً: الممارسة الدفاعية القياسية المعتمدة (Secure Practice) ---
+def secure_hash_password(password):
+    &quot;&quot;&quot;
+    تطبيق معيار PBKDF2-HMAC-SHA256 المعتمد من NIST:
+    1. توليد ملح مشفر عشوائي (Salt) بطول 16 بايت
+    2. تطبيق 600,000 دورة تكرار لإبطاء هجمات التخمين
+    &quot;&quot;&quot;
+    salt = os.urandom(16) # ملح عشوائي غير قابل للتوقع
+    iterations = 600000   # عدد التكرارات الموصى به حديثاً من OWASP
+
+    derived_key = hashlib.pbkdf2_hmac(
+        hash_name='sha256',
+        password=password.encode('utf-8'),
+        salt=salt,
+        iterations=iterations
+    )
+
+    # دمج الملح مع المفتاح المشتق لتخزينهما معاً بأمان
+    return salt.hex() + &quot;:&quot; + derived_key.hex()
+
+def verify_password(stored_record, provided_password):
+    &quot;&quot;&quot;التحقق من صحة كلمة المرور المدخلة بمقارنة بصمتها بالمسجل&quot;&quot;&quot;
+    salt_hex, key_hex = stored_record.split(&quot;:&quot;)
+    salt = bytes.fromhex(salt_hex)
+
+    # إعادة التجزئة بنفس الملح والتكرارات
+    new_key = hashlib.pbkdf2_hmac(
+        hash_name='sha256',
+        password=provided_password.encode('utf-8'),
+        salt=salt,
+        iterations=600000
+    )
+
+    # استخدام مقارنة مقاومة للتوقيت (Timing-Attack Safe)
+    import hmac
+    return hmac.compare_digest(new_key.hex(), key_hex)
+
+# تجربة حية توضح قوة الخوارزمية الدفاعية
+if __name__ == &quot;__main__&quot;:
+    user_pass = &quot;mySecretPassphrase2026!&quot;
+
+    # حفظ الكلمة الآمنة
+    saved_record = secure_hash_password(user_pass)
+    print(&quot;السجل الآمن المخزن في قاعدة البيانات:&quot;)
+    print(saved_record)
+
+    # تجربة التحقق
+    is_correct = verify_password(saved_record, &quot;mySecretPassphrase2026!&quot;)
+    is_wrong = verify_password(saved_record, &quot;WrongPassword!&quot;)
+
+    print(f&quot;\nنتيجة محاولة الكلمة الصحيحة: {'✔ نجح الدخول' if is_correct else '❌ فشل'}&quot;)
+    print(f&quot;نتيجة محاولة الكلمة الخاطئة : {'✔ نجح الدخول' if is_wrong else '❌ تم الصد بنجاح'}&quot;)
+</code></pre>
+<p>لاحظ استخدام الدالة <code>hmac.compare_digest</code>؛ فالمبرمج المتقدم يدرك أن مقارنة النصوص العادية عبر <code>==</code> تستهلك زمناً يختلف بحسب عدد الأحرف المتطابقة، مما قد يسمح للمهاجم بقياس فروق الزمن بالميكروثانية لمعرفة الحروف الصحيحة (هجمات التوقيت Timing Attacks)!</p>
+<hr />
+<h2>7. أمان قنوات الاتصال: بروتوكول TLS 1.3 وتثبيت الشهادات</h2>
+<p>عندما يتصل تطبيق الهاتف بخادم الشركة عبر شبكة إنترنت عامة، يمكن لأي شخص يتنصت على الراوتر قراءة البيانات إذا كانت مرسلة بنص صريح (عبر بروتوكول HTTP غير المشفر).</p>
+<p>لذلك، فإن القاعدة الإلزامية في أي تطبيق حديث هي <strong>استخدام بروتوكول HTTPS عبر طبقة النقل الآمنة (TLS - Transport Layer Security) بنسختها الحديثة TLS 1.3</strong>.</p>
+<h3>تثبيت الشهادة الرقمية (Certificate Pinning):</h3>
+<p>في التطبيقات الحساسة (مثل تطبيقات البنوك والمحافظ الإلكترونية)، لا يكتفي المطور بـ HTTPS العادي، بل يقوم بـ "تثبيت الشهادة الرقمية" داخل كود التطبيق نفسه (SSL/Certificate Pinning)، بحيث يرفض التطبيق الحديث مع أي خادم إلا إذا قدم نفس الشهادة المشفرة المضمنة في التطبيق، مما يحبط محاولات هجمات "الرجل في المنتصف" (Man-in-the-Middle) تماماً.</p>
+<hr />
+<h2>8. مشروع أمان تطبيقات الويب المفتوح (OWASP Top 10)</h2>
+<p>يعد <strong>مشروع أمان تطبيقات الويب المفتوح (OWASP)</strong> المرجع العالمي الأول لمهندسي البرمجيات. تصدر المنظمة دورياً قائمة بأخطر 10 ثغرات برمجية تهدد التطبيقات في العالم:</p>
+<ol>
+<li><strong>A01: انهيار التحكم في الوصول (Broken Access Control):</strong> سماح النظام للمستخدم العادي بالوصول لبيانات مستخدمين آخرين أو لوحة الإدارة.</li>
+<li><strong>A02: الإخفاقات التشفيرية (Cryptographic Failures):</strong> استخدام خوارزميات قديمة أو إرسال أسرار بنص غير مشفر.</li>
+<li><strong>A03: ثغرات الحقن (Injection - مثل SQL Injection):</strong> إدخال أكواد خبيثة عبر حقول الإدخال لتنفيذها داخل قاعدة البيانات.</li>
+<li><strong>A04: التصميم غير الآمن (Insecure Design):</strong> عيوب بنيوية في منطق النظام نفسه لم تُراعَ فيها نماذج التهديد.</li>
+<li><strong>A05: التهيئة الأمنية الخاطئة (Security Misconfiguration):</strong> ترك كلمات المرور الافتراضية، أو تفعيل صفحات الأخطاء التفصيلية في بيئة الإنتاج.</li>
+<li><strong>A06: المكونات القديمة والهشة (Vulnerable Components):</strong> استخدام مكتبات خارجية مليئة بالثغرات المعلنة دون تحديث.</li>
+<li><strong>A07: فشل المصادقة والهوية (Identification &amp; Authentication Failures):</strong> السماح بهجمات التخمين التلقائي دون حظر أو غياب التحقق الثنائي.</li>
+<li><strong>A08: إخفاقات سلامة البرمجيات والبيانات (Software &amp; Data Integrity Failures):</strong> قبول تحديثات أو ملفات برمجية دون التحقق من توقيعها الرقمي.</li>
+<li><strong>A09: إخفاقات التسجيل والمراقبة الأمنية (Security Logging Failures):</strong> وقوع هجمات على النظام دون وجود سجلات ترصد الفاعل وتطلق الإنذار.</li>
+<li><strong>A10: تزوير الطلبات من جانب الخادم (SSRF - Server-Side Request Forgery):</strong> إجبار الخادم على جلب موارد غير مصرح بها من داخل الشبكة الداخلية.</li>
+</ol>
+<hr />
+<h2>9. مبدأ الامتياز الأدنى (Least Privilege) ونظام RBAC</h2>
+<p>في هندسة النظم الآمنة، يُطبق <strong>مبدأ الامتياز الأدنى (Principle of Least Privilege)</strong>:<br />
+<strong>«لا تمنح أي مستخدم أو برنامج أو قاعدة بيانات إلا الحد الأدنى المطلق من الصلاحيات الذي يحتاجه لإنجاز عمله فقط، ولأقصر وقت ممكن»</strong>.</p>
+<ul>
+<li>تطبيق مدونة المحتوى يحتاج فقط لقراءة جدول المقالات، فلا تعطه صلاحية كتابة أو حذف على جدول المستخدمين!</li>
+<li>موظف خدمة العملاء يحتاج لمعرفة حالة شحن الطلب، فلا تعرض أمامه أرقام البطاقات الائتمانية للعملاء!</li>
+</ul>
+<p>يُترجم هذا هندسياً عبر نظام <strong>التحكم في الوصول القائم على الأدوار (Role-Based Access Control - RBAC)</strong>، حيث يُعرف النظام أدواراً واضحة (زائر، كاتب، مدير مالي، مسؤول نظام)، وتُربط الصلاحيات بالأدوار بدقة متناهية.</p>
+<hr />
+<h2>10. للقارئ المتخصص: ترويسات أمان المتصفح (Security Headers)</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+يمثل متصفح المستخدم خط الدفاع الأول في تطبيقات الويب. يمكن لخادم الويب فرض سياسات أمان حديدية عبر إرسال **ترويسات أمان HTTP (Security Headers)** في كل استجابة:
+
+1. **سياسة أمان المحتوى (Content-Security-Policy - CSP):**  
+   الترويسة الأقوى على الإطلاق للقضاء على ثغرات **Cross-Site Scripting (XSS)**. تحدد بدقة المصادر والنطاقات المسموح للمتصفح بتحميل السكربتات والصور والخطوط منها، وتحظر تماماً تنفيذ الأكواد المضمنة غير المصرح بها (Inline Scripts):
+   `Content-Security-Policy: default-src 'self'; script-src 'self' https://trustedscripts.org;`
+2. **الأمان الصارم لطبقة النقل (Strict-Transport-Security - HSTS):**  
+   تجبر المتصفح على الاتصال عبر HTTPS حصرياً وترفض محاولات الاتصال غير المشفر HTTP أو تجاوز تحذيرات الشهادات:
+   `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`
+3. **منع التضمين في إطارات خفية (X-Frame-Options):**  
+   تحمي التطبيق من هجمات اختطاف النقر **(Clickjacking)** بمنع تضمين موقعك داخل إطار `<iframe>` في موقع احتيالي:
+   `X-Frame-Options: DENY`
+4. **حماية ملفات تعريف الارتباط للجلسات (Secure & HttpOnly & SameSite Cookies):**  
+   * `HttpOnly`: تمنع وصول كود جافا سكريبت إلى كوكيز الجلسة، مما يحميها من السرقة في حال وقوع XSS.
+   * `Secure`: تضمن عدم إرسال الكوكيز إلا عبر اتصالات HTTPS المشفرة.
+   * `SameSite=Strict`: تحصن الجلسة تماماً ضد هجمات تزوير الطلبات عبر المواقع **(CSRF)**.
+
+</div>
+
+<hr />
+<h2>11. ملخص الفصل السادس</h2>
+<ul>
+<li>الأمان بالتصميم (Secure by Design) ليس خياراً مضافاً بعد الإنتاج، بل هو استثمار هندسي أساسي يحمي المؤسسة والمجتمع من أضرار كارثية.</li>
+<li>عدم الثقة بمدخلات المستخدمين هو خط الدفاع الأول لمنع ثغرات الحقن (Injection) والتلاعب بالنظم.</li>
+<li>المصادقة (AuthN) تجيب عن "من أنت؟"، بينما التفويض (AuthZ) يحدد "ماذا يحق لك أن تفعل؟"، وإهمال التفويض ثغرة فادحة.</li>
+<li>تخزين كلمات المرور لا يكون إلا عبر دوال التجزئة الدفاعية البطيئة المعتمدة (Argon2id, PBKDF2, bcrypt) مع ملح عشوائي مشفر ومقارنة آمنة زمنياً.</li>
+<li>قائمة OWASP Top 10 تمثل خارطة الطريق الهندسية لتحصين تطبيقات الويب ضد أشهر وأخطر نقاط الضعف البرمجية.</li>
+<li>ترويسات أمان المتصفح الحديثة (CSP, HSTS) تفرض حماية حديدية تحمي المستخدمين حتى لو حاول المهاجمون التلاعب بالواجهات.</li>
+</ul>
+<hr />
+<h2>12. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>ما الفارق الجوهري بين التشفير (Encryption) والتجزئة (Hashing)، ولماذا تُستخدم التجزئة تحديداً لحفظ كلمات المرور؟</strong></li>
+<li><strong>اشرح ثغرة الحقن (Injection) مع تقديم مثال لكيفية تحصين الكود البرمجي ضدها.</strong></li>
+<li><strong>لماذا يُعد استخدام خوارزمية SHA-256 مجردة دون ملح أو تكرارات ممارسة غير مقبولة أمنياً لتخزين كلمات المرور؟</strong></li>
+<li><strong>ما وظيفة ترويسة أمان المحتوى (Content-Security-Policy) في متصفحات الويب، وضد أي نوع من الهجمات تحمي؟</strong></li>
+</ol>
+<hr />
+<h2>13. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>OWASP Top 10 Official Documentation (<code>owasp.org/www-project-top-ten</code>):</strong> الوثيقة المعيارية الشاملة لأخطر ثغرات تطبيقات الويب وطرق التحصين ضدها.</li>
+<li><strong>OWASP Password Storage Cheat Sheet:</strong> الدليل الإرشادي الرسمي لمهندسي البرمجيات لتخزين كلمات المرور وفق أحدث المعايير الدفاعية.</li>
+<li><strong>CISA Secure by Design Whitepaper:</strong> الرؤية العالمية المعتمدة لهندسة البرمجيات الآمنة منذ التأسيس عبر <code>cisa.gov/securebydesign</code>.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch7" class="book-chapter-section" data-title="الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 7</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل السابع: الذكاء الاصطناعي ومستقبل الإنسان</h1>
+<hr />
+<blockquote>
+<p>«الذكاء الاصطناعي ليس عقلاً واعياً يملك مشاعر أو إرادة، بل هو مرآة رياضية ضخمة تعكس المعرفة البشرية التي غُذّي بها؛ وقيمته الحقيقية تتحدد بحكمة الإنسان الذي يوجهه وأخلاقه».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: بين حمى الانبهار ورعب التهويل</h2>
+<p>في كل يوم، تتصدر عناوين الأخبار قصص مثيرة حول الذكاء الاصطناعي: تارة يصورونه كمعجزة سحرية ستحل كل مشكلات الكوكب بين عشية وضحاها، وتارة يصورونه كشبح مخيف سيسلب البشر وظائفهم ويسيطر على العالم في القريب العاجل!</p>
+<p>بين هذين القطبين المتطرفين—<strong>الانبهار الساذج والرعب المبالغ فيه</strong>—تضيع الحقيقة العلمية الرصينة التي يحتاجها الإنسان العادي والمبرمج الواعي.</p>
+<p>الحقيقة هي: <strong>الذكاء الاصطناعي ثورة تكنولوجية هائلة لا شك فيها، لكنه في جوهره أداة رياضية وحسابية متقدمة</strong>. إنه لا "يفكر" كما يفكر الإنسان، ولا "يفهم" المعنى الروحي أو الأخلاقي للكلمات التي يكتبها، ولكنه بارع للغاية في شيء واحد: <strong>اكتشاف الأنماط المعقدة وتوقع الاحتمالات بسرعة تفوق قدرة البشر بملايين المرات</strong>.</p>
+<p>في هذا الفصل، سننزع الهالة الأسطورية عن الذكاء الاصطناعي، ونشرح كيف يعمل من الداخل بلغة واضحة، ونتعلم كيف نوظفه لخدمتنا دون أن نسلمه عقولنا أو نفرط في خصوصيتنا.</p>
+<hr />
+<h2>2. ما هو الذكاء الاصطناعي؟ رحلة المفاهيم الثلاثة</h2>
+<p>لكي نفهم الشجرة المعرفية للذكاء الاصطناعي، يجب أن نميز بين ثلاثة مستويات متداخلة تشبه الدمى الروسية (الماتريوشكا):</p>
+<pre><code>+-------------------------------------------------------+
+|  الذكاء الاصطناعي (Artificial Intelligence - AI)      |
+|  +-------------------------------------------------+  |
+|  |  تعلم الآلة (Machine Learning - ML)             |  |
+|  |  +-------------------------------------------+  |  |
+|  |  |  التعلم العميق (Deep Learning - DL)        |  |  |
+|  |  |  (الشبكات العصبية الاصطناعية العميقة)      |  |  |
+|  |  +-------------------------------------------+  |  |
+|  +-------------------------------------------------+  |
++-------------------------------------------------------+
+</code></pre>
+<ol>
+<li>
+<p><strong>الذكاء الاصطناعي (AI) - المظلة الأكبر:</strong><br />
+   المفهوم العام الذي بدأ منذ خمسينيات القرن العشرين؛ وهو قدرة الآلة على محاكاة السلوكيات الذكية للإنسان (مثل حل المسائل، التعرف على الأشكال، أو ممارسة لعبة الشطرنج). في بداياته، كان يعتمد على "أنظمة القواعد والخبراء": آلاف من قواعد <code>if/else</code> يكتبها المبرمجون يدوياً.</p>
+</li>
+<li>
+<p><strong>تعلم الآلة (Machine Learning - ML) - الثورة الثانية:</strong><br />
+   بدلاً من كتابة كل قاعدة يدوياً، نعطي الحاسوب <strong>بيانات ضخمة</strong> وخوارزميات إحصائية، وندع الحاسوب "يتعلم النمط بنفسه".<br />
+<em>مثال:</em> نعطي البرنامج 100 ألف صورة لقطط وكلاب، فيكتشف الحاسوب الفروق الدقيقة في ملامح الأذن والأنف تلقائياً دون أن نحدد له أبعادها بالملليمتر!</p>
+</li>
+<li>
+<p><strong>التعلم العميق (Deep Learning - DL) - المحرك الحالي:</strong><br />
+   فرع متقدم من تعلم الآلة يحاكي في تصميمه الرياضي ترابط الخلايا العصبية في الدماغ البشري عبر طبقات متعددة (Artificial Neural Networks). هذا الفرع هو المسؤول عن القفزة المذهلة في التعرف على الوجوه، وترجمة اللغات، والمركبات ذاتية القيادة.</p>
+</li>
+</ol>
+<hr />
+<h2>3. كيف تعمل النماذج اللغوية الكبيرة (LLMs)؟ تفكيك السحر</h2>
+<p>عندما تتحدث مع روبوت ذكاء اصطناعي حديث مثل ChatGPT أو Gemini ويكتب لك مقالاً بليغاً، قد يخيل إليك أن هناك مفكراً يجلس خلف الشاشة يفهم مشاعرك ويصيغ أفكاره!</p>
+<p>ما الذي يحدث رياضياً في الحقيقة؟</p>
+<p>تعتمد هذه النماذج على فكرة رياضية أساسية تُعرف بـ <strong>«توقع الكلمة التالية» (Next-Token Prediction)</strong>:<br />
+1. <strong>التغذية والتدريب:</strong> تم تدريب النموذج على قراءة مئات المليارات من النصوص والكتب والمقالات المنشورة على الإنترنت بلغات متعددة.<br />
+2. <strong>التحويل إلى أرقام (Tokenization &amp; Embeddings):</strong> الكلمات لا تدخل للنموذج كحروف؛ بل تُقطع إلى أجزاء صغيرة (Tokens) وتُحول إلى مصفوفات رياضية معقدة في فضاء متعدد الأبعاد يربط الكلمات المتقاربة في المعنى.<br />
+3. <strong>حساب الاحتمالات:</strong> عندما تكتب له: <em>"السماء زرقاء و..."</em>، يقوم النموذج بحساب الاحتمال الإحصائي لأكثر كلمة تناسب هذا السياق بناءً على كل ما قرأه في تاريخ تدريبه (هل هي "الغيوم"؟ "الشمس"؟ أم "الصحراء"؟).</p>
+<p>النموذج اللغوي هو <strong>محرك احتمالات فائق التطور والذكاء اللغوي</strong>، ينسج الألفاظ وفق علاقات إحصائية بالغة التعقيد، لكنه لا "يعي" حقيقة ما يقوله بالطريقة التي يعيها الإنسان!</p>
+<hr />
+<h2>4. الذكاء الاصطناعي التوليدي (Generative AI)</h2>
+<p>لسنوات طويلة، كان الذكاء الاصطناعي "تحليلياً" فقط: تعطيه صورة فيقول لك "هذه قطة"، أو تعطيه رسالة فيقول "هذا تصيد احتيالي".</p>
+<p>التحول الزلزالي الذي حدث مؤخراً هو ولادة <strong>الذكاء الاصطناعي التوليدي (Generative AI)</strong>:<br />
+القدرة ليس فقط على تصنيف المحتوى الموجود، بل على <strong>توليد محتوى جديد تماماً لم يكن موجوداً من قبل</strong>:<br />
+* كتابة مقالات وقصائد وأوراق بحثية.<br />
+* توليد أكواد برمجية كاملة وتصحيحها.<br />
+* رسم صور واقعية وتصاميم فنية مذهلة من مجرد وصف نصي (مثل غلاف هذا الكتاب الذي بين يديك!).<br />
+* توليد مقاطع فيديو، وأصوات بشرية واقعية، ومقاطع موسيقية.</p>
+<hr />
+<h2>5. التوظيف الرشيد للذكاء الاصطناعي في التعلم والبرمجة</h2>
+<p>الذكاء الاصطناعي ليس بديلاً عن عقلك، بل هو <strong>«مضخم لقدراتك» (Super-Charger)</strong> إذا أحسنت استخدامه:</p>
+<h3>أ) في التعليم والتطوير الذاتي:</h3>
+<ul>
+<li><strong>المعلم الخصوصي الصبور:</strong> يمكنك أن تسأله: <em>"اشرح لي كيف تعمل كابلات الإنترنت وكأنني طفل في العاشرة من عمري"</em>، ثم تسأله: <em>"الآن اشرحها لي كطالب هندسة اتصالات في الجامعة"</em>.</li>
+<li><strong>اختبار الفهم الذاتي:</strong> اطلب منه: <em>"اختبرني بخمسة أسئلة اختيار من متعدد في موضوع الأمن السيبراني وصحح لي أخطائي مع التفسير"</em>.</li>
+</ul>
+<h3>ب) في كتابة البرمجيات:</h3>
+<ul>
+<li><strong>تسريع كتابة الشيفرات الروتينية (Boilerplate Code):</strong> يستطيع المبرمج أن يطلب منه كتابة هيكل قاعدة البيانات أو دالة اتصال بالـ API في ثوانٍ.</li>
+<li><strong>البحث عن الأخطاء وتفسيرها:</strong> بدلاً من قضاء ساعتين في حيرة أمام رسالة خطأ مبهمة، تعرض الخطأ على النموذج فيشرح لك سببه المحتمل ويقترح التصحيح.</li>
+<li><strong>شرح الأكواد المعقدة وتوثيقها:</strong> مساعدتك في قراءة أكواد قديمة كتبها مبرمجون آخرون وفهم منطقها بسرعة.</li>
+</ul>
+<hr />
+<h2>6. المخاطر الكبرى للذكاء الاصطناعي</h2>
+<p>مع هذه الإمكانات الهائلة، تبرز تحديات أخلاقية وتقنية حقيقية يجب أن يتعامل معها كل مستخدم بوعي وحذر:</p>
+<h3>1. ظاهرة "الهلوسة" (Hallucination)</h3>
+<p>أخطر عيوب النماذج اللغوية اليوم: <strong>أنها تختلق معلومات كاذبة تماماً وتطرحها بثقة مطلقة ولغة فصيحة مقنعة!</strong><br />
+قد تطلب من النموذج أسماء كتب أو مراجع علمية، فيخترع لك عناوين كتب ومؤلفين وأرقام صفحات لم توجد في التاريخ قط!<br />
+<strong>القاعدة:</strong> <em>لا تثق في معلومة يقدمها الذكاء الاصطناعي دون التحقق منها من مصادرها الأصلية الموثوقة.</em></p>
+<h3>2. تآكل المهارات الفكرية والكسل الذهني (Cognitive Offloading)</h3>
+<p>إذا اعتدت أن تجعل الذكاء الاصطناعي يكتب لك كل بريد، ويفكر لك في كل مشكلة، ويلخص لك كل كتاب دون أن تشغل عقلك، فستفقد بالتدريج قدرتك على التفكير النقدي وصياغة الأفكار وحل المعضلات الواقعية. الآلة يجب أن تساعدك، لا أن تفكر بدلاً منك!</p>
+<h3>3. انتهاك الخصوصية وتسريب الأسرار</h3>
+<p>عندما تكتب مشكلة شركتك أو أرقام حساباتك أو أكواد مشروعك السري داخل روبوت دردشة عام، فإن هذه البيانات قد تُخزن على خوادم الشركة وتُستخدم في تدريب النسخ القادمة من النموذج، مما قد يؤدي إلى تسريب أسرارك للمستخدمين الآخرين!<br />
+<strong>القاعدة:</strong> <em>لا تدخل أية بيانات شخصية حساسة، أو كلمات مرور، أو أسرار عمل غير مصرح بنشرها في نماذج الذكاء الاصطناعي.</em></p>
+<h3>4. التزييف العميق (Deepfakes) والتضليل</h3>
+<p>أصبح بإمكان الخوارزميات تزييف مقاطع فيديو وأصوات لأشخاص حقيقيين بدقة تجعل من شبه المستحيل تمييزها بالعين المجردة. المهاجمون يستخدمون هذه التقنية اليوم لتقليد أصوات الأبناء والاستغاثة بآبائهم لتحويل أموال طارئة!</p>
+<hr />
+<h2>7. إطار NIST لإدارة مخاطر الذكاء الاصطناعي (AI RMF)</h2>
+<p>أصدر المعهد الوطني الأمريكي للمعايير والتقنية وثيقة قياسية دولية رائدة تُعرف بـ <strong>(NIST AI Risk Management Framework 1.0)</strong> تهدف إلى حوكمة وتأمين منظومات الذكاء الاصطناعي عبر أربع ركائز أساسية:</p>
+<ol>
+<li><strong>الحوكمة (Govern):</strong> وضع سياسات ومسؤوليات أخلاقية واضحة للمؤسسات التي تطور وتستخدم الذكاء الاصطناعي.</li>
+<li><strong>الرسم والتخطيط (Map):</strong> فهم سياق استخدام النموذج وتحديد الفئات التي قد تتضرر من أخطائه مسبقاً.</li>
+<li><strong>القياس والتقييم (Measure):</strong> اختبار دقة النموذج، ورصد معدلات انحيازه وظاهرة الهلوسة بانتظام.</li>
+<li><strong>الإدارة والتحكم (Manage):</strong> وضع خطط طوارئ وتدخل بشري مستمر لتعديل سلوك النموذج أو إيقافه فور وقوع ضرر.</li>
+</ol>
+<hr />
+<h2>8. المهارات الإنسانية التي تعجز الآلات عن استبدالها</h2>
+<p>مهما تطورت قدرات الحواسيب، فإن هناك جوهراً إنسانياً فريداً لا يمكن للسيليكون أن يحاكيه أبداً:</p>
+<ul>
+<li><strong>التفكير النقدي والحكمة (Critical Thinking &amp; Wisdom):</strong> الآلة تحسب وتتوقع، لكن الإنسان هو الذي يزن الأمور في سياقها التاريخي والإنساني ويتخذ القرار الرشيد.</li>
+<li><strong>التعاطف والذكاء العاطفي (Empathy):</strong> القدرة على الشعور بألم الآخرين وفهم ما لم يقال بصدق.</li>
+<li><strong>المسؤولية الأخلاقية والضمير (Moral Responsibility):</strong> الآلة لا تملك ضميراً ولا تحاسب أخلاقياً؛ الإنسان هو المسؤول الأول عن استخدام المعرفة.</li>
+<li><strong>الرغبة الصادقة في خدمة المجتمع:</strong> الشعار الذي نكرره دائماً: <strong>«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين»</strong> هو قيمة إنسانية خالصة تجعل العلم بركة ونوراً في الأرض.</li>
+</ul>
+<hr />
+<h2>9. للقارئ المتخصص: آلية الانتباه الذاتي (Self-Attention)</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+القفزة الهائلة في النماذج اللغوية الكبيرة تعود إلى ورقة بحثية تاريخية نشرها باحثو Google عام 2017 بعنوان: *"Attention Is All You Need"*، والتي قدمت معمارية **المحول (Transformer)** المبنية على آلية **الانتباه الذاتي (Scaled Dot-Product Self-Attention)**.
+
+#### المعادلة الرياضية الجوهرية:
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^T}{\sqrt{d_k}}\right) V$$
+
+حيث تُمثل كل كلمة في الجملة بثلاثة متجهات رياضية مشتقة عبر أوزان شبكية مدربة:
+* **الاستعلام ($Q$ - Query):** عما تبحث عنه الكلمة في سياق الجملة.
+* **المفتاح ($K$ - Key):** بطاقة هوية ومحتوى الكلمات الأخرى لمقارنتها بالاستعلام.
+* **القيمة ($V$ - Value):** المحتوى الدلالي والمعلوماتي الفعلي للكلمة.
+
+#### لماذا شكل الانتباه الذاتي ثورة هندسية؟
+في النماذج القديمة (RNNs)، كان الحاسوب يقرأ الكلمات كلمة وراء كلمة بالتتابع، فإذا كانت الجملة طويلة نسي الكلمة الأولى قبل الوصول للآخرة!  
+أما في معمارية Transformer، فالنموذج يعالج **كل كلمات النص دفعة واحدة بالتوازي (In Parallel)**، ويحسب وزن الترابط والصلة بين كل كلمة وجميع الكلمات الأخرى في الجملة بصرف النظر عن المسافة بينها، مما منح النماذج قدرة خارقة على فهم السياق العميق والضمائر العائدة وتعدد المعاني.
+
+</div>
+
+<hr />
+<h2>10. ملخص الفصل السابع</h2>
+<ul>
+<li>الذكاء الاصطناعي منظومة رياضية وإحصائية متطورة لاكتشاف الأنماط وتوقع الاحتمالات، وليس عقلاً بشرياً واعياً.</li>
+<li>يتدرج المفهوم من الذكاء الاصطناعي العام إلى تعلم الآلة وصولاً إلى التعلم العميق والشبكات العصبية.</li>
+<li>النماذج اللغوية الكبيرة تعمل بمبدأ توقع الكلمة التالية (Next-Token Prediction) وفق أوزان دلالية مستخلصة من بيانات ضخمة.</li>
+<li>الذكاء الاصطناعي مساعد خارق في التعلم والبرمجة وتسريع المهام، لكنه يعاني من ظاهرة "الهلوسة" وتلفيق المعلومات.</li>
+<li>الخصوصية الرقمية والتفكير النقدي هما خط الدفاع الأول لحماية أنفسنا من أخطار التزييف العميق والتضليل والكسل الذهني.</li>
+<li>الحكمة، والأخلاق، والتعاطف، والمسؤولية الإنسانية هي الفضائل التي تميز الإنسان ولا يمكن استبدالها بآلة.</li>
+</ul>
+<hr />
+<h2>11. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>ما الفارق الجوهري بين تعلم الآلة (Machine Learning) والبرمجة التقليدية القائمة على القواعد؟</strong></li>
+<li><strong>اشرح ظاهرة "الهلوسة" (Hallucination) في النماذج اللغوية، ولماذا لا يجوز الاعتماد عليها كمصدر وحيد للأبحاث العلمية؟</strong></li>
+<li><strong>لماذا يُعد إدخال بيانات سرية تخص شركتك أو حساباتك في روبوتات الذكاء الاصطناعي العامة مخاطرة أمنية كبيرة؟</strong></li>
+<li><strong>ما هي المهارات الإنسانية الأربع التي تعجز خوارزميات الذكاء الاصطناعي عن تعويضها في سوق العمل المستقبلي؟</strong></li>
+</ol>
+<hr />
+<h2>12. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>NIST AI Risk Management Framework (AI RMF 1.0):</strong> الوثيقة الرسمية لإدارة مخاطر الذكاء الاصطناعي عبر <code>nist.gov/itl/ai-risk-management-framework</code>.</li>
+<li><strong>Attention Is All You Need (Vaswani et al., 2017):</strong> الورقة البحثية الأصلية المؤسسة لمعمارية Transformers عبر أرشيف الأبحاث <code>arxiv.org/abs/1706.03762</code>.</li>
+<li><strong>DeepLearning.AI Courses (Andrew Ng):</strong> المناهج التعليمية المعتمدة عالمياً لأسس الذكاء الاصطناعي والتعلم العميق.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch8" class="book-chapter-section" data-title="الفصل الثامن: أخطاء رقمية قد تغير حياتك">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 8</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل الثامن: أخطاء رقمية قد تغير حياتك (دراسات حالة واقعية)</h1>
+<hr />
+<blockquote>
+<p>«الإنسان العاقل يتعلم من أخطائه وتجاربه، ولكن الإنسان الحكيم يتعلم من أخطاء الآخرين قبل أن يدفع ثمنها من ماله، أو أمن أسرته، أو راحة باله».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: ثمن الغفلة في عالم لا يرحم</h2>
+<p>في الحياة الفيزيائية، إذا أخطأت وأسقطت كوب ماء على الأرض، فإن أقصى ما يحدث هو انسكاب الماء وتنظيف المكان في دقائق.</p>
+<p>أما في الفضاء الرقمي، فإن <strong>نقرة واحدة خاطئة على رابط مشبوه في لحظة تعجل</strong>، أو مشاركة رمز مكون من 6 أرقام مع شخص لطيف على الهاتف، قد تكلفك:<br />
+* مدخرات سنوات من الشقاء والعمل الشاق.<br />
+* خصوصيات عائلتك وصورك الشخصية التي لا تقدر بثمن.<br />
+* تدمير سمعة عملك أو تسريب أسرار شركتك.</p>
+<p>الهدف من هذا الفصل ليس بث الرعب أو التشاؤم في قلبك، بل <strong>إعطاؤك دروعاً واقية مستخلصة من صميم الواقع</strong>.</p>
+<p>في السطور التالية، سنستعرض <strong>ثمانية سيناريوهات واقعية مستوحاة من حوادث حقيقية متكررة</strong> وقعت لأشخاص ومؤسسات في محيطنا. سنفكك في كل سيناريو: المشكلة، والسبب الفني، والضرر المترتب، وكيفية الوقاية، والأهم: <strong>ماذا تفعل فوراً إذا وقعت في نفس الفخ؟</strong>.</p>
+<hr />
+<h2>2. السيناريو الأول: فخ الشحنة المنتظرة والبطاقة البنكية</h2>
+<h3>المشكلة والسياق:</h3>
+<p>تلقى "سالم" رسالة نصية (SMS) قصيرة على هاتفه مكتوب فيها:<br />
+<em>"عزيزي العميل، شحنتك رقم (SA-9821) متوقفة في المستودع الرئيسي بسبب نقص في العنوان البريدي. يرجى سداد رسوم التوصيل المتبقية (3 ريالات فقط) لتأكيد التوصيل اليوم: <code>www.aramex-sa-delivery-update.com</code>"</em>.<br />
+كان سالم ينتظر بالفعل شحنة ملابس طلبها قبل يومين عبر الإنترنت. شعر بالتعجل، وضغط على الرابط، فظهرت له صفحة تحمل شعار وألوان شركة الشحن الشهيرة بدقة فائقة، وطلبت منه إدخال رقم بطاقته البنكية والرمز السري (CVV) لسداد الرسوم الرمزية. أدخل البيانات، ثم وصله رمز تحقق (OTP) على هاتفه فكتبه في الموقع.<br />
+خلال 30 ثانية، وصلته رسالة من البنك بخصم <strong>12,500 ريال</strong> من حسابه!</p>
+<h3>سبب الخلل:</h3>
+<ol>
+<li><strong>استغلال التوقيت المصادف والتعجل:</strong> استغل المحتال أن ملايين الناس يطلبون شحنات دورياً، وصاغ الرسالة لتبدو عاجلة جداً.</li>
+<li><strong>عدم فحص شريط العنوان:</strong> لم ينتبه سالم إلى أن رابط الموقع ليس الموقع الرسمي للشركة (<code>aramex.com</code>)، بل نطاق احتيالي مسجل حديثاً.</li>
+<li><strong>عدم قراءة نص رسالة الـ OTP:</strong> الرسالة التي وصلته من البنك كانت تتضمن صراحة: <em>"رمز الشراء بقيمة 12,500 ريال هو..."</em>، لكنه لم يقرأ إلا الأرقام فقط في شريط الإشعارات!</li>
+</ol>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>شركات الشحن الحقيقية لا تطلب دفع رسوم إضافية عبر روابط في رسائل SMS مجهولة؛ تتبع شحنتك دائماً من داخل تطبيق الشركة الرسمي مباشرة.</li>
+<li><strong>اقرأ رسالة الـ OTP بتركيز كامل:</strong> تأكد من أن المبلغ المكتوب في نص رسالة البنك يطابق تماماً ما تريد دفعه.</li>
+</ul>
+<h3>خطة الإنقاذ والتعافي الفوري:</h3>
+<ol>
+<li><strong>اتصل بفرع طوارئ البنك فوراً (في أول 5 دقائق)</strong> واطلب تجميد البطاقة فوراً ورفع بلاغ "معاملة احتيالية غير مصرح بها" (Fraud Dispute).</li>
+<li>تقديم بلاغ رسمي لدى منصة مكافحة الجرائم المعلوماتية الرسمية في دولتك لحفظ حقك القانوني وملاحقة الحسابات المستقبلة.</li>
+</ol>
+<hr />
+<h2>3. السيناريو الثاني: كلمة المرور الموحدة وسقوط أحجار الدومينو</h2>
+<h3>المشكلة والسياق:</h3>
+<p>"فاطمة" مهندسة معمارية مجتهدة. لتسهيل حياتها، اعتمدت منذ 6 سنوات كلمة مرور واحدة مفضلة: <code>Fatima#Arch2018</code>، واستخدمتها في كل مكان: في بريدها الشخصي، وتطبيق البنك، ومنتدى تصميم قديم سجلت فيه عام 2019، وحساباتها على وسائل التواصل.<br />
+في أحد الأيام، تم اختراق ذلك المنتدى القديم وسُربت قاعدة بياناته على الإنترنت المظلم.<br />
+في غضون ساعات، استيقظت فاطمة لتجد نفسها مطرودة من حساب إنستغرام الخاص بها، وبريدها الإلكتروني لا يقبل الدخول، وتم تغيير أرقام الاسترداد، وبدأ المخترق في مراسلة متابعيها ومطالبتهم بتحويلات مالية باسمها!</p>
+<h3>سبب الخلل:</h3>
+<ul>
+<li><strong>إعادة استخدام كلمة المرور (Password Reuse):</strong> عندما تستخدم نفس المفتاح لبيتك وسيارتك ومكتبك وخزانتك، فإن ضياع مفتاح واحد يعني ضياع كل شيء!</li>
+</ul>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>الفصل التام واستخدام <strong>كلمة مرور فريدة ومستقلة لكل خدمة وحساب</strong>.</li>
+<li>الاستعانة بمدير كلمات مرور موثوق يولد كلمات عشوائية ويحفظها مشفرة.</li>
+</ul>
+<h3>خطة الإنقاذ والتعافي الفوري:</h3>
+<ol>
+<li>اللجوء فوراً إلى روابط <strong>"استرداد الحسابات المخترقة"</strong> في المنصات الأساسية، واستخدام إثبات الهوية الشخصية (جواز السفر / البطاقة الوطنية أو الفيديو البيومتري للوجه) الذي توفره المنصات الكبرى لاستعادة الملكية.</li>
+<li>الدخول إلى الحسابات البنكية فوراً من جهاز نظيف وتغيير كلمات مرورها وتفعيل التوثيق الثنائي.</li>
+</ol>
+<hr />
+<h2>4. السيناريو الثالث: مشاركة رمز الـ OTP بدافع مساعدة صديق منتحَل</h2>
+<h3>المشكلة والسياق:</h3>
+<p>تلقى "أبو خالد" رسالة واتساب من حساب ابن عمه "خالد" يقول له فيها:<br />
+<em>"يا أبا خالد، حفظك الله، أنا في موقف حرج جداً وأحتاج لتسجيل الدخول إلى حسابي الحكومي وتأخر هاتفي في استقبال الرسالة، فطلبت إرسال رمز التحقق على رقمك؛ ستصلك رسالة الآن بها 6 أرقام، أرجوك أرسلها لي بسرعة!"</em>.<br />
+بحسن نية وشهامة ورغبة في مساعدة ابن عمه، وصلت أبو خالد رسالة نصية فنسخ الأرقام وأرسلها لخالد فوراً.<br />
+بعد دقيقة واحدة، توقف تطبيق واتساب على هاتف أبو خالد، وظهرت له شاشة تخبره: <em>"تم تسجيل رقمك على هاتف آخر"</em>. كان حساب ابن عمه مخترقاً أصلاً، واستغل المهاجم الشهامة ليسرق حساب أبو خالد أيضاً!</p>
+<h3>سبب الخلل:</h3>
+<ul>
+<li><strong>الهندسة الاجتماعية واستغلال عاطفة الثقة والقرابة.</strong></li>
+<li>جهل قاعدة الأمان المطلقة: <strong>رمز التحقق لا يُشارك مع أي إنسان على وجه الأرض مهما كانت صفته</strong>.</li>
+</ul>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>إذا طلب منك أي صديق أو قريب أي رمز أو مال عبر رسالة إلكترونية، <strong>اتصل به هاتفياً بصوته أو قابله شخصياً</strong> قبل أن تتخذ أي إجراء؛ للتأكد من أنه هو وليس شخصاً سرق حسابه.</li>
+<li>تفعيل ميزة <strong>"التحقق بخطوتين" (Two-Step Verification)</strong> برقم تعريف سري PIN داخل تطبيق الواتساب نفسه.</li>
+</ul>
+<h3>خطة الإنقاذ والتعافي الفوري:</h3>
+<ol>
+<li>إعادة تثبيت التطبيق وإدخال رقم هاتفك وطلب رمز التحقق مجدداً عبر اتصال هاتفي صوتي فوري لقطع الجلسة عن المهاجم.</li>
+<li>تنبيه الأقارب والمجموعات في الحال عبر الهاتف العادي بأن حسابك تم اختراقه وتوجيههم بعدم تحويل أي أموال أو الضغط على أي روابط مرسلة من رقمك.</li>
+</ol>
+<hr />
+<h2>5. السيناريو الرابع: تطبيق تعديل الصور المجاني وسرقة الأرشيف</h2>
+<h3>المشكلة والسياق:</h3>
+<p>شاهدت "ريم" إعلاناً جذاباً على تيك توك لتطبيق يعد بتعديل الصور وتحويلها إلى لوحات كرتونية مجاناً وبدون علامة مائية. كان الرابط يوجه إلى موقع خارجي لتحميل ملف تثبيت بصيغة APK لنظام أندرويد. قامت ريم بتعطيل تحذير الهاتف وثبتت التطبيق.<br />
+طلب التطبيق منها عند الفتح: <em>"السماح بالوصول الكامل لجميع الصور، والكاميرا، وجهات الاتصال"</em>. ضغطت "موافق" دون قراءة.<br />
+بعد أسبوعين، بدأت ريم تتلقى رسائل تهديد وابتزاز على هاتفها بصور عائلية خاصة جداً كانت محفوظة في أرشيف هاتفها، مع طلب مبالغ مالية مقابل عدم نشرها!</p>
+<h3>سبب الخلل:</h3>
+<ul>
+<li><strong>تثبيت برمجيات من خارج المتاجر الرسمية الموثوقة (Sideloading).</strong></li>
+<li>منح أذونات خطيرة دون مبرر وظيفي مقنع.</li>
+</ul>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>لا تثبت تطبيقات أبداً من خارج Google Play أو App Store.</li>
+<li>إذا طلب تطبيق لتعديل الصور صلاحية قراءة جهات الاتصال أو الرسائل النصية، فاحذفه فوراً لأنه تطبيق تجسسي يتنكر في شكل أداة ترفيهية.</li>
+</ul>
+<h3>خطة الإنقاذ والتعافي الفوري:</h3>
+<ol>
+<li><strong>لا تدفع للمبتز دولاراً واحداً أبداً!</strong> إن دفع المال للمبتز لا ينهي المشكلة بل يثبت له أنك فريسة سهلة ويجعله يطلب مبالغ أضخم.</li>
+<li>التواصل فوراً مع <strong>الجهات الأمنية المختصة بالجرائم الإلكترونية والابتزاز في دولتك</strong> (مثل تطبيق "كلنا أمن" أو شرطة مكافحة الجرائم الرقمية)، فهم يمتلكون أساليب فنية لتعقب المبتز وإسقاطه في سرية تامة دون فضح الضحية.</li>
+</ol>
+<hr />
+<h2>6. السيناريو الخامس: إهمال التحديث لنظام التشغيل وهجوم الفدية</h2>
+<h3>المشكلة والسياق:</h3>
+<p>مكتب استشارات هندسية صغير يملكه "المهندس فهد"، يضم 5 حواسيب متصلة بشبكة محلية واحدة وتخزن مخططات ومشاريع لعملاء المكتب على مدار 10 سنوات.<br />
+كانت رسالة <em>"يتوفر تحديث أمني هام لنظام ويندوز"</em> تظهر للمهندس فهد كل يوم، وكان في كل مرة يضغط: <em>"تذكيري غداً"</em> لانشغاله في العمل، وظل هذا الحال لمدة 9 أشهر كاملة!<br />
+في صباح أحد الأيام، وصل الموظفون إلى المكتب ليجدوا خلفيات جميع الشاشات قد تحولت إلى اللون الأحمر برسالة مرعبة:<br />
+<em>"تم تشفير جميع ملفاتكم ومخططاتكم ببرمجية فدية عسكرية؛ لديكم 48 ساعة لدفع 50 ألف دولار بالبيتكوين للحصول على المفتاح، وإلا فسيتم حذف كل شيء نهائياً!"</em>.<br />
+توقف المكتب عن العمل، وخسر جميع مشاريعه، وتكبد خسائر فادحة كادت تؤدي لإفلاسه.</p>
+<h3>سبب الخلل:</h3>
+<ul>
+<li>استغل المهاجمون ثغرة شبكية شهيرة ومعلنة تم إصلاحها بواسطة مايكروسوفت منذ 8 أشهر، لكن إهمال التحديث ترك المنفذ مفتوحاً على مصراعيه!</li>
+<li>عدم وجود نسخ احتياطي خارجي معزول عن الشبكة (عدم تطبيق قاعدة 3-2-1).</li>
+</ul>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>تفعيل التحديثات التلقائية للنظام دون تأخير.</li>
+<li>حفظ نسخة احتياطية دورية أسبوعية على قرص صلب خارجي مفصول فيزيائياً عن الحواسيب والإنترنت (Cold Backup).</li>
+</ul>
+<h3>خطة الإنقاذ والتعافي الفوري:</h3>
+<ol>
+<li><strong>فصل كافة الأجهزة المصابة عن الشبكة والإنترنت فوراً</strong> لمنع انتشار العدوى لبقية الأجهزة.</li>
+<li>فحص نوع برمجية الفدية عبر منصة <code>No More Ransom</code> الدولية الرسمية (<code>nomoreransom.org</code>)؛ حيث توفر جهات أمنية عالمية مفاتيح فك تشفير مجانية للعديد من برمجيات الفدية التي تم تفكيك شفراتها.</li>
+</ol>
+<hr />
+<h2>7. السيناريو السادس: الموظف وتسريب الأسرار عبر الذكاء الاصطناعي</h2>
+<h3>المشكلة والسياق:</h3>
+<p>"طارق" موظف في قسم التطوير المالي بشركة تجارية كبرى. طُلب منه تحليل ميزانية سرية لصفقة استحواذ ضخمة وكتابة ملخص تنفيذي للإدارة قبل نهاية اليوم.<br />
+لتوفير الوقت، فتح طارق موقع روبوت ذكاء اصطناعي توليدي شهير في متصفحه، ونسخ كامل بيانات جدول الأرباح، وأسماء العملاء، وأرقام الحسابات، وصيغة العقد السري، وكتب للروبوت: <em>"حلل لي هذه البيانات واكتب لي تقريراً ملخصاً"</em>.<br />
+بعد ثلاثة أشهر، اكتشفت الشركة أن جزءاً من استراتيجيتها السرية وعقودها بات متاحاً في إجابات روبوت الذكاء الاصطناعي للمستخدمين المنافسين عند سؤالهم عن السوق! تم فصل طارق من وظيفته ومقاضاته بتهمة إفشاء أسرار العمل التجارية.</p>
+<h3>سبب الخلل:</h3>
+<ul>
+<li>جهل المستخدم بأن البيانات المدخلة في روبوتات الدردشة المجانية العامة تُستخدم كبيانات تدريب إضافية للنماذج اللغوية ما لم تُعطل هذه الميزة صراحة.</li>
+</ul>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>الالتزام الصارم بسياسات الشركة؛ وعدم إدخال أي أسرار تجارية أو بيانات شخصية (PII) في أدوات الذكاء الاصطناعي العامة.</li>
+<li>استخدام الاشتراكات المؤسسية (Enterprise AI) التي تضمن في بنودها القانونية عدم استخدام مدخلات الشركة في تدريب النماذج.</li>
+</ul>
+<hr />
+<h2>8. السيناريو السابع: فخ الإفراط في النشر ومشاركة تذاكر السفر (Oversharing)</h2>
+<h3>المشكلة والسياق:</h3>
+<p>كان "عمر" في غاية السعادة لحصوله على إجازة للسفر مع أسرته إلى أوروبا. قبل الصعود للطائرة، التقط صورة سيلفي وهو يحمل تذكرة الطيران (Boarding Pass) بوضوح تام، ونشرها على إنستغرام مع تعليق: <em>"إلى باريس لمدة أسبوعين، وداعاً للمنزل الجميل!"</em>.<br />
+خلال ساعات:<br />
+1. استخدم أحد المتربصين الرمز الشريطي (Barcode) الظاهر في صورة التذكرة؛ وببرنامج قراءة بسيط استخرج رقم الحجز السري (PNR) ورقم المسافر الدائم، ودخل على موقع شركة الطيران وألغى تذكرة عودة عمر بالكامل!<br />
+2. علم لصوص في منطقته أن منزله سيكون فارغاً لمدة 14 يوماً كاملة، فتعرض منزله للسرقة أثناء سفره!</p>
+<h3>سبب الخلل:</h3>
+<ul>
+<li><strong>الإفراط في نشر تفاصيل الحياة الخاصة وتوقيتاتها الدقيقة على الملأ.</strong></li>
+<li>جهل أن تذكرة الطيران تحتوي على بيانات مشفرة حساسة يمكن قراءتها بسهولة من أي صورة.</li>
+</ul>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>لا تنشر أبداً صور تذاكر الطيران، أو البطاقات الشخصية، أو مفاتيح المنازل والسيارات الجديدة.</li>
+<li>انشر ذكريات وصور رحلاتك <strong>بعد عودتك للمنزل بسلام</strong>، وليس أثناء غيابك عن بيتك.</li>
+</ul>
+<hr />
+<h2>9. السيناريو الثامن: شبكة الواي فاي العامة وهجوم الوسيط (MitM)</h2>
+<h3>المشكلة والسياق:</h3>
+<p>كان "يزيد" يجلس في مقهى مزدحم بالمطار، ورأى شبكة واي فاي مفتوحة باسم: <code>Airport_Free_WiFi_Fast</code>. اتصل بها فوراً، ثم فتح متصفحه ودخل على بريده وسجل الدخول لإنجاز بعض الأعمال.<br />
+ما لم يكن يعرفه يزيد هو أن هذه الشبكة لم تكن تابعة للمطار على الإطلاق! بل كانت شبكة وهمية خبيثة (Rogue Access Point) أطلقها مهاجم يجلس على طاولة قريبة بحاسوبه المحمول، ويمرر كل حركة البيانات عبر جهازه ليتنصت على كلمات المرور غير المشفرة والجلسات النشطة.</p>
+<h3>كيفية الوقاية المسبقة:</h3>
+<ul>
+<li>تجنب استخدام شبكات الواي فاي العامة المفتوحة بدون كلمة مرور في إنجاز أي معاملات مصرفية أو حساسة.</li>
+<li>إذا اضطررت لاستخدامها، فعّل تطبيق <strong>الشبكة الافتراضية الخاصة (VPN) الموثوقة</strong> فوراً، فهي تشفر النفق بين جهازك والإنترنت بالكامل وتجعل بياناتك غير قابلة للقراءة لأي وسيط متلصص.</li>
+</ul>
+<hr />
+<h2>10. النموذج القياسي للتعافي الفوري عند الوقوع في أي فخ رقمي</h2>
+<p>إذا شككت في أي لحظة أنك ارتكبت خطأً رقمياً أو تعرضت لاختراق، فاتبع قاعدة <strong>«الدقائق الذهبية الخمس» (The 5-Golden Minutes Protocol)</strong>:</p>
+<pre><code>[ الخطوة 1: العزل ] ---&gt; افصل الجهاز فوراً عن الواي فاي وشبكة الهاتف الخلوي
+          |
+[ الخطوة 2: التغيير ] ---&gt; من جهاز آخر نظيف: غير كلمة مرور الحساب الأساسي فوراً
+          |
+[ الخطوة 3: التجميد ] ---&gt; إذا مس الأمر أموالاً: اتصل فوراً بخط طوارئ البنك وجمد البطاقة
+          |
+[ الخطوة 4: الطرد ] ---&gt; ادخل على الحساب واضغط &quot;تسجيل الخروج من كافة الأجهزة الأخرى&quot;
+          |
+[ الخطوة 5: البلاغ ] ---&gt; لا تخف ولا تتردد: ارفع بلاغاً للجهات الأمنية المختصة لملاحقة الفاعل
+</code></pre>
+<hr />
+<h2>11. ملخص الفصل الثامن</h2>
+<ul>
+<li>الأخطاء الرقمية لا تقع بسبب نقص الذكاء، بل بسبب استغلال المهاجمين للحظات التعجل، والطيبة، والفضول، والخوف البشري.</li>
+<li>فحص الروابط ونصوص رسائل التحقق (OTP) يمنع أكثر من 90% من حوادث الاحتيال المالي وسرقة الشحنات.</li>
+<li>مفتاح واحد لحسابات متعددة يعني كارثة محققة عند اختراق أي موقع ضعيف؛ والحل في فرادة كلمات المرور.</li>
+<li>الحذر والتحقق الهاتفي المباشر هو الرد الصحيح على أي طلب مفاجئ للأموال أو الأكواد السرية من الأقارب.</li>
+<li>لا تدفع للمبتز الإلكتروني أبداً؛ بل استعن بالجهات الأمنية المتخصصة التي تحمي خصوصيتك وتعاقب الجاني.</li>
+<li>التحديثات الأمنية المنتظمة والنسخ الاحتياطي المعزول هما صمام الأمان الوحيد للنجاة من هجمات الفدية.</li>
+<li>قاعدة الدقائق الذهبية الخمس تضمن احتواء الأضرار قبل استفحالها عند وقوع أي طارئ.</li>
+</ul>
+<hr />
+<h2>12. اختبر معلوماتك (أسئلة للمراجعة الذاتية)</h2>
+<ol>
+<li><strong>في السيناريو الأول، ما هو المؤشر الذي كان يجب على "سالم" الانتباه إليه في شريط المتصفح لكشف احتيال شركة الشحن؟</strong></li>
+<li><strong>لماذا يمثل دفع الفدية المالية للمبتز الإلكتروني تصرفاً خاطئاً يؤدي لتفاقم المشكلة بدلاً من حلها؟</strong></li>
+<li><strong>ما هي المخاطر الأمنية غير المتوقعة لنشر صورة تذكرة الطيران (Boarding Pass) على منصات التواصل الاجتماعي؟</strong></li>
+<li><strong>اشرح باختصار الخطوات الثلاث الأولى في "بروتوكول الدقائق الذهبية الخمس" فور اكتشافك لعملية اختراق.</strong></li>
+</ol>
+<hr />
+<h2>13. مصادر للتوسع والقراءة الموصى بها</h2>
+<ul>
+<li><strong>No More Ransom Project (<code>nomoreransom.org</code>):</strong> المبادرة الدولية الرسمية لفك تشفير برمجيات الفدية مجاناً بقيادة يوروبول وشركات الأمن العالمية.</li>
+<li><strong>Have I Been Pwned (<code>haveibeenpwned.com</code>):</strong> المنصة العالمية الآمنة الموثوقة للتحقق مما إذا كان بريدك الإلكتروني قد تسرب في أي اختراق سابق.</li>
+<li><strong>CISA Social Engineering &amp; Phishing Guidance:</strong> الإرشادات الرسمية للتعرف على أساليب الخداع النفسي والتصيد الإلكتروني عبر <code>cisa.gov</code>.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch9" class="book-chapter-section" data-title="الفصل التاسع: التكنولوجيا في خدمة المجتمع">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 9</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل التاسع: التكنولوجيا في خدمة المجتمع</h1>
+<hr />
+<blockquote>
+<p>«إن أعظم مقياس لتقدم التكنولوجيا ليس في سرعة معالجاتها أو أرباح شركاتها، بل في قدرتها على التخفيف من معاناة إنسان، أو إنارة عقل طفل، أو حماية مستضعف لا يملك من أمره شيئاً».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: التكنولوجيا ليست غاية في ذاتها</h2>
+<p>في خضم الحديث اليومي المتواصل عن الأجهزة الأحدث، وأسهم شركات وادي السيليكون، وصعود العملات الرقمية، نكاد ننسى أحياناً السؤال الأهم والأكثر جوهرية في تاريخ الحضارة الإنسانية كلها:<br />
+<strong>لماذا نخترع التكنولوجيا أصلاً؟ ما هي الغاية الحقيقية من كل هذا العلم؟</strong></p>
+<p>هل الغاية أن نقضي ساعات أطول ملتصقين بشاشات هواتفنا نستهلك إعلانات لا تنتهي؟<br />
+هل الهدف أن نراكم المعرفة البرمجية والأمنية لنتباهى بها على غيرنا في مجالس التقنية؟</p>
+<p>بالتأكيد لا!</p>
+<p>إن التكنولوجيا سلاح ذو حدين، ومضخم هائل للقيم:<br />
+<em> إذا تجردت من البوصلة الأخلاقية والهم الإنساني، تحولت إلى أدوات للمراقبة الجائرة، والاحتيال، وتكريس الفوارق الطبقية، وعزل البشر عن بعضهم.<br />
+* أما إذا اقترنت بروح المسؤولية والعطاء، فإنها تتحول إلى </em><em>أعظم قوة تمكينية عرفها التاريخ</em>*؛ قادرة على تحرير العقول من الجهل، وإطعام الجائع، وفتح أبواب العمل للفقير، وإعادة الأمل لمن فقد قدرته على الحركة أو البصر.</p>
+<p>في هذا الفصل، ننقل بوصلتنا من "كيف نحمي أنفسنا؟" إلى <strong>"كيف نستخدم هذه القوة المعرفية لخدمة مجتمعاتنا وصناعة أثر حقيقي في حياة الناس؟"</strong>.</p>
+<hr />
+<h2>2. دمقرطة التعليم والعدالة المعرفية</h2>
+<p>قبل عصر الإنترنت، كانت المعرفة حكراً على نخبة محظوظة: من يعيش قرب مكتبة كبرى في عاصمة عالمية، أو من يملك المال الكافي للالتحاق بجامعة عريقة.</p>
+<p>أما اليوم، وبفضل تكنولوجيا الاتصالات:<br />
+* يستطيع شاب في قرية نائية أن يشاهد نفس المحاضرة التي يلقيها بروفيسور فيزياء أو علوم حاسب في معهد ماساتشوستس للتكنولوجيا (MIT) مجاناً.<br />
+* أصبح بإمكان أي إنسان تحميل مراجع علمية، وتعلم لغات البرمجة، والتدرب على مهارات الأمن السيبراني عبر منصات مفتوحة دون أن يدفع قرشاً واحداً.</p>
+<p>إن تسخير التكنولوجيا لترجمة العلوم إلى اللغة العربية، وبناء منصات تعليمية تفاعلية مجانية، وتبسيط المفاهيم المعقدة للعامة هو <strong>أعظم عمل وطني وإنساني يمكن أن يشارك فيه كل مبرمج وكاتب ومختص</strong>.</p>
+<hr />
+<h2>3. التقنيات المساعدة وإتاحة الويب لذوي الإعاقة (Accessibility)</h2>
+<p>من أجمل وأسمى تجليات التكنولوجيا في عصرنا: <strong>قدرتها على كسر الحواجز الفيزيائية أمام أصحاب الهمم وذوي الإعاقة</strong>.</p>
+<ul>
+<li><strong>فاقدو البصر:</strong> يستطيعون اليوم قراءة الكتب والتعامل مع الهواتف الذكية بسلاسة مذهلة عبر برمجيات "قارئات الشاشة" (Screen Readers) التي تحول النص المكتوب إلى صوت فوري، وأجهزة برايل الرقمية.</li>
+<li><strong>ذوو الإعاقة الحركية:</strong> يستطيعون التحكم في الحواسيب وكتابة الأكواد عبر حركات أعينهم (Eye-Tracking) أو عبر الأوامر الصوتية بالغة الدقة.</li>
+<li><strong>ضعاف السمع:</strong> يستفيدون من خوارزميات الذكاء الاصطناعي التي تحول المحاضرات والأصوات في الفيديوهات إلى نصوص مكتوبة حية وفورية (Live Captions).</li>
+</ul>
+<p>عندما يصمم المبرمج موقعه أو تطبيقه ليكون متاحاً وسهل الاستخدام لهذه الفئات، فهو لا يضيف "ميزة تقنية إضافية"، بل <strong>يمارس عملاً أخلاقياً رفيعاً يحفظ كرامة إنسان ويمنحه الحق الطبيعي في التعلم والعمل والتواصل</strong>.</p>
+<hr />
+<h2>4. رقمنة الخدمات العامة والشفافية المجتمعية</h2>
+<p>عندما تتحول الإجراءات الحكومية من المعاملات الورقية العتيقة إلى المنصات الرقمية الذكية، فإن المجتمع يجني ثماراً هائلة:<br />
+* <strong>محاربة الفساد والبيروقراطية:</strong> فالنظام الرقمي لا يطلب رشوة، ولا يجامل أحداً، ولا يضيع الملفات تحت الأدراج!<br />
+* <strong>توفير الوقت والجهد على المواطنين:</strong> تجديد الوثائق، وحجز المواعيد الطبية، وتلقي الدعم الاجتماعي أصبح يتم من المنزل في دقائق بدلاً من إضاعة أيام في الطوابير والمراجعات الشاقة.<br />
+* <strong>الوصول العادل للخدمات:</strong> يستوي في الوصول إلى الخدمة ساكن العاصمة وساكن الأرياف البعيدة.</p>
+<p>إن المهندس الذي يسهم في بناء هذه المنظومات الوطنية الرقمية يسهم عملياً في بناء العدالة الاجتماعية واستقرار وطنه.</p>
+<hr />
+<h2>5. دعم المشاريع الصغيرة ورواد الأعمال المحليين</h2>
+<p>كان فتح متجر تجاري في الماضي يتطلب استئجار محل في موقع متميز، ودفع أموال طائلة للديكور، والإنفاق على لوحات إعلانية باهظة في الشوارع، وهو ما كان يعجز عنه معظم الشباب وأصحاب الحرف اليدوية.</p>
+<p>اليوم، وبفضل الحلول البرمجية الخفيفة ومنصات التجارة الإلكترونية وأنظمة الدفع الرقمي:<br />
+* تستطيع أسرة منتجة أو سيدة تصنع منتجات يدوية في بيتها أن تطلق متجراً إلكترونياً وتبيع منتجاتها لآلاف العملاء في مختلف المدن بتكلفة تقترب من الصفر.<br />
+* يستطيع مزارع بسيط أن يبيع محصوله مباشرة للمستهلك دون وسيط يبتزه، عبر تطبيق بسيط على هاتفه.</p>
+<p>هذه هي القوة الحقيقية للتكنولوجيا: <strong>أن تكون رافعة للطبقات العاملة والكادحة، تفتح لهم آفاق الرزق والكرامة</strong>.</p>
+<hr />
+<h2>6. نشر الوعي السيبراني كواجب مجتمعي لحماية المستضعفين</h2>
+<p>من أكبر الجرائم الأخلاقية في عصرنا أن يرى المتخصص التقني آباءنا وأمهاتنا وكبار السن يتعرضون للخداع اليومي عبر رسائل الاحتيال والاتصالات المريبة، ثم يقف مكتوف الأيدي أو يكتفي بالضحك على بساطتهم!</p>
+<p>إن كبار السن نشأوا في زمن كانت فيه الكلمة تعني الأمان، وكانت الثقة هي الأصل بين الناس، ولم يعاصروا ولادة الخوارزميات الخادعة.<br />
+لذلك، فإن <strong>واجب كل مبرمج ومهتم بالأمن الرقمي أن يتطوع بحماية هذه الفئات</strong>:<br />
+* أن يجلس مع والديه وأقاربه ليشرح لهم برفق علامات الرسائل الاحتيالية.<br />
+* أن يساعدهم في تفعيل التحقق الثنائي وقفل هواتفهم.<br />
+* أن يكون هو صمام الأمان الذي يلجؤون إليه فوراً دون خوف أو خجل عند مواجهة أي رسالة مريبة.</p>
+<p>إن التوعية الرقمية ليست ترفاً، بل هي <strong>كفالة اجتماعية وأمنية واجبة على أهل العلم تجاه من لا يعلم</strong>.</p>
+<hr />
+<h2>7. فلسفة البرمجيات مفتوحة المصدر (Open Source for Social Good)</h2>
+<p>في عالم تسوده الشركات الاحتكارية العملاقة التي تحتجز الشيفرات والأسرار خلف بوابات الاشتراكات الباهظة، تقف <strong>حركة البرمجيات مفتوحة المصدر (FOSS)</strong> كمنارة مضيئة للتضامن الإنساني.</p>
+<h3>ما هو المصدر المفتوح؟</h3>
+<p>أن يقوم المبرمج أو الفريق الهندسي بنشر كود برنامجه بالكامل مجاناً للعالم على منصات مثل GitHub، مع ترخيص يسمح للجميع بقراءته، والتعلم منه، وتطويره، واستخدامه في مشاريعهم دون مقابل.</p>
+<p>إن نظام التشغيل <strong>Linux</strong> الذي يدير 90% من خوادم الإنترنت وسفن الفضاء وهواتف أندرويد هو مشروع مفتوح المصدر تطوع في بنائه آلاف المهندسين حول العالم من أجل الخير العام.</p>
+<p>عندما تساهم بسطر كود واحد في مشروع مفتوح المصدر يساعد الأطباء، أو يعين المكفوفين، أو يحمي خصوصية الناس، فإنك تضع لبنة في صرح المعرفة الإنسانية المشتركة التي لا تزول بموت صاحبها.</p>
+<hr />
+<h2>8. أفكار مشاريع تقنية مجتمعية قابلة للتنفيذ الفوري</h2>
+<p>إذا كنت مبرمجاً أو طالباً تبحث عن مشروع تخرج أو مشروع شخصي يفيد الناس، فإليك ثلاثة أفكار لمشاريع عملية نافعة وقانونية وأخلاقية يمكنك البدء في بنائها اليوم:</p>
+<h3>المشروع الأول: "المساعد الآمن لكبار السن" (Web/App)</h3>
+<p>تطبيق عربي فائق البساطة، بأزرار كبيرة وخطوط واضحة، يحتوي على تدريب تفاعلي ومحاكاة آمنة تماماً لرسائل الاحتيال الشائعة (مثل رسائل الشحنات، والفوز بالجوائز).<br />
+يضغط كبير السن على الرسالة ليرى أمامه شاشات توضيحية بصوت عربي مريح تبين له: <em>"لماذا هذه الرسالة كاذبة؟ وأين الفخ في هذا الرابط؟"</em>.<br />
+هذا المشروع يحول الخوف إلى وعي وينقذ مدخرات مئات الأسر.</p>
+<h3>المشروع الثاني: "منصة إرشاد الخصوصية والأمان بالعربية"</h3>
+<p>موقع ويب مفتوح وخفيف يتيح للمستخدم العادي اختيار نوع هاتفه (أندرويد / آيفون)، فيعطيه دليلاً تفاعلياً مصوراً خطوة بخطوة باللغة العربية البسيطة لكيفية إغلاق أذونات التتبع في منصات التواصل، ومسح بيانات الموقع، وتفعيل التوثيق بخطوتين في 5 دقائق فقط.</p>
+<h3>المشروع الثالث: "منظومة تقليل هدر الطعام للمبادرات الخيرية"</h3>
+<p>تطبيق محلي يربط بين المطاعم وقاعات المناسبات التي يتوفر لديها طعام فائض نظيف وصالح للاستهلاك، وبين الجمعيات الخيرية القريبة التي تملك فرق توزيع للمحتاجين. يرسل التطبيق إشعاراً فورياً للجمعية عند توفر الفائض لاستلامه وتوزيعه قبل تلفه، مما يسهم في مكافحة الهدر وسد حاجة الأسر المتعففة.</p>
+<hr />
+<h2>9. للقارئ المتخصص: إرشادات إتاحة الويب الدولية (WCAG 2.2)</h2>
+<div style="background: rgba(14, 165, 233, 0.08); border-right: 4px solid #0ea5e9; padding: 18px 22px; border-radius: 8px; margin: 24px 0;">
+
+### 🔬 للقارئ المتخصص (Technical Deep Dive)
+
+أصدر اتحاد شبكة الويب العالمية (W3C) المعيار الدولي الصارم **WCAG 2.2 (Web Content Accessibility Guidelines)** والذي يقوم على أربعة مبادئ تأسيسية يُرمز لها بكلمة **(POUR)**:
+
+1. **القابلية للإدراك (Perceivable):**  
+   * توفير نص بديل وصفي لكل صورة عبر السمة `alt="وصف دقيق"` ليقرأه قارئ الشاشة للمكفوفين.
+   * ضبط نسبة تباين الألوان (Color Contrast Ratio) بين النص والخلفية بحيث لا تقل عن `4.5:1` للنصوص العادية لتسهيل قراءتها لضعاف البصر وكبار السن.
+2. **القابلية للتشغيل (Operable):**  
+   * **الملاحة الكاملة عبر لوحة المفاتيح (Keyboard Navigation):** يجب أن يتمكن المستخدم من الوصول لكافة الأزرار والروابط والنماذج باستخدام زر `Tab` ومفتاح `Enter` فقط دون الحاجة لفأرة (Mouse).
+   * إبراز مؤشر التركيز المرئي (Focus Indicator) وعدم حذفه مطلقاً عبر `outline: none` دون توفير بديل واضح.
+3. **القابلية للفهم (Understandable):**  
+   * وضوح النصوص وتحديد لغة الصفحة بدقة عبر `<html lang="ar" dir="rtl">` لمساعدة محركات النطق.
+   * إعطاء رسائل خطأ دقيقة في النماذج توضح للمستخدم بوضوح الحقل الذي أخطأ فيه وكيف يصححه.
+4. **المتانة والصلابة (Robust):**  
+   * كتابة كود HTML دلالي قياسي (Semantic HTML) باستخدام وسوم `<main>`, `<nav>`, `<article>`, `<button>` بدلاً من ملء الصفحة بـ `<div>` عشوائي، مما يضمن توافق النظام مع كافة التقنيات المساعدة ومحركات التصفح المستقبلية.
+
+</div>
+
+---
+
+## 10. ملخص الفصل التاسع
+
+* التكنولوجيا ليست غاية لذاتها بل مضخم للقيم وأداة لخدمة الإنسان والتمكين الاجتماعي.
+* الرقمنة العادلة تسهم في دمقرطة التعليم، ومكافحة الفساد، وتوفير الخدمات العامة، وتمكين أصحاب المشاريع الصغيرة.
+* تصميم البرمجيات والواجهات لتلائم ذوي الإعاقة (Accessibility) التزام أخلاقي يضمن كرامة الإنسان وتكافؤ فرصه في الحياة.
+* حماية كبار السن ونشر الوعي الأمني في محيط العائلة واجب ديني واجتماعي على كل متخصص ومبرمج.
+* حركة البرمجيات مفتوحة المصدر تمثل أرقى أشكال التكافل المعرفي الإنساني لبناء بنى تحتية للخير العام.
+* المشاريع البرمجية النافعة تبدأ من تلمس حاجات المجتمع الواقعية وتحويل الكود إلى حلول تفرج كربة إنسان.
+
+---
+
+## 11. اختبر معلوماتك (أسئلة للمراجعة الذاتية)
+
+1. **كيف تسهم التكنولوجيا في دمقرطة التعليم وتحقيق العدالة المعرفية للشباب في المناطق النائية؟**
+2. **ما هي التقنيات المساعدة الأساسية التي تمكن فاقدي البصر وذوي الإعاقة الحركية من استخدام الحواسيب؟**
+3. **لماذا يُعد كبار السن الفئة الأكثر استهدافاً وتضرراً من رسائل الاحتيال الرقمي، وما هو واجبنا العملي تجاههم؟**
+4. **في معايير إتاحة الويب العالمية (WCAG)، ماذا يعني مبدأ "القابلية للتشغيل" (Operable) عبر لوحة المفاتيح فقط؟**
+
+---
+
+## 12. مصادر للتوسع والقراءة الموصى بها
+
+* **W3C Web Accessibility Initiative (WAI):** المعايير والدروس الإرشادية الرسمية لإتاحة الويب عبر `w3.org/WAI`.
+* **Open Source Initiative (OSI):** المنظمة العالمية المعنية بتراخيص ومبادئ البرمجيات مفتوحة المصدر عبر `opensource.org`.
+* **UN Sustainable Development Goals (SDGs) & ICT:** تقارير الأمم المتحدة حول دور تكنولوجيا المعلومات في تحقيق أهداف التنمية المستدامة والعدالة الاجتماعية.
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="ch10" class="book-chapter-section" data-title="الفصل العاشر: من المعرفة إلى التأثير (الخطة)">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">فصل 10</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الفصل العاشر: من المعرفة إلى التأثير (خطة الـ 30 يوماً لمستقبلك)</h1>
+<hr />
+<blockquote>
+<p>«المعرفة التي تبقى حبيسة الأوراق والعقول لا تغير واقعاً؛ إن القيمة الحقيقية لكل ما قرأته في هذا الكتاب تبدأ في اللحظة التي تغلق فيها الصفحة الأخيرة وتبدأ أول خطوة عملية في حياتك اليومية».</p>
+</blockquote>
+<hr />
+<h2>1. افتتاحية: العبور من موقع "المستهلك" إلى موقع "الفاعل"</h2>
+<p>وصلت معي الآن إلى المحطة العاشرة في هذه الرحلة المعرفية.<br />
+لقد بدأنا من كابلات الإنترنت الممتدة في قيعان المحيطات، وفككنا معاً أسرار المعالجات وتطبيقات الويب، وكتبنا أولى أسطر البرمجة المنطقية ببايثون، وحصنا أنفسنا بدروع الأمن السيبراني ضد حيل الهندسة الاجتماعية، وتعلمنا كيف نصمم برمجيات آمنة، واستكشفنا آفاق الذكاء الاصطناعي ومخاطره، ورأينا كيف يمكن للتكنولوجيا أن تكون بلسماً يخفف آلام المجتمع.</p>
+<p>والآن، يطرح عليك هذا الكتاب سؤاله الحاسم والمباشر:<br />
+<strong>ماذا بعد؟ ما الذي ستفعله بكل هذه المعرفة غداً؟</strong></p>
+<p>هل ستعود للتعامل مع هاتفك وحاسوبك بنفس الغفلة القديمة؟ أم أنك ستقف اليوم على أرضية صلبة من الثقة والتمكن، لتصبح حامياً لنفسك ولمن حولك، وصانعاً لأثر إيجابي في مستقبلك المهني والاجتماعي؟</p>
+<p>في هذا الفصل الختامي، سنضع بين يديك خارطة طريق عملية تدلك على مسارك القادم، ونقدم لك <strong>«برنامج الـ 30 يوماً التطبيقي»</strong> لتتحول هذه المعرفة إلى سلوك يومي مستدام.</p>
+<hr />
+<h2>2. منهجية التعلم الذاتي المستمر في عالم متسارع</h2>
+<p>هناك حقيقة يجب أن يدركها كل من يدخل عالم التكنولوجيا: <strong>التقنية قطار سريع لا يتوقف أبداً</strong>.<br />
+ما هو جديد ومبهر اليوم، قد يصبح قديماً بعد خمس سنوات؛ وما يُعد ممارسة حديثة قد يُستبدل بأدوات أكثر ذكاءً.</p>
+<p>ولذلك، فإن أعظم مهارة تخرج بها من هذا الكتاب ليست حفظ أداة بعينها، بل <strong>«مهارة أن تتعلم كيف تتعلم» (Learning How to Learn)</strong>:</p>
+<ol>
+<li><strong>التعلم القائم على المشاريع (Project-Based Learning):</strong><br />
+   إياك أن تسقط في فخ <strong>"جحيم الدروس المتتالية" (Tutorial Hell)</strong>؛ أي مشاهدة مئات الساعات من الفيديوهات التعليمية وقراءة الكتب دون أن تكتب سطراً برمجياً واحداً بنفسك!<br />
+   الحل: اختر فكرة تطبيق بسيطة، وابدأ في بنائها؛ وكلما واجهت عقبة، ابحث عن حلها وطبقه. المعرفة التي تثبت في عقلك هي التي تمارسها بيديك.</li>
+<li><strong>بناء مصفاة التفكير النقدي:</strong><br />
+   في عصر الانفجار المعلوماتي، 80% مما يُنشر على وسائل التواصل حول التقنية هو إما محتوى تسويقي سطحي، أو تهويل مبالغ فيه لكسب المشاهدات.<br />
+   عود نفسك على الذهاب دائماً إلى <strong>المصادر الرسمية والمواصفات القياسية التأسيسية</strong> (توثيق بايثون الرسمي، معايير NIST، إرشادات OWASP، وتوثيق MDN).</li>
+<li><strong>تقبل الأخطاء كجزء طبيعي من الرحلة:</strong><br />
+   في البرمجة والأمن السيبراني، الخطأ ليس علامة فشل، بل هو المعلم الأكبر. رسائل الخطأ التي تظهر في شاشتك هي بوصلتك لمعرفة أين تكمن الحقيقة وكيف تنمو مهاراتك.</li>
+</ol>
+<hr />
+<h2>3. كيف تختار تخصصك ومسارك التقني القادم؟</h2>
+<p>إذا كنت ترغب في تحويل اهتمامك بالتقنية إلى مسار مهني ودراسي، فالعالم الرقمي يفتح لك أربعة أبواب رئيسية واعدة:</p>
+<pre><code>                          [ العالم الرقمي ]
+                                 |
+     +---------------+-----------+-----------+---------------+
+     |               |                       |               |
+[ تطوير الويب ]  [ الأمن السيبراني ]    [ الذكاء الاصطناعي ]  [ الحوسبة السحابية ]
+   (Web Dev)      (Cyber Defense)       (AI &amp; Data)       (Cloud &amp; DevOps)
+</code></pre>
+<ol>
+<li><strong>تطوير تطبيقات الويب والهواتف (Software Development):</strong><br />
+   مناسب للشخص الذي يحب البناء، والإبداع، وتصميم الحلول التي يلمسها الناس مباشرة في حياتهم. (تعلم: HTML, CSS, JavaScript, Python, Dart/Flutter, قواعد البيانات).</li>
+<li><strong>الأمن السيبراني الدفاعي (Defensive Cybersecurity / Blue Team):</strong><br />
+   مناسب للشخص الذي يملك عقلية المحقق الفضولي، يحب حماية الآخرين، وتحليل الشبكات، وسد الثغرات، ومراقبة حركة البيانات. (تعلم: الشبكات Network+, أنظمة Linux, نماذج التهديد, وأدوات التحليل الجنائي الرقمي).</li>
+<li><strong>علوم البيانات والذكاء الاصطناعي (Data Science &amp; AI):</strong><br />
+   مناسب للشخص الذي يعشق الأرقام، والتحليل المنطقي، واكتشاف الأنماط الخفية في البيانات الضخمة وبناء النماذج الذكية. (تعلم: Python, الرياضيات والإحصاء, مكتبات Pandas و Scikit-Learn, ومفاهيم التعلم العميق).</li>
+<li><strong>الحوسبة السحابية وهندسة المنظومات (Cloud &amp; DevOps):</strong><br />
+   مناسب لمن يحب إدارة البنى التحتية الكبرى، وضمان استقرار الخوادم وموثوقيتها وسرعتها حول العالم. (تعلم: Linux, Docker, Kubernetes, AWS/GCP).</li>
+</ol>
+<hr />
+<h2>4. الميثاق الأخلاقي لمهنة التقنية</h2>
+<p>المهندس الطبيب يقسم قسماً طبياً ليصون حياة المرضى؛ والمهندس التقني يحمل في يده سلطة لا تقل خطورة عن مبضع الجراح!</p>
+<p>المبرمج وخبير الأمن السيبراني يملك القدرة على:<br />
+* الوصول إلى أسرار بيوت وعائلات.<br />
+* الاطلاع على مدخرات وأموال.<br />
+* بناء برمجيات تسعد الناس أو تعذبهم وتتجسس عليهم.</p>
+<p>لذلك، يجب أن تعاهد نفسك منذ هذه اللحظة على هذا <strong>الميثاق الأخلاقي الراسخ</strong>:<br />
+* <strong>الأمانة العلمية والمهنية:</strong> لا تختبر نظاماً دون تصريح، ولا تتجسس على خصوصية زميل أو جار، ولا تبنِ تطبيقاً يخدع الناس أو يضرهم.<br />
+* <strong>الشفافية والمسؤولية:</strong> إذا اكتشفت ثغرة في موقع أو تطبيق، أبلغ مالك النظام بسرية وأمانة عبر قنوات الإفصاح المسؤول (Coordinated Vulnerability Disclosure)، ولا تستغلها للابتزاز أو الشهرة الرخيصة.<br />
+* <strong>النفع العام:</strong> اجعل جزءاً من مهاراتك ووقتك لخدمة مجتمعك، ومساعدة الضعفاء، والارتقاء بالمحتوى العربي النافع.</p>
+<hr />
+<h2>5. البرنامج العملي: خطة الـ 30 يوماً لرفع الوعي الرقمي والأمان</h2>
+<p>هذه ليست خطة نظرية، بل <strong>برنامج عملي تطبيقي مجرب</strong>، مقسم على أربعة أسابيع بمعدل 15 إلى 20 دقيقة يومياً، ينقلك من مستوى المستخدم المعرض للخطر إلى مستوى الإنسان الحصين والواعي:</p>
+<h3>📅 الأسبوع الأول: استعادة السيطرة على كلمات المرور والهويات</h3>
+<ul>
+<li><strong>اليوم 1 - 2:</strong> قم بجرد كافة حساباتك المسجلة، واشترك في مدير كلمات مرور موثوق (مثل Bitwarden أو 1Password) على هاتفك وحاسوبك.</li>
+<li><strong>اليوم 3 - 4:</strong> اختر "عبارة مرور رئيسية" قوية جداً من 5 كلمات عشوائية غير مترابطة لخزينتك الرقمية واحفظها جيداً.</li>
+<li><strong>اليوم 5 - 6:</strong> ابدأ بتغيير كلمات مرور حساباتك الأساسية (البريد الإلكتروني، البنوك، منصات التواصل) إلى كلمات مرور فريدة وعشوائية يولدها مدير كلمات المرور.</li>
+<li><strong>اليوم 7:</strong> تحقق من بريدك الإلكتروني عبر موقع <code>haveibeenpwned.com</code> لمعرفة الحسابات القديمة المسربة وتغييرها فوراً.</li>
+</ul>
+<h3>📅 الأسبوع الثاني: تحصين الأجهزة والشبكات والنسخ الاحتياطي</h3>
+<ul>
+<li><strong>اليوم 8 - 9:</strong> فحص كافة الأجهزة في منزلك (هواتف، حواسيب، أجهزة لوحية) والتأكد من تثبيت أحدث التحديثات الأمنية لأنظمة التشغيل والتطبيقات.</li>
+<li><strong>اليوم 10 - 11:</strong> مراجعة صلاحيات التطبيقات في هاتفك (Permissions Hygiene)، وحذف أي تطبيق مشبوه أو لم تستخدمه منذ 3 أشهر، وإلغاء وصول الكاميرا والموقع عما لا يلزمه.</li>
+<li><strong>اليوم 12 - 13:</strong> تطبيق قاعدة (3-2-1) للنسخ الاحتياطي: خزن نسخة من صورك ووثائقك الهامة على قرص صلب خارجي ونسخة أخرى على سحابة مشفرة.</li>
+<li><strong>اليوم 14:</strong> فحص راوتر الواي فاي المنزلي: تغيير كلمة المرور الافتراضية للوحة التحكم، وتفعيل تشفير WPA2/WPA3، والتأكد من إغلاق ميزة WPS الهشة.</li>
+</ul>
+<h3>📅 الأسبوع الثالث: التدريع المتقدم والخصوصية الرقمية</h3>
+<ul>
+<li><strong>اليوم 15 - 17:</strong> تفعيل المصادقة متعددة العوامل (MFA) عبر تطبيق توثيق (Google Authenticator أو Aegis) لكافة حساباتك، وحفظ الرموز الاحتياطية (Backup Codes) في مكان آمن.</li>
+<li><strong>اليوم 18 - 19:</strong> الدخول لإعدادات الخصوصية في منصات التواصل (فيسبوك، إنستغرام، إكس، تيك توك) وجعل الحسابات مقتصرة على الأصدقاء وإيقاف مشاركة الموقع الجغرافي التلقائي.</li>
+<li><strong>اليوم 20 - 21:</strong> تنظيف المتصفح: تثبيت مانع إعلانات ومتعقبات موثوق (مثل uBlock Origin)، وضبط إعدادات مسح الكوكيز غير الضرورية، وتفعيل ميزة HTTPS-Only.</li>
+</ul>
+<h3>📅 الأسبوع الرابع: التفكير البرمجي ومشاركة المعرفة</h3>
+<ul>
+<li><strong>اليوم 22 - 24:</strong> تثبيت لغة بايثون على حاسوبك، وكتابة وتشغيل أول برنامج لك (برنامج إدارة الميزانية والتبرعات الذي بنيناه في الفصل الثالث).</li>
+<li><strong>اليوم 25 - 26:</strong> تجربة حل مشكلة يومية بسيطة بالتفكير المنطقي والخوارزمي المقسم لخطوات.</li>
+<li><strong>اليوم 27 - 28:</strong> الجلوس مع أفراد أسرتك (خاصة كبار السن والأطفال)، وتدريبهم على كيفية كشف الرسائل الاحتيالية وفخاخ الشحنات الوهمية بحب وصبر.</li>
+<li><strong>اليوم 29:</strong> كتابة منشور أو مقال قصير أو تسجيل رسالة صوتية لأصدقائك تلخص لهم أهم قاعدة أمنية تعلمتها من هذا الكتاب.</li>
+<li><strong>اليوم 30:</strong> احتفل بإنجازك! لقد أصبحت الآن إنساناً واعياً رقمياً، قادراً على حماية نفسك وصناعة غد أفضل لمجتمعك.</li>
+</ul>
+<hr />
+<h2>6. كلمة ختامية: العلم الذي يثمر خيراً</h2>
+<p>لقد بدأنا هذا الكتاب بعبارة، ونختم فصوله بنفس العبارة التي آمنا بها طوال هذه الرحلة:</p>
+<blockquote>
+<p><strong>«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».</strong></p>
+</blockquote>
+<p>إن العالم الرقمي مليء بالتحديات، لكنه في الوقت ذاته ممتلئ بآفاق لا حصر لها للبناء والنهضة.<br />
+لا تجعل ما تعلمته هنا يتوقف عندك. علّمه لأمك، وشاركه مع إخوانك، وناقشه مع زملائك، واجعله دافعاً لك لتبني برمجيات وأنظمة آمنة ترفع شأن وطنك وأمتك.</p>
+<p>سر في دروب هذا العالم الرقمي وأنت رافع الرأس، مطمئن القلب، يقظ العقل... فالمستقبل تصنعه المعرفة الواعية!</p>
+<hr />
+<h2>7. ملخص الفصل العاشر</h2>
+<ul>
+<li>المعرفة التقنية ليست كنزاً يُكنز، بل قوة عملية تبدأ عندما تتحول المفاهيم إلى سلوك تطبيقي مستدام.</li>
+<li>التعلم الذاتي المستمر القائم على بناء المشاريع الحقيقية هو الأسلوب الوحيد لمواكبة تسارع التكنولوجيا والنجاة من فخ الدروس المتتالية.</li>
+<li>مسارات التقنية الكبرى (تطوير البرمجيات، الأمن السيبراني، الذكاء الاصطناعي، والحوسبة السحابية) تتكامل معاً لحل مشكلات العالم.</li>
+<li>الميثاق الأخلاقي الرقمي هو سياج الأمان الذي يضمن بقاء مهارات المبرمج وخبير الأمن في خدمة المجتمع والعدالة.</li>
+<li>خطة الـ 30 يوماً توفر دليلاً تطبيقياً متدرجاً يبدأ بضبط كلمات المرور وينتهي بنقل المعرفة ونشر الوعي في المحيط الأسري والاجتماعي.</li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="back-matter" class="book-chapter-section" data-title="الخاتمة ومعجم المصطلحات والمراجع">
+      <div class="chapter-card">
+        <div class="chapter-badge-wrap">
+          <span class="chapter-pill-badge">المراجع والختام</span>
+        </div>
+        <div class="chapter-inner-content">
+          <h1>الخاتمة، معجم المصطلحات، وقائمة المراجع الرسمية</h1>
+<hr />
+<h2>أولاً: خاتمة الكتاب — التكنولوجيا في خدمة الإنسان</h2>
+<p>بسم الله الرحمن الرحيم،</p>
+<p>وها نحن نصل إلى ختام هذه الصفحات، بعد رحلة فكرية وعلمية طفنا فيها بأرجاء العالم الرقمي الفسيح؛ من عمق الأسلاك النحاسية وومضات الضوء في كابلات المحيطات، إلى المعالجات الدقيقة، وخوارزميات البرمجة، وأسوار الأمن السيبراني، ومفترقات طرق الذكاء الاصطناعي، وقبل كل شيء: رسالة التكنولوجيا السامية في خدمة الإنسان والمجتمع.</p>
+<p>إذا كان لي أن أتركك بفكرة واحدة تختصر جوهر هذا الكتاب كله، فهي هذه:<br />
+<strong>«التكنولوجيا مرآة ومضخم لإنسانيتك؛ إنها لا تملك قلباً يشعر، ولا ضميراً يزن، ولا إرادة تختار. أنت العقل، وأنت البوصلة، وأنت المسؤول الأول والأخير عن صياغة هذا العالم الرقمي»</strong>.</p>
+<p>إن فهم التكنولوجيا لم يعد خياراً ترفيهياً يقتصر على فئة المبرمجين أو المهندسين؛ لقد أصبح <strong>حقاً إنسانياً وأداة تمكين ودرعاً واقياً</strong> يصون كرامة الفرد، ويحمي استقرار أسرته، ويفتح آفاق المستقبل أمام أبناء وبنات وطننا العربي.</p>
+<p>لا تدع الشاشات البراقة تعزلك عن محيطك الإنساني، ولا تجعل سهولة التطبيقات تغريك بالكسل الفكري والاستسلام الأعمى لما تقترحه عليك الخوارزميات. كن قارئاً فاحصاً، ومستخدماً يقظاً، ومطوراً أميناً، ومواطناً رقمياً صالحاً يترك في كل زاوية من هذا الفضاء الرقمي بصمة خير وأمان.</p>
+<p>تذكر دائماً أن أعظم درجات القوة في هذا العصر ليست في امتلاك أحدث الأجهزة أو حفظ أعقد الأكواد، بل في ترجمة تلك القوة إلى نفع يعم الناس، مصداقاً للرسالة التي قامت عليها كل كلمة في هذا العمل:</p>
+<blockquote>
+<p><strong>«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين».</strong></p>
+</blockquote>
+<p>أسأل الله العلي القدير أن يجعل هذا العمل خالصاً لوجهه الكريم، نافعاً لكل من قرأه، ولبنة تسهم في رفعة الوعي التقني في مجتمعاتنا العربية العزيزة.</p>
+<p><strong>المؤلف: جنكيز</strong></p>
+<hr />
+<div style="page-break-after: always;"></div>
+
+<h2>ثانياً: معجم المصطلحات التقنية الموحد (Technical Glossary)</h2>
+<p>دليل مرجعي مرتب هجائياً لأهم المفاهيم والمصطلحات التقنية الواردة في الكتاب باللغة العربية مع مقابلها باللغة الإنجليزية:</p>
+<h3>أ</h3>
+<ul>
+<li><strong>الأمن السيبراني (Cybersecurity):</strong><br />
+  منظومة الممارسات والتقنيات الهندسية المصممة لحماية الحواسيب، والشبكات، والبرمجيات، والبيانات من أي هجوم رقمي أو وصول غير مصرح به أو تخريب.</li>
+<li><strong>الأمان بالتصميم (Secure by Design):</strong><br />
+  فلسفة هندسية تقضي بدمج معايير الحماية وإدارة المخاطر في هيكل النظام البرمجي منذ اللحظة الأولى للتخطيط والتصميم بدلاً من إضافتها كترقيعات بعد الإنتاج.</li>
+</ul>
+<h3>ب</h3>
+<ul>
+<li><strong>البرمجة (Programming):</strong><br />
+  عملية صياغة وترتيب تعليمات منطقية متسلسلة بلغة يفهمها الحاسوب لتنفيذ مهمة محددة أو حل معضلة واقعية.</li>
+<li><strong>البرمجيات الخبيثة (Malware):</strong><br />
+  مصطلح جامع يشمل أي كود أو برنامج صُمم لإلحاق الضرر بالأجهزة، أو التجسس على المستخدمين، أو سرقة البيانات دون علم المالك وموافقته.</li>
+<li><strong>برمجيات الفدية (Ransomware):</strong><br />
+  سلالة خبيثة من البرامج تقوم بتشفير ملفات الضحية بالكامل وتطلب فدية مالية مقابل تقديم مفتاح فك التشفير.</li>
+<li><strong>البصمة الرقمية (Digital Footprint):</strong><br />
+  مجموع الآثار والبيانات والسجلات التي يتركها المستخدم خلفه أثناء نشاطه وتصفحه واستخدامه لشبكة الإنترنت.</li>
+</ul>
+<h3>ت</h3>
+<ul>
+<li><strong>التجزئة المشفرة (Cryptographic Hashing):</strong><br />
+  معادلة رياضية تحول أي نص أو ملف إلى بصمة رقمية ذات طول ثابت باتجاه واحد يستحيل عكسها؛ وتستخدم لمطابقة كلمات المرور وسلامة الملفات.</li>
+<li><strong>التشفير (Encryption):</strong><br />
+  عملية رياضية ذات اتجاهين تحول النص المقروء إلى نص مشفر مبهم لا يمكن فكه إلا بواسطة مفتاح سري محدد.</li>
+<li><strong>التصيد الاحتيالي (Phishing):</strong><br />
+  هجوم هندسة اجتماعية يستهدف خداع الضحية لحمله على النقر على روابط مشبوهة أو إفشاء أسراره وبياناته البنكية عبر انتحال صفة جهة رسمية موثوقة.</li>
+<li><strong>التفويض (Authorization - AuthZ):</strong><br />
+  التحقق الأمني من الصلاحيات والميزات التي يحق للمستخدم المسجل الوصول إليها وممارستها داخل النظام.</li>
+<li><strong>التقنيات المساعدة (Assistive Technology):</strong><br />
+  أجهزة وبرمجيات مخصصة لتمكين الأشخاص ذوي الإعاقة وكبار السن من استخدام الحواسيب وتصفح الويب باستقلالية وكرامة.</li>
+<li><strong>التوليد بالذكاء الاصطناعي (Generative AI):</strong><br />
+  فرع من الذكاء الاصطناعي قادر على خلق محتوى رقمي جديد ومبتكر (نصوص، صور، أكواد، أصوات) بناءً على أوامر نصية وتدريب مسبق على بيانات ضخمة.</li>
+</ul>
+<h3>ث</h3>
+<ul>
+<li><strong>الثغرة الأمنية (Vulnerability):</strong><br />
+  نقطة ضعف أو خطأ في كود البرنامج، أو بنية النظام، أو الإعدادات، تتيح للتهديدات الخارجية النفاذ والتسبب في ضرر.</li>
+</ul>
+<h3>خ</h3>
+<ul>
+<li><strong>الخادم (Server):</strong><br />
+  حاسوب عالي الأداء والموثوقية متصل بالإنترنت بصفة دائمة، وظيفته تخزين البيانات ومعالجة طلبات المستخدمين (العملاء) والاستجابة لها.</li>
+<li><strong>الخوارزمية (Algorithm):</strong><br />
+  سلسلة من الخطوات المنطقية والرياضية المحددة بدقة متناهية لحل مسألة معينة أو إنجاز مهمة خطوة بخطوة.</li>
+</ul>
+<h3>ذ</h3>
+<ul>
+<li><strong>الذكاء الاصطناعي (Artificial Intelligence - AI):</strong><br />
+  علم وهندسة صناعة آلات وأنظمة برمجية ذكية تحاكي القدرات المعرفية البشرية في التعلم، وحل المشكلات، واكتشاف الأنماط.</li>
+</ul>
+<h3>س</h3>
+<ul>
+<li><strong>السحابة والحوسبة السحابية (Cloud Computing):</strong><br />
+  توفير موارد الحوسبة (المعالجات، التخزين، قواعد البيانات، والبرامج) عند الطلب عبر الإنترنت مع الدفع حسب الاستهلاك.</li>
+</ul>
+<h3>ع</h3>
+<ul>
+<li><strong>عبارة المرور (Passphrase):</strong><br />
+  سلسلة مكونة من عدة كلمات عشوائية غير مترابطة تفصل بينها مسافات، تتفوق على كلمات المرور التقليدية في سهولة الحفظ ومقاومتها الهائلة لهجمات الكسر.</li>
+</ul>
+<h3>ق</h3>
+<ul>
+<li><strong>قاعدة البيانات (Database):</strong><br />
+  مستودع إلكتروني منظم ومحكم لحفظ واسترجاع وإدارة البيانات الرقمية بكفاءة وأمان وسرعة.</li>
+</ul>
+<h3>م</h3>
+<ul>
+<li><strong>المصادقة (Authentication - AuthN):</strong><br />
+  عملية التحقق الرقمي للتأكد من الهوية الحقيقية للمستخدم أو النظام الذي يطلب الدخول.</li>
+<li><strong>المصادقة متعددة العوامل (Multi-Factor Authentication - MFA):</strong><br />
+  طبقة أمان تتطلب وسيلتي إثبات هوية مختلفتين على الأقل (مثل كلمة المرور + رمز من تطبيق توثيق) لتسجيل الدخول.</li>
+<li><strong>مدير كلمات المرور (Password Manager):</strong><br />
+  برنامج مشفر عالي الأمان يولد ويخزن كلمات المرور الفريدة في خزينة رقمية لا تُفتح إلا بمفتاح رئيسي وحيد يملكه المستخدم.</li>
+</ul>
+<h3>هـ</h3>
+<ul>
+<li><strong>الهندسة الاجتماعية (Social Engineering):</strong><br />
+  أسلوب نفسي احتيالي يمارسه المهاجمون للتلاعب بالبشر واستغلال الثقة أو الخوف لدفعهم لإفشاء معلومات سرية أو ارتكاب أخطاء أمنية.</li>
+<li><strong>الهلوسة في الذكاء الاصطناعي (AI Hallucination):</strong><br />
+  ظاهرة تقوم فيها النماذج اللغوية باختلاق معلومات وحقائق كاذبة وغير موجودة وتقديمها بثقة لغوية مطلقة.</li>
+</ul>
+<h3>و</h3>
+<ul>
+<li><strong>واجهة برمجة التطبيقات (API):</strong><br />
+  مجموعة من البروتوكولات والتعريفات القياسية التي تسمح للبرامج والتطبيقات المختلفة بالتواصل وتبادل البيانات بأمان وسلاسة.</li>
+</ul>
+<hr />
+<div style="page-break-after: always;"></div>
+
+<h2>ثالثاً: قائمة المصادر والمراجع الرسمية المعتمدة (Official References)</h2>
+<p>تم توثيق كافة المفاهيم والمعايير الهندسية والأمنية الواردة في هذا الكتاب استناداً إلى الوثائق الرسمية والمواصفات القياسية الصادرة عن كبرى الهيئات الدولية والمنظمات المعيارية:</p>
+<h3>1. معايير المعهد الوطني للمعايير والتقنية (NIST Standards)</h3>
+<ul>
+<li><strong>NIST Special Publication 800-63B:</strong><br />
+<em>Digital Identity Guidelines: Authentication and Lifecycle Management</em>. National Institute of Standards and Technology, U.S. Department of Commerce.<br />
+  الرابط الرسمي: <code>https://pages.nist.gov/800-63-3/sp800-63b.html</code></li>
+<li><strong>NIST Cybersecurity Framework (CSF 2.0):</strong><br />
+<em>The NIST Cybersecurity Framework: A Blueprint for Managing Cybersecurity Risks</em>. NIST, 2024.<br />
+  الرابط الرسمي: <code>https://www.nist.gov/cyberframework</code></li>
+<li><strong>NIST AI 100-1 (AI RMF 1.0):</strong><br />
+<em>Artificial Intelligence Risk Management Framework</em>. National Institute of Standards and Technology, 2023.<br />
+  الرابط الرسمي: <code>https://www.nist.gov/itl/ai-risk-management-framework</code></li>
+</ul>
+<h3>2. معايير أمان تطبيقات الويب (OWASP Guidelines)</h3>
+<ul>
+<li><strong>OWASP Top 10 Web Application Security Risks:</strong><br />
+<em>The Open Web Application Security Project Foundation</em>. الإصدار المعياري الأخير.<br />
+  الرابط الرسمي: <code>https://owasp.org/www-project-top-ten/</code></li>
+<li><strong>OWASP Application Security Verification Standard (ASVS 4.0):</strong><br />
+<em>A Framework for Testing Web Application Technical Security Controls</em>.<br />
+  الرابط الرسمي: <code>https://owasp.org/www-project-application-security-verification-standard/</code></li>
+<li><strong>OWASP Password Storage Cheat Sheet:</strong><br />
+<em>Defensive Storage Mechanisms for Cryptographic Password Hashes (Argon2id, PBKDF2, bcrypt)</em>.<br />
+  الرابط الرسمي: <code>https://cheatsheetseries.owasp.org/</code></li>
+</ul>
+<h3>3. وكالة الأمن السيبراني وأمن البنية التحتية (CISA)</h3>
+<ul>
+<li><strong>CISA Secure by Design Whitepaper:</strong><br />
+<em>Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software</em>. Cybersecurity and Infrastructure Security Agency, 2023.<br />
+  الرابط الرسمي: <code>https://www.cisa.gov/securebydesign</code></li>
+<li><strong>CISA Phishing and Social Engineering Awareness Guide:</strong><br />
+<em>Recognizing and Reporting Suspicious Cybersecurity Messages</em>.<br />
+  الرابط الرسمي: <code>https://www.cisa.gov/stopransomware</code></li>
+</ul>
+<h3>4. معايير لغة البرمجة بايثون (Python Standards)</h3>
+<ul>
+<li><strong>Python Software Foundation (PSF):</strong><br />
+<em>The Python Standard Library Documentation (Language Reference &amp; Library Index, Python 3.12+)</em>.<br />
+  الرابط الرسمي: <code>https://docs.python.org/3/</code></li>
+<li><strong>PEP 8 -- Style Guide for Python Code:</strong><br />
+<em>Guido van Rossum, Barry Warsaw, Nick Coghlan</em>. المعايير العالمية لكتابة الكود النظيف في بايثون.<br />
+  الرابط الرسمي: <code>https://peps.python.org/pep-0008/</code></li>
+</ul>
+<h3>5. معايير اتحاد شبكة الويب العالمية (W3C) وإتاحة الوصول</h3>
+<ul>
+<li><strong>W3C Web Content Accessibility Guidelines (WCAG 2.2):</strong><br />
+<em>World Wide Web Consortium Recommendation for Web Accessibility (POUR Principles)</em>, October 2023.<br />
+  الرابط الرسمي: <code>https://www.w3.org/TR/WCAG22/</code></li>
+<li><strong>MDN Web Docs (Mozilla Developer Network):</strong><br />
+<em>Web Architecture, HTTP Headers, Security, and Client-Server Communication Standards</em>.<br />
+  الرابط الرسمي: <code>https://developer.mozilla.org/</code></li>
+</ul>
+<h3>6. طلبات التعليق والبروتوكولات المعيارية لشبكة الإنترنت (IETF RFCs)</h3>
+<ul>
+<li><strong>RFC 793 / RFC 9293:</strong> <em>Transmission Control Protocol (TCP) Specification</em>. Internet Engineering Task Force (IETF).<br />
+  الرابط الرسمي: <code>https://www.rfc-editor.org/info/rfc9293</code></li>
+<li><strong>RFC 6238:</strong> <em>TOTP: Time-Based One-Time Password Algorithm (Dynamic Truncation and HMAC Calculation)</em>.<br />
+  الرابط الرسمي: <code>https://www.rfc-editor.org/info/rfc6238</code></li>
+<li><strong>RFC 8446:</strong> <em>The Transport Layer Security (TLS) Protocol Version 1.3</em>.<br />
+  الرابط الرسمي: <code>https://www.rfc-editor.org/info/rfc8446</code></li>
+</ul>
+        </div>
+      </div>
+    </section>
+    
+
+    </main>
+  </div>
+
+  <!-- Floating Quick Actions -->
+  <div class="floating-actions">
+    <button id="scroll-top-btn" class="floating-btn" title="العودة للأعلى" style="display: none;">↑</button>
+  </div>
+
+  <!-- Share Modal -->
+  <div id="share-modal">
+    <div class="modal-card">
+      <h3 style="font-family: var(--font-heading); margin-bottom: 8px; color: var(--accent);">مشاركة كتاب الوعي الرقمي</h3>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px;">شارك هذا الرابط مع عائلتك وأصدقائك لنشر الوعي والأمان الرقمي:</p>
+      
+      <div class="share-links-grid">
+        <a id="share-wa" href="#" target="_blank" class="share-channel-btn btn-wa">واتساب</a>
+        <a id="share-tg" href="#" target="_blank" class="share-channel-btn btn-tg">تيليجرام</a>
+        <a id="share-x" href="#" target="_blank" class="share-channel-btn btn-x">منصة X</a>
+        <a id="share-fb" href="#" target="_blank" class="share-channel-btn btn-fb">فيسبوك</a>
+        <button id="copy-link-btn" class="share-channel-btn btn-copy">📋 نسخ الرابط المباشر</button>
+      </div>
+
+      <button id="close-modal-btn" class="icon-btn" style="margin-top: 12px; width: 100%; justify-content: center;">إغلاق</button>
+    </div>
+  </div>
+
+  <script>
+    // Theme Management
+    const themeBtn = document.getElementById('theme-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const themes = ['dark', 'sepia', 'light'];
+    const themeIcons = { 'dark': '🌙', 'sepia': '📜', 'light': '☀️' };
+    
+    let currentThemeIndex = 0;
+    const savedTheme = localStorage.getItem('digital_book_theme') || 'dark';
+    currentThemeIndex = themes.indexOf(savedTheme);
+    applyTheme(savedTheme);
+
+    themeBtn.addEventListener('click', () => {
+      currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+      const newTheme = themes[currentThemeIndex];
+      applyTheme(newTheme);
+    });
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeIcon.textContent = themeIcons[theme];
+      localStorage.setItem('digital_book_theme', theme);
+    }
+
+    // Reading Progress & Scroll
+    const progressBar = document.getElementById('progress-bar');
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + '%';
+
+      if (winScroll > 400) {
+        scrollTopBtn.style.display = 'flex';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Font Sizing
+    let currentFontSize = parseInt(localStorage.getItem('digital_book_font_size')) || 19;
+    document.documentElement.style.fontSize = currentFontSize + 'px';
+
+    document.getElementById('font-increase').addEventListener('click', () => {
+      if (currentFontSize < 28) {
+        currentFontSize += 1;
+        document.documentElement.style.fontSize = currentFontSize + 'px';
+        localStorage.setItem('digital_book_font_size', currentFontSize);
+      }
+    });
+
+    document.getElementById('font-decrease').addEventListener('click', () => {
+      if (currentFontSize > 14) {
+        currentFontSize -= 1;
+        document.documentElement.style.fontSize = currentFontSize + 'px';
+        localStorage.setItem('digital_book_font_size', currentFontSize);
+      }
+    });
+
+    // Mobile Sidebar Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.toc-link').forEach(link => {
+      link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+      });
+    });
+
+    // TOC Active Link on Scroll (Intersection Observer)
+    const sections = document.querySelectorAll('.book-chapter-section');
+    const navLinks = document.querySelectorAll('.toc-link');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('data-target') === activeId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    // TOC Search Filter
+    const searchInput = document.getElementById('toc-search');
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      navLinks.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(query)) {
+          link.style.display = 'flex';
+        } else {
+          link.style.display = 'none';
+        }
+      });
+    });
+
+    // Share Modal Functionality
+    const shareBtn = document.getElementById('share-btn');
+    const shareModal = document.getElementById('share-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const copyLinkBtn = document.getElementById('copy-link-btn');
+
+    const shareUrl = window.location.href;
+    const shareText = encodeURIComponent("كتاب «الوعي الرقمي: المعرفة التي تحميك وتصنع مستقبلك» — تأليف: جنكيز. اقرأ الكتاب مجاناً عبر الرابط:");
+
+    document.getElementById('share-wa').href = `https://api.whatsapp.com/send?text=${shareText}%20${encodeURIComponent(shareUrl)}`;
+    document.getElementById('share-tg').href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${shareText}`;
+    document.getElementById('share-x').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${encodeURIComponent(shareUrl)}`;
+    document.getElementById('share-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+    shareBtn.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'كتاب الوعي الرقمي — تأليف جنكيز',
+          text: '«المعرفة قوة، لكن قيمتها الحقيقية فيما نقدمه بها للآخرين»',
+          url: shareUrl
+        }).catch(() => {
+          shareModal.style.display = 'flex';
+        });
+      } else {
+        shareModal.style.display = 'flex';
+      }
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      shareModal.style.display = 'none';
+    });
+
+    shareModal.addEventListener('click', (e) => {
+      if (e.target === shareModal) {
+        shareModal.style.display = 'none';
+      }
+    });
+
+    copyLinkBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        copyLinkBtn.textContent = '✔ تم نسخ الرابط بنجاح!';
+        setTimeout(() => {
+          copyLinkBtn.textContent = '📋 نسخ الرابط المباشر';
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

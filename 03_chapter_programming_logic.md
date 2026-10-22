@@ -194,7 +194,7 @@ def display_report(summary):
     if summary['remaining_balance'] > 0:
         print(f"🤝 حصة العطاء المجتمعي (5%)  : {summary['donation']:.2f}")
         print(f"🌱 صافي الادخار الشخصي       : {summary['net_savings']:.2f}")
-        print("💡 رسالة: «المعرفة قوة، وقيمتها فيما نقدمه للآخرين»")
+        print("💡 رسالة: «المعرفة قوة، لكن قيمتها الحقيقية تتجلّى في نفع الآخرين بها»")
     else:
         print("⚠️ تنبيه: مصروفاتك تجاوزت دخلك! راجع بنود الإنفاق بعناية.")
     print("=" * 48 + "\n")

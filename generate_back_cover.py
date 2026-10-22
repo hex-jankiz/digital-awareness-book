@@ -1,0 +1,198 @@
+import os
+import subprocess
+
+html_back_cover = '''<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    width: 848px;
+    height: 1264px;
+    background: radial-gradient(circle at 50% 15%, #172554 0%, #0f172a 50%, #030712 100%);
+    font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+    color: #f8fafc;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Decorative borders */
+  .border-frame {
+    position: absolute;
+    inset: 24px;
+    border: 2px solid rgba(56, 189, 248, 0.25);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+  .border-frame-inner {
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+  /* Cyber subtle accents */
+  .glow-circle {
+    position: absolute;
+    top: -120px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .header-section {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  .book-title {
+    font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  }
+
+  .book-subtitle {
+    font-size: 20px;
+    color: #38bdf8;
+    font-weight: 600;
+  }
+
+  .synopsis-section {
+    position: relative;
+    z-index: 2;
+    margin: 25px 0;
+    line-height: 2.0;
+    font-size: 19px;
+    color: #e2e8f0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .synopsis-p {
+    margin-bottom: 20px;
+  }
+
+  .highlight-box {
+    background: rgba(15, 23, 42, 0.7);
+    border-right: 4px solid #38bdf8;
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.85;
+    color: #f1f5f9;
+  }
+
+  .quote-section {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    border-radius: 10px;
+    padding: 22px 26px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .quote-text {
+    font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    color: #fbbf24;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .author-credit {
+    font-size: 17px;
+    color: #cbd5e1;
+    font-weight: 600;
+  }
+
+  .footer-meta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    font-size: 14px;
+    color: #94a3b8;
+  }
+
+  .category-tag {
+    background: rgba(56, 189, 248, 0.12);
+    color: #38bdf8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+  }
+
+  .publisher-info {
+    text-align: left;
+    direction: ltr;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #64748b;
+  }
+</style>
+</head>
+<body>
+  <div class="border-frame"></div>
+  <div class="border-frame-inner"></div>
+  <div class="glow-circle"></div>
+
+  <div class="header-section">
+    <h1 class="book-title">الوعي الرقمي</h1>
+    <div class="book-subtitle">المعرفة التي تحميك وتصنع مستقبلك</div>
+  </div>
+
+  <div class="synopsis-section">
+    <p class="synopsis-p">
+      هل تساءلت يوماً ماذا يجري خلف شاشة هاتفك الذكي عندما ترسل رسالة، أو تسدد فاتورة، أو تضغط على رابط يأتيك فجأة؟
+    </p>
+    <p class="synopsis-p">
+      في عالم أصبح الاتصال الرقمي فيه عصب الحياة اليومية، تحول الجهل بآلياته إلى ثغرة كبرى تهدد خصوصيتك، ومدخراتك، وأمان أسرتك. لم تعد برامج الحماية وحدها كافية لصنع الأمان؛ فالأمان الحقيقي يبدأ من <strong>عقلٍ واعٍ</strong> يدرك كيف تفكر الأنظمة، وكيف يتربص المحتالون، وكيف يحصن نفسه وأسرته بحكمة وثقة.
+    </p>
+    <div class="highlight-box">
+      دليل عربي متكامل ينتقل بك خطوة بخطوة من تفكيك أسرار الإنترنت والهواتف، إلى التفكير المنطقي والبرمجة، ومكافحة التصيد والهندسة الاجتماعية، وصولاً إلى ثورة الذكاء الاصطناعي وصناعة الأثر المجتمعي.
+    </div>
+  </div>
+
+  <div class="quote-section">
+    <div class="quote-text">«المعرفة قوة، لكن قيمتها الحقيقية تتجلّى في نفع الآخرين بها».</div>
+    <div class="author-credit">تأليف: جنكيز</div>
+  </div>
+
+  <div class="footer-meta">
+    <span class="category-tag">علوم الحاسب / الأمن السيبراني / الثقافة الرقمية</span>
+    <span class="publisher-info">DIGITAL AWARENESS • JANKIZ • 2026</span>
+  </div>
+</body>
+</html>'''
+
+with open('back_cover.html', 'w', encoding='utf-8') as f:
+    f.write(html_back_cover)
+
+print("Generated back_cover.html successfully.")
